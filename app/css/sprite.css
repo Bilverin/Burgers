@@ -18,13 +18,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-add-1-checked {
   background-image: url(../img/sprite.png);
-  background-position: -343px -182px;
+  background-position: 0px -393px;
   width: 88px;
   height: 81px;
 }
 .icon-add-1 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -393px;
+  background-position: -343px -182px;
   width: 88px;
   height: 81px;
 }
@@ -42,37 +42,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-add-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: -437px -83px;
+  background-position: -437px 0px;
   width: 99px;
   height: 83px;
 }
 .icon-add-3 {
   background-image: url(../img/sprite.png);
-  background-position: -437px 0px;
+  background-position: -437px -83px;
   width: 99px;
   height: 83px;
 }
 .icon-add-4-checked {
   background-image: url(../img/sprite.png);
-  background-position: 0px 0px;
+  background-position: -121px 0px;
   width: 121px;
   height: 84px;
 }
 .icon-add-4 {
   background-image: url(../img/sprite.png);
-  background-position: -121px 0px;
+  background-position: 0px 0px;
   width: 121px;
   height: 84px;
 }
 .icon-add-5-checked {
   background-image: url(../img/sprite.png);
-  background-position: -226px -311px;
+  background-position: -104px -311px;
   width: 122px;
   height: 67px;
 }
 .icon-add-5 {
   background-image: url(../img/sprite.png);
-  background-position: -104px -311px;
+  background-position: -226px -311px;
   width: 122px;
   height: 67px;
 }
@@ -102,13 +102,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-add-8-checked {
   background-image: url(../img/sprite.png);
-  background-position: 0px -155px;
+  background-position: 0px -84px;
   width: 138px;
   height: 71px;
 }
 .icon-add-8 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -84px;
+  background-position: 0px -155px;
   width: 138px;
   height: 71px;
 }
@@ -124,6 +124,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 91px;
   height: 85px;
 }
+.icon-close {
+  background-image: url(../img/sprite.png);
+  background-position: -490px -336px;
+  width: 24px;
+  height: 24px;
+}
 .icon-logo-footer {
   background-image: url(../img/sprite.png);
   background-position: -348px -311px;
@@ -132,19 +138,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-logo-header {
   background-image: url(../img/sprite.png);
-  background-position: -437px -336px;
+  background-position: -463px -336px;
   width: 27px;
   height: 27px;
 }
 .icon-meat-1-checked {
   background-image: url(../img/sprite.png);
-  background-position: -102px -226px;
+  background-position: 0px -226px;
   width: 102px;
   height: 85px;
 }
 .icon-meat-1 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -226px;
+  background-position: -102px -226px;
   width: 102px;
   height: 85px;
 }
@@ -171,4 +177,16 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -343px 0px;
   width: 94px;
   height: 91px;
+}
+.icon-placeholder-active {
+  background-image: url(../img/sprite.png);
+  background-position: -254px -393px;
+  width: 52px;
+  height: 72px;
+}
+.icon-placeholder {
+  background-image: url(../img/sprite.png);
+  background-position: -437px -336px;
+  width: 26px;
+  height: 36px;
 }

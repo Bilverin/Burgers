@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	//= tpl/head.html
+
+<body>
+	<!--[if lt IE 10]>
+	<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
+	<![endif]-->
+
+	<!-- Preloader  -->
+	<div class="preloader"></div>
+
+	<!-- Application -->
+	<div class="app">
+
+		<section class="wr-bhf-activation">
+			<a href="#" class="close"><i class="icon icon-close"></i></a>
+			<div class="container">
+				<div class="row ">
+					<div class="col-md-12">
+						<div class="section-header">
+							<h2>Активация карты</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 col-md-offset-1">
+
+						<div class="bhf-activation">
+							<form action="#">
+							<div class="floating-labels">
+									<input type="text" id="name" required="required">
+									<label for="name">Имя</label>
+								</div>
+								<div class="floating-labels">
+									<input type="text" id="surname" required="required">
+									<label for="surname">Фамилия</label>
+								</div>
+								<div class="floating-labels">
+									<input type="text" id="date" required="required">
+									<label for="date">Дата рождения</label>
+								</div>
+								<div class="floating-labels">
+									<select name="gender" id="gender" required="required">
+										<option></option>
+										<option value="1">Мужской</option>
+										<option value="2">Женский</option>
+									</select>
+									<label for="gender">Выберите пол</label>
+								</div>
+								<div class="floating-labels">
+									<input type="text" id="tel" required="required">
+									<label for="tel">Телефон</label>
+								</div>
+								<div class="floating-labels">
+									<input type="text" id="email" required="required">
+									<label for="email">Электронная почта</label>
+								</div>
+								<div class="floating-labels">
+									<input type="text" id="cardnumb" required="required">
+									<label for="cardnumb">Номер карты</label>
+								</div>
+								<input type="checkbox" id="agreement">
+								<label for="agreement" class="agreement"><span>Я согласен с условиями (</span><a href="#">ссылка на оферту</a><span>) и не против получать письма с новостями и спец. предложениями от Burger Heroes</span></label>
+								<button>Активировать</button>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Plugins -->
+	<div class="popup"></div>
+	
+	<!-- Scripts -->
+	//= tpl/scripts.html
+	
+</body>
+</html>

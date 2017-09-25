@@ -36,10 +36,53 @@
 	}
 }
 
+.btn {
+	font-size: 26px; font-family: $i-black; text-transform: uppercase; text-align: left;
+	display: block; position: relative; left: -28px; padding: 14px 27px 25px;
+	background: transparent; border: solid 2px #ffffff; border-radius: 0;
+	&:hover {
+		color: $main-dark;
+		background: #ffffff;
+	}
+}
+
+
+.no-wrap {
+	white-space: nowrap;
+}
 
 /*********************************/
 /*********** Modules *************/
 /*********************************/
+// header socials
+ul.header-socials {
+	position: absolute; top: 255px; right: -147px; transform: translate(-50%,-50%) rotate(90deg); z-index: 10;
+	@include respond-to(md) {
+		display: none;
+	}
+	li {
+		display: inline-block; margin-left: 27px;
+		&:first-child {
+			margin-left: 0;
+		}
+		a {
+			font-size: 14px; font-family: $s-regular; letter-spacing: 0.2px; text-shadow: 1px 1px 0 #000;
+			position: relative; display: inline-block;
+			&:after {
+				content: '';
+				display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: -1px; transform: translateX(-50%);
+				background: #ffffff;
+				transition: .4s ease-out;
+			}
+			&:hover {
+				color: #ffffff;
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
 
 // Header
 .header {
@@ -208,8 +251,11 @@
 	}
 
 	p {
-		font-size: 13px;
+		font-size: 13px; font-family: $s-book;
 		opacity: 0.2;
+		span {
+			font-family: $s-medium;
+		}
 	}
 }
 
@@ -247,7 +293,247 @@
 }
 
 //=======================//
-//====== Main page ======//
+//====== Main Page ======//
+//=======================//
+.main {
+	&-intro {
+		&-header {
+			padding-top: 10px; margin-bottom: 57px;
+			h1 {
+				font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 134px; letter-spacing: -3.2px;
+				position: relative; left: -10px;
+				span {
+					font-family: $cp-light-LC; text-transform: initial; letter-spacing: -8.3px;
+				}
+			}
+		}
+
+		&-body {
+			p {
+				font-size: 16px; font-family: $s-regular; line-height: 26px;
+				margin-bottom: 20px;
+			}
+
+			a {
+				width: 398px;
+			}
+		}
+	}
+
+	&-slider {
+		padding-top: 41px;
+		p {
+			font-size: 16px; font-family: $s-regular; line-height: 26px;
+			margin-bottom: 15px;
+		}
+		h3, a {
+			font-size: 16px; font-family: $i-black; text-transform: uppercase; letter-spacing: 0.85px; line-height: 22px;
+			display: inline-block;
+		}
+		a {
+			position: relative;
+			&:after {
+				content: '';
+				display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%);
+				background: #ffffff;
+				transition: .4s ease-out;
+			}
+			&:hover {
+				color: #ffffff;
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&-info {
+		padding-top: 40px;
+		& > p {
+			font-size: 16px; font-family: $s-book; line-height: 28px;
+			margin-bottom: 18px;
+		}
+
+		ul {
+			padding-top: 13px;
+			li {
+				margin-bottom: 23px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				p, span {
+					font-size: 18px; text-transform: uppercase; letter-spacing: -0.25px;
+				}
+				p {
+					font-family: $i-black;
+					margin-bottom: 5px;
+				}
+				span {
+					font-family: $i-light;
+				}
+			}
+		}
+	}
+
+	&-map {
+		padding-top: 46px;
+		h4 {
+			font-size: 20px; font-family: $i-black; text-transform: uppercase;
+			margin-bottom: 6px;
+		}
+		ul {
+			li {
+				font-size: 14px; font-family: $s-book; line-height: 18px;
+				span {
+					font-family: $s-bold;
+				}
+			}
+		}
+	}
+}
+
+
+//=======================//
+//====== BHF Page =======//
+//=======================//
+.bhf {
+	&-intro {
+		&-header {
+			@extend .main-intro-header;
+			margin-bottom: 60px;
+		}
+		&-body {
+			@extend .main-intro-body;
+			a.btn {
+				letter-spacing: -1.3px;
+				width: calc(100% + 15px); left: -16px; top: 2px; 
+			}
+		}
+	}
+	&-slider {
+		@extend .main-slider;
+		h3 {
+			font-size: 18px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+	&-join-info {
+		ul {
+			padding-top: 3px; margin-bottom: 50px;
+			counter-reset: list; 
+			li {
+				font-size: 130px; font-family: $cp-light-LC; line-height: 115px; letter-spacing: -2.3px;
+				&:before {
+					counter-increment: list;
+					content: counter(list) ". ";
+					color: $main-light; font-size: 130px; font-family: $i-black; letter-spacing: -3.5px;
+				}
+			}
+		}
+
+		p {
+			font-size: 18px; font-family: $s-book; line-height: 26px;
+			margin-bottom: 8px;
+		}
+
+		a.btn {
+			display: block; width: 100%; margin-top: 46px; padding: 13px 27px 24px; left: 0;
+			border-width: 3px;
+		}
+	}
+
+	&-activation {
+		form {
+			position: relative; z-index: 5; padding-top: 115px;
+			.floating-labels {
+				position: relative; margin-bottom: 45px;
+				input {
+					
+				}
+				label {
+					font-size: 18px; font-family: $s-regular;
+					position: absolute; top: 4px; left: 0;
+					transition: .15s ease-out;
+					pointer-events: none;
+					opacity: 0.2;
+				}
+				input:valid ~ label, select:valid ~ label {
+					font-size: 12px; font-family: $i-black; text-transform: uppercase;
+					top: -22px;
+					opacity: 1;
+				}
+			}
+			select {
+				font-size: 18px; font-family: $s-regular; line-height: 26px;
+				width: 100%; display: block; padding-bottom: 9px;
+				background: transparent; border: none; border-bottom: solid 3px #ffffff;
+				option {
+					color: $main-dark;
+				}
+			}
+			input {
+				&[type=text] {
+					font-size: 18px; font-family: $s-regular; line-height: 26px;
+					display: block; width: 100%; padding-bottom: 9px;
+					background: transparent; border: none; border-bottom: solid 3px #ffffff;
+				}
+				&[type=checkbox] {
+					display: none;
+				}
+			}
+			label {
+				font-size: 12px; font-family: $s-regular;
+				&.agreement {
+					line-height: 16px;
+					padding-left: 45px; position: relative; top: -4px; margin-bottom: 77px;
+					&:before {
+						content: '\f00c';
+						color: transparent; font: normal normal normal 22px FontAwesome;
+						display: block; width: 32px; height: 32px; padding: 2px 0 0 2px; position: absolute; left: 0; top: 4px;
+						border: solid 3px $main-light;
+						opacity: 1; cursor: pointer; transition: 0.15s ease-out;
+					}
+					span {
+						opacity: 0.2;
+					}
+					a {
+						position: relative; display: inline-block;
+						opacity: 0.2;
+						transition: .4s ease-out;
+						&:after {
+							content: '';
+							display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: -1px; transform: translateX(-50%);
+							background: #ffffff;
+							transition: 0.4s ease-out;
+						}
+						&:hover, &:focus, &:active {
+							color: #ffffff;
+							opacity: 1;
+							&:after {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+			input[type=checkbox]:checked ~ label {
+				&:before {
+					color: $main-light;
+				}
+			}
+			button {
+				@extend .btn;
+				left: 0; width: 100%; padding: 13px 27px 24px;
+				border-width: 3px;
+			}
+		}
+	}
+}
+
+//=======================//
+//===== Burger Page =====//
 //=======================//
 // intro
 .intro {
@@ -336,9 +622,9 @@
 			flex-wrap: wrap;
 		}
 		& > p {
-			// НЕТ НУЖНЫХ ШРИФТОВ!!!!
-			font-size: 18px; font-family: sans-serif;
-			width: 430px;
+			
+			font-size: 18px; font-family: $s-regular; line-height: 32px;
+			width: 430px; position: relative; top: -7px;
 			@include respond-to(sm) {
 				width: 100%; margin-bottom: 30px;
 			}
@@ -368,8 +654,8 @@
 				}
 
 				p {
-					// НЕТ НУЖНЫХ ШРИФТОВ!!!!
-					font-size: 12px; font-family: sans-serif; line-height: 18px; letter-spacing: 1px;
+					
+					font-size: 12px; font-family: $s-regular; line-height: 18px;
 					max-width: 175px;
 				}
 			}
@@ -431,13 +717,13 @@
 	}
 
 	div {
-		width: calc(100% - 390px); padding-left: 30px;
+		width: calc(100% - 390px); padding-left: 28px;
 		@include respond-to(sm) {
 			width: 100%; padding: 0;
 		}
 		p {
-			// НЕТ НУЖНЫХ ШРИФТОВ!!!!
-			font-size: 18px; font-family: sans-serif; line-height: 32px; letter-spacing: 1px;
+			
+			font-size: 18px; font-family: $s-regular; line-height: 32px; letter-spacing: 0.2px;
 			@include respond-to(sm) {
 				font-size: 16px; line-height: 22px;
 			}
@@ -461,8 +747,8 @@
 		padding-top: 75px;
 	}
 	p {
-		// НЕТ НУЖНЫХ ШРИФТОВ!!!!
-		font-size: 18px; font-family: sans-serif; line-height: 26px; text-shadow: 1px 1px 0 #000;
+		
+		font-size: 18px; font-family: $s-book; line-height: 26px; text-shadow: 1px 1px 0 #000;
 		width: 345px;
 		@include respond-to(xs) {
 			font-size: 16px; line-height: 22px;
@@ -535,8 +821,8 @@
 				}
 
 				p {
-					// НЕТ НУЖНЫХ ШРИФТОВ!!!!
-					font-size: 18px; font-family: sans-serif; font-weight: 400; line-height: 26px;
+					
+					font-size: 18px; font-family: $s-book; font-weight: 400; line-height: 26px;
 					@include respond-to(md) {
 						font-size: 16px; line-height: 24px;
 					}
