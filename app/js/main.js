@@ -10,7 +10,8 @@ $(document).ready(function() {
 
 	$('.js-burgerToggle').click(function(){
 		$(this).toggleClass('active');
-		$('.header-menu').toggleClass('active');
+		$('.wr-navigation').toggleClass('active');
+		$('body').toggleClass('ov-hidden');
 
 		return false;
 	});

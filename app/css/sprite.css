@@ -18,175 +18,235 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-add-1-checked {
   background-image: url(../img/sprite.png);
-  background-position: 0px -393px;
+  background-position: -534px -81px;
   width: 88px;
   height: 81px;
 }
 .icon-add-1 {
   background-image: url(../img/sprite.png);
-  background-position: -343px -182px;
+  background-position: -534px 0px;
   width: 88px;
   height: 81px;
 }
 .icon-add-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -171px -393px;
+  background-position: -534px -162px;
   width: 83px;
   height: 78px;
 }
 .icon-add-2 {
   background-image: url(../img/sprite.png);
-  background-position: -88px -393px;
+  background-position: -534px -240px;
   width: 83px;
   height: 78px;
 }
 .icon-add-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: -437px 0px;
+  background-position: -435px -83px;
   width: 99px;
   height: 83px;
 }
 .icon-add-3 {
   background-image: url(../img/sprite.png);
-  background-position: -437px -83px;
+  background-position: -435px 0px;
   width: 99px;
   height: 83px;
 }
 .icon-add-4-checked {
   background-image: url(../img/sprite.png);
-  background-position: -121px 0px;
+  background-position: 0px 0px;
   width: 121px;
   height: 84px;
 }
 .icon-add-4 {
   background-image: url(../img/sprite.png);
-  background-position: 0px 0px;
+  background-position: -121px 0px;
   width: 121px;
   height: 84px;
 }
 .icon-add-5-checked {
   background-image: url(../img/sprite.png);
-  background-position: -104px -311px;
+  background-position: -292px -311px;
   width: 122px;
   height: 67px;
 }
 .icon-add-5 {
   background-image: url(../img/sprite.png);
-  background-position: -226px -311px;
+  background-position: 0px -402px;
   width: 122px;
   height: 67px;
 }
 .icon-add-6-checked {
   background-image: url(../img/sprite.png);
-  background-position: -242px 0px;
+  background-position: -242px -86px;
   width: 101px;
   height: 86px;
 }
 .icon-add-6 {
   background-image: url(../img/sprite.png);
-  background-position: -242px -86px;
+  background-position: -242px 0px;
   width: 101px;
   height: 86px;
 }
 .icon-add-7-checked {
   background-image: url(../img/sprite.png);
-  background-position: 0px -311px;
+  background-position: -204px -226px;
   width: 104px;
   height: 82px;
 }
 .icon-add-7 {
   background-image: url(../img/sprite.png);
-  background-position: -204px -226px;
+  background-position: -188px -311px;
   width: 104px;
   height: 82px;
 }
 .icon-add-8-checked {
   background-image: url(../img/sprite.png);
-  background-position: 0px -84px;
+  background-position: 0px -155px;
   width: 138px;
   height: 71px;
 }
 .icon-add-8 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -155px;
+  background-position: 0px -84px;
   width: 138px;
   height: 71px;
 }
 .icon-add-9-checked {
   background-image: url(../img/sprite.png);
-  background-position: -437px -166px;
+  background-position: -435px -251px;
   width: 91px;
   height: 85px;
 }
 .icon-add-9 {
   background-image: url(../img/sprite.png);
-  background-position: -437px -251px;
+  background-position: -435px -166px;
   width: 91px;
   height: 85px;
 }
+.icon-bottle-light {
+  background-image: url(../img/sprite.png);
+  background-position: -435px -336px;
+  width: 61px;
+  height: 62px;
+}
+.icon-bottle {
+  background-image: url(../img/sprite.png);
+  background-position: -138px -84px;
+  width: 61px;
+  height: 62px;
+}
+.icon-child-bottle {
+  background-image: url(../img/sprite.png);
+  background-position: -173px -402px;
+  width: 47px;
+  height: 48px;
+}
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -490px -336px;
+  background-position: -343px -287px;
   width: 24px;
   height: 24px;
 }
+.icon-coffee {
+  background-image: url(../img/sprite.png);
+  background-position: -496px -336px;
+  width: 32px;
+  height: 48px;
+}
 .icon-logo-footer {
   background-image: url(../img/sprite.png);
-  background-position: -348px -311px;
+  background-position: -138px -155px;
   width: 61px;
   height: 60px;
 }
 .icon-logo-header {
   background-image: url(../img/sprite.png);
-  background-position: -463px -336px;
+  background-position: -199px -116px;
   width: 27px;
   height: 27px;
 }
-.icon-meat-1-checked {
+.icon-lunch {
   background-image: url(../img/sprite.png);
-  background-position: 0px -226px;
-  width: 102px;
-  height: 85px;
+  background-position: -242px -172px;
+  width: 71px;
+  height: 47px;
 }
-.icon-meat-1 {
+.icon-meat-1-checked {
   background-image: url(../img/sprite.png);
   background-position: -102px -226px;
   width: 102px;
   height: 85px;
 }
+.icon-meat-1 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -226px;
+  width: 102px;
+  height: 85px;
+}
 .icon-meat-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -138px -84px;
+  background-position: -534px -388px;
   width: 74px;
   height: 70px;
 }
 .icon-meat-2 {
   background-image: url(../img/sprite.png);
-  background-position: -138px -155px;
+  background-position: -534px -318px;
   width: 74px;
   height: 70px;
 }
 .icon-meat-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: -343px -91px;
+  background-position: 0px -311px;
   width: 94px;
   height: 91px;
 }
 .icon-meat-3 {
   background-image: url(../img/sprite.png);
-  background-position: -343px 0px;
+  background-position: -94px -311px;
   width: 94px;
   height: 91px;
 }
+.icon-menu {
+  background-image: url(../img/sprite.png);
+  background-position: -199px -84px;
+  width: 36px;
+  height: 32px;
+}
+.icon-omlette {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -402px;
+  width: 51px;
+  height: 50px;
+}
 .icon-placeholder-active {
   background-image: url(../img/sprite.png);
-  background-position: -254px -393px;
+  background-position: 0px -469px;
   width: 52px;
   height: 72px;
 }
 .icon-placeholder {
   background-image: url(../img/sprite.png);
-  background-position: -437px -336px;
+  background-position: -313px -172px;
   width: 26px;
   height: 36px;
+}
+.icon-pushk-only {
+  background-image: url(../img/sprite.png);
+  background-position: -343px 0px;
+  width: 92px;
+  height: 93px;
+}
+.icon-summer-prop {
+  background-image: url(../img/sprite.png);
+  background-position: -343px -190px;
+  width: 88px;
+  height: 97px;
+}
+.icon-summer-proposition-inverse {
+  background-image: url(../img/sprite.png);
+  background-position: -343px -93px;
+  width: 88px;
+  height: 97px;
 }
