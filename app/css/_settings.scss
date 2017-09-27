@@ -63,6 +63,11 @@ body {
 		color: #ffffff;
 		-webkit-font-smoothing: antialiased !important;
 	}
+	&.light {
+		* {
+			color: #080808;
+		}
+	}
 }
 
 /* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */

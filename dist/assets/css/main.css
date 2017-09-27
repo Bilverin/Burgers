@@ -7933,6 +7933,8 @@ body {
   body * {
     color: #ffffff;
     -webkit-font-smoothing: antialiased !important; }
+  body.light * {
+    color: #080808; }
 
 /* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
 h1, h2, h3, h4, h5, h6, p, ul {
@@ -7990,13 +7992,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-add-1-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -81px;
+  background-position: -534px 0px;
   width: 88px;
   height: 81px; }
 
 .icon-add-1 {
   background-image: url(../img/sprite.png);
-  background-position: -534px 0px;
+  background-position: -534px -81px;
   width: 88px;
   height: 81px; }
 
@@ -8098,19 +8100,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-bottle-light {
   background-image: url(../img/sprite.png);
-  background-position: -435px -336px;
+  background-position: -138px -84px;
   width: 61px;
   height: 62px; }
 
 .icon-bottle {
   background-image: url(../img/sprite.png);
-  background-position: -138px -84px;
+  background-position: -435px -336px;
   width: 61px;
   height: 62px; }
 
 .icon-child-bottle {
   background-image: url(../img/sprite.png);
-  background-position: -173px -402px;
+  background-position: -234px -402px;
   width: 47px;
   height: 48px; }
 
@@ -8126,11 +8128,23 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 32px;
   height: 48px; }
 
-.icon-logo-footer {
+.icon-logo-footer-dark {
   background-image: url(../img/sprite.png);
   background-position: -138px -155px;
   width: 61px;
   height: 60px; }
+
+.icon-logo-footer {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -402px;
+  width: 61px;
+  height: 60px; }
+
+.icon-logo-header-dark {
+  background-image: url(../img/sprite.png);
+  background-position: -199px -155px;
+  width: 27px;
+  height: 27px; }
 
 .icon-logo-header {
   background-image: url(../img/sprite.png);
@@ -8158,13 +8172,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-meat-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -388px;
+  background-position: -534px -318px;
   width: 74px;
   height: 70px; }
 
 .icon-meat-2 {
   background-image: url(../img/sprite.png);
-  background-position: -534px -318px;
+  background-position: -534px -388px;
   width: 74px;
   height: 70px; }
 
@@ -8188,7 +8202,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-omlette {
   background-image: url(../img/sprite.png);
-  background-position: -122px -402px;
+  background-position: -183px -402px;
   width: 51px;
   height: 50px; }
 
@@ -8447,6 +8461,12 @@ ul.header-socials {
         color: #ffffff; }
         ul.header-socials li a:hover:after {
           width: 100%; }
+      .light ul.header-socials li a {
+        text-shadow: none; }
+        .light ul.header-socials li a:after {
+          background: #080808; }
+        .light ul.header-socials li a:hover {
+          color: #080808; }
 
 .header {
   display: -webkit-box;
@@ -8522,6 +8542,8 @@ ul.header-socials {
         -webkit-transform: translateX(-50%) scale(1);
         -ms-transform: translateX(-50%) scale(1);
         transform: translateX(-50%) scale(1); }
+      .light .header a.burger span {
+        background: #080808; }
   .header nav {
     padding-top: 3px; }
     @media (max-width: 991px) {
@@ -8568,6 +8590,10 @@ ul.header-socials {
           transition: .4s ease-out; }
         .header nav ul.navigation li a:hover:after {
           width: 100%; }
+        .light .header nav ul.navigation li a {
+          color: #080808; }
+          .light .header nav ul.navigation li a:after {
+            background: #080808; }
 
 .navigation nav {
   position: relative;
@@ -8587,6 +8613,10 @@ ul.header-socials {
       .navigation nav ul.links li a:hover {
         color: #ffffff;
         font-family: "intro-thin", sans-serif; }
+      .light .navigation nav ul.links li a {
+        color: #080808; }
+        .light .navigation nav ul.links li a:hover {
+          color: #080808; }
   .navigation nav ul.socials {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8693,6 +8723,10 @@ ul.header-socials {
           transition: .4s ease-out; }
         .footer nav ul li a:hover:after {
           width: 100%; }
+        .light .footer nav ul li a {
+          color: #080808; }
+          .light .footer nav ul li a:after {
+            background: #080808; }
 
 .footer ul.socials {
   display: -webkit-box;
@@ -9151,6 +9185,19 @@ ul.header-socials {
     .burgerPlace-list > ul > li a {
       font-size: 14px;
       font-family: "stolzl-book", sans-serif; }
+
+.burgerPlace-menu h2 {
+  font-size: 170px;
+  font-family: "intro-black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -13px; }
+
+.burgerPlace-menu p {
+  font-size: 36px;
+  font-family: "code-pro-light-lc", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  padding-left: 10px; }
 
 .burgers-header {
   padding-top: 13px;
@@ -9783,8 +9830,296 @@ ul.header-socials {
     .add ul li input:checked + label [class$='checked'] {
       display: inline-block; }
 
+.company-intro h1 {
+  font-size: 170px;
+  font-family: "intro-black", sans-serif;
+  text-transform: uppercase;
+  line-height: 140px;
+  letter-spacing: -6px;
+  margin-bottom: 20px; }
+  .company-intro h1:last-child {
+    margin-bottom: 0; }
+
+.company-intro p {
+  font-size: 24px;
+  font-family: "intro-light", sans-serif;
+  text-transform: uppercase;
+  line-height: 32px;
+  letter-spacing: 0.65px;
+  margin-bottom: 15px; }
+  .company-intro p:last-child {
+    margin-bottom: 0; }
+
+.company-mission {
+  padding-top: 33px; }
+  .company-mission p {
+    font-size: 16px;
+    font-family: "stolzl-book", sans-serif;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    margin-bottom: 28px; }
+    .company-mission p:last-child {
+      margin-bottom: 0; }
+
+.company-worth {
+  padding-top: 32px; }
+  .company-worth ul li {
+    font-size: 16px;
+    font-family: "stolzl-book", sans-serif;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+    padding-left: 23px;
+    position: relative;
+    margin-bottom: 15px; }
+    .company-worth ul li:before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      left: 8px;
+      top: 11px;
+      background: #080808;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+
+.company-command {
+  padding-top: 40px;
+  position: relative;
+  z-index: 3; }
+  .company-command p {
+    font-size: 16px;
+    font-family: "stolzl-book", sans-serif;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    margin-bottom: 25px; }
+  .company-command ul li {
+    font-size: 16px;
+    font-family: "stolzl-book", sans-serif;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 10px; }
+    .company-command ul li:last-child {
+      margin-bottom: 0; }
+    .company-command ul li:before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      background: #080808;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+
+.company-vacancy {
+  padding-top: 48px;
+  position: relative;
+  left: -5px;
+  z-index: 3; }
+  .company-vacancy h3 {
+    color: #ffffff;
+    font-size: 42px;
+    font-family: "code-pro-light", sans-serif;
+    text-transform: uppercase;
+    line-height: 36px;
+    margin-bottom: 30px; }
+  .company-vacancy h4 {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: "intro-light", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .company-vacancy ul {
+    margin-bottom: 40px; }
+    .company-vacancy ul li {
+      margin-bottom: 24px; }
+      .company-vacancy ul li:last-child {
+        margin-bottom: 0; }
+      .company-vacancy ul li a {
+        color: #ffffff;
+        font-size: 42px;
+        font-family: "intro-black", sans-serif;
+        text-transform: uppercase;
+        line-height: 33px;
+        letter-spacing: -0.5px;
+        position: relative; }
+        .company-vacancy ul li a:after {
+          content: '';
+          display: block;
+          width: 0%;
+          height: 3px;
+          position: absolute;
+          left: 50%;
+          bottom: -2px;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background: #ffffff;
+          -webkit-transition: .4s ease-out;
+          transition: .4s ease-out; }
+        .company-vacancy ul li a:hover:after {
+          width: 100%; }
+      .company-vacancy ul li h4 a {
+        font-size: 60px; }
+  .company-vacancy > a {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "intro-black", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    position: relative; }
+    .company-vacancy > a:after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      bottom: -2px;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background: #ffffff;
+      -webkit-transition: 0.4s ease-out;
+      transition: 0.4s ease-out; }
+    .company-vacancy > a:hover:after {
+      width: 100%; }
+  .company-vacancy-info {
+    padding-top: 65px; }
+    .company-vacancy-info h3 {
+      font-size: 18px;
+      font-family: "intro-black", sans-serif;
+      text-transform: uppercase;
+      line-height: 24px;
+      margin-bottom: 18px; }
+    .company-vacancy-info ul {
+      margin-bottom: 45px; }
+      .company-vacancy-info ul:last-child {
+        margin-bottom: 0; }
+      .company-vacancy-info ul li {
+        font-size: 16px;
+        font-family: "stolzl-book", sans-serif;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        padding-left: 15px;
+        position: relative;
+        margin-bottom: 10px; }
+        .company-vacancy-info ul li:last-child {
+          margin-bottom: 0; }
+        .company-vacancy-info ul li:before {
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px;
+          position: absolute;
+          left: 0px;
+          top: 10px;
+          background: #080808;
+          -webkit-border-radius: 50%;
+          border-radius: 50%; }
+  .company-vacancy-another {
+    position: relative;
+    z-index: 3;
+    padding-top: 65px; }
+    .company-vacancy-another h4 {
+      color: #ffffff;
+      font-size: 24px;
+      font-family: "intro-light", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 33px; }
+    .company-vacancy-another ul {
+      margin-bottom: 40px; }
+      .company-vacancy-another ul li {
+        margin-bottom: 21px; }
+        .company-vacancy-another ul li:last-child {
+          margin-bottom: 0; }
+        .company-vacancy-another ul li a {
+          color: #ffffff;
+          font-size: 60px;
+          line-height: 55px;
+          font-family: "intro-black", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: -0.5px;
+          position: relative; }
+          .company-vacancy-another ul li a:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 3px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: #ffffff;
+            -webkit-transition: .4s ease-out;
+            transition: .4s ease-out; }
+          .company-vacancy-another ul li a:hover:after {
+            width: 100%; }
+
+.company-news {
+  padding-top: 40px; }
+  .company-news > p {
+    font-size: 16px;
+    font-family: "stolzl-book", sans-serif;
+    line-height: 28px;
+    margin-bottom: 15px; }
+  .company-news ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1000%;
+    padding-top: 32px; }
+    .company-news ul li {
+      width: 345px;
+      margin-right: 50px; }
+      .company-news ul li:last-child {
+        margin-right: 0; }
+      .company-news ul li a {
+        display: inline-block; }
+        .company-news ul li a:hover figure figcaption * {
+          color: #fbb040; }
+        .company-news ul li a figure figcaption {
+          padding-top: 11px; }
+          .company-news ul li a figure figcaption p {
+            font-size: 12px;
+            font-family: "stolzl-regular", sans-serif;
+            margin-bottom: 6px; }
+          .company-news ul li a figure figcaption h3 {
+            font-size: 16px;
+            font-family: "intro-black", sans-serif;
+            text-transform: uppercase;
+            line-height: 22px;
+            letter-spacing: -0.15px; }
+
+.company-contacts {
+  padding-top: 48px; }
+  .company-contacts ul li {
+    margin-bottom: 22px; }
+    .company-contacts ul li:last-child {
+      margin-bottom: 0; }
+    .company-contacts ul li h3 {
+      font-size: 18px;
+      font-family: "intro-black", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -0.2px;
+      margin-bottom: 3px; }
+    .company-contacts ul li p {
+      font-size: 18px;
+      font-family: "intro-light", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -0.3px; }
+
 body {
   background: #080808; }
+  body.light {
+    background: #ffffff; }
 
 .app {
   min-width: 320px;
@@ -9823,6 +10158,8 @@ body {
       -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
       transform: translateX(0); }
+    .light .app .wr-navigation {
+      background: #ffffff; }
   .app .wr-main-intro {
     position: relative;
     padding-bottom: 267px; }
@@ -9977,6 +10314,8 @@ body {
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
+  .app .wr-burgerPlace-menu {
+    padding: 11px 0 26px; }
   .app .wr-burgers .row > div:last-child .menu-list.menu a:last-child {
     margin-bottom: 0; }
   .app .wr-burgers .row > div:last-child .menu-list a:last-child {
@@ -9997,5 +10336,81 @@ body {
       padding: 0 0 123px; }
     .app .wr-menu-breakfasts {
       padding: 0 0 64px; }
+  .app .wr-company-intro {
+    padding: 14px 0 135px; }
+  .app .wr-company-mission {
+    padding: 0 0 162px; }
+    .app .wr-company-mission figure {
+      position: absolute;
+      right: 42.85714%;
+      top: -314px;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+      z-index: -1; }
+  .app .wr-company-worth {
+    padding: 0 0 137px; }
+  .app .wr-company-command {
+    padding: 0 0 188px; }
+    .app .wr-company-command figure {
+      position: absolute;
+      right: 42.85714%;
+      top: 61px;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+      z-index: -1; }
+  .app .wr-company-vacancy {
+    padding: 54px 0 50px; }
+    .app .wr-company-vacancy:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 42.85714%;
+      top: 0;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+      z-index: 2;
+      background: rgba(19, 17, 18, 0.4); }
+    .app .wr-company-vacancy:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 42.85714%;
+      top: 0;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+      z-index: 1;
+      background: url("../img/company-vacancy.jpg") 0px -3px no-repeat; }
+    .app .wr-company-vacancy a.close {
+      position: absolute;
+      right: 82px;
+      top: 89px;
+      z-index: 20;
+      display: block;
+      width: 30px;
+      height: 30px;
+      opacity: 0.6;
+      -webkit-transition: 0.3s ease-out;
+      transition: 0.3s ease-out; }
+      .app .wr-company-vacancy a.close i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+      .app .wr-company-vacancy a.close:hover {
+        opacity: 1; }
+  .app .wr-company-news {
+    padding: 0 0 266px; }
+  .app .wr-company-contacts {
+    padding: 0 0 146px; }
   .app .wr-footer {
     padding: 0 0 65px; }
