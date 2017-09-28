@@ -1256,67 +1256,50 @@ ul.header-socials {
 			flex-wrap: wrap;
 		}
 		li {
-			width: 33.33333%;
+			width: 33.33333%; padding-top: 110px; padding-right: 50px; position: relative;
 			@include respond-to(sm) {
-				width: 100%; margin-bottom: 20px;
+				width: 100%; margin-bottom: 20px; padding-right: 0;
 			}
 			input {
 				display: none;
 			}
 
-			label {
-				display: block; padding-top: 110px; padding-right: 50px; position: relative;
-				cursor: pointer;
-				@include respond-to(sm) {
-					padding-right: 0;
-				}
-
-				i {
-					position: absolute; left: 0; top: 0;
-				}
-
-				[class*='icon-meat-1'] {
-					left: -6px;
-					@include respond-to(sm) {
-						left: 0;
-					}
-				}
-				[class*='icon-meat-2'] {
-					left: 4px; top: 5px;
-					@include respond-to(sm) {
-						left: 0;
-					}
-				}
-				[class*='icon-meat-3'] {
-					left: -16px; top: 4px;
-					@include respond-to(sm) {
-						left: 0;
-					}
-				}
-				[class$='checked'] {
-					display: none;
-				}
-
-				h3 {
-					font-size: 18px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.25px;
-					margin-bottom: 8px;
-				}
-
-				p {
-					
-					font-size: 18px; font-family: $s-book; font-weight: 400; line-height: 26px;
-					@include respond-to(md) {
-						font-size: 16px; line-height: 24px;
-					}
-				}
+			i {
+				position: absolute; left: 0; top: 0;
 			}
 
-			input:checked + label {
-				[class*='icon-meat'] {
-					display: none;
+			[class*='icon-meat-1'] {
+				left: -6px;
+				@include respond-to(sm) {
+					left: 0;
 				}
-				[class$='checked'] {
-					display: inline-block;
+			}
+			[class*='icon-meat-2'] {
+				left: 4px; top: 5px;
+				@include respond-to(sm) {
+					left: 0;
+				}
+			}
+			[class*='icon-meat-3'] {
+				left: -16px; top: 4px;
+				@include respond-to(sm) {
+					left: 0;
+				}
+			}
+			[class$='checked'] {
+				display: none;
+			}
+
+			h3 {
+				font-size: 18px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.25px;
+				margin-bottom: 8px;
+			}
+
+			p {
+
+				font-size: 18px; font-family: $s-book; font-weight: 400; line-height: 26px;
+				@include respond-to(md) {
+					font-size: 16px; line-height: 24px;
 				}
 			}
 		}
@@ -1331,7 +1314,7 @@ ul.header-socials {
 			width: 100%;
 		}
 		li {
-			width: 25%; margin-bottom: 84px;
+			width: 25%; margin-bottom: 84px; padding-top: 100px; position: relative;
 			@include respond-to(1099px) {
 				text-align: center;
 				width: 33.33333%;
@@ -1340,68 +1323,50 @@ ul.header-socials {
 				width: 50%; margin-bottom: 40px;
 			}
 			@include respond-to(xs) {
-				margin-bottom: 30px;
+				margin-bottom: 30px; padding-top: 80px;
 			}
-			input {
+
+			i {
+				position: absolute; left: 0; top: 0;
+				@include respond-to(xs) {
+					transform: scale(0.7);
+				}
+			}
+
+			[class*='icon-add-1'] {
+				left: -1px; top: 2px;
+			}
+			[class*='icon-add-2'] {
+				left: 0; top: -8px;
+			}
+			[class*='icon-add-3'] {
+				left: -9px; top: -8px;
+			}
+			[class*='icon-add-4'] {
+				left: 0; top: -6px;
+			}
+			[class*='icon-add-5'] {
+				left: -14px; top: 15px;
+			}
+			[class*='icon-add-6'] {
+				left: -1px; top: 1px;
+			}
+			[class*='icon-add-7'] {
+				left: -1px; top: 6px;
+			}
+			[class*='icon-add-8'] {
+				left: -6px; top: 11px;
+			}
+			[class*='icon-add-9'] {
+				left: -12px; top: 7px;
+			}
+
+			[class$='checked'] {
 				display: none;
 			}
 
-			label {
-				cursor: pointer; padding-top: 100px; position: relative; margin-bottom: 0;
-				@include respond-to(xs) {
-					padding-top: 80px;
-				}
-				i {
-					position: absolute; left: 0; top: 0;
-					@include respond-to(xs) {
-						transform: scale(0.7);
-					}
-				}
-
-				[class*='icon-add-1'] {
-					left: -1px; top: 2px;
-				}
-				[class*='icon-add-2'] {
-					left: 0; top: -8px;
-				}
-				[class*='icon-add-3'] {
-					left: -9px; top: -8px;
-				}
-				[class*='icon-add-4'] {
-					left: 0; top: -6px;
-				}
-				[class*='icon-add-5'] {
-					left: -14px; top: 15px;
-				}
-				[class*='icon-add-6'] {
-					left: -1px; top: 1px;
-				}
-				[class*='icon-add-7'] {
-					left: -1px; top: 6px;
-				}
-				[class*='icon-add-8'] {
-					left: -6px; top: 11px;
-				}
-				[class*='icon-add-9'] {
-					left: -12px; top: 7px;
-				}
-
-				[class$='checked'] {
-					display: none;
-				}
-
-				p {
-					font-size: 18px; font-family: $i-black; text-transform: uppercase; line-height: 24px; letter-spacing: -0.2px;
-				}
-			}
-
-			input:checked + label {
-				[class*='icon-add'] {
-					display: none;
-				}
-				[class$='checked'] {
-					display: inline-block;
-				}
+			p {
+				font-size: 18px; font-family: $i-black; text-transform: uppercase; line-height: 24px; letter-spacing: -0.2px;
 			}
 		}
 	}
@@ -1542,7 +1507,13 @@ ul.header-socials {
 		}
 
 		&-info {
-			padding-top: 65px;
+			margin-top: 65px; overflow-y: auto; height: 400px; padding-right: 15px;
+			&::-webkit-scrollbar {
+				width: 6px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: $main-dark; border-radius: 50px;
+			}
 			h3 {
 				font-size: 18px; font-family: $i-black; text-transform: uppercase; line-height: 24px;
 				margin-bottom: 18px;
@@ -1665,6 +1636,89 @@ ul.header-socials {
 
 				p {
 					font-size: 18px; font-family: $i-light; text-transform: uppercase; letter-spacing: -0.3px;
+				}
+			}
+		}
+	}
+}
+
+
+//=======================//
+//======= Popups ========//
+//=======================//
+.popup {
+	&-bhf {
+		&-activation {
+			display: none; position: fixed; left: 0; top: 0;width: 100%; height: 100%; z-index: 1000; padding: 84px 0 140px;
+			background: $main-dark;
+			overflow-y: auto; overflow-x: hidden;
+
+			&:before {
+				content: '';
+				display: block; width: 100%; height: 100%; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
+				background: rgba(19,17,18,0.4);
+			}
+			&:after {
+				content: '';
+				display: block; width: 100%; height: 100%; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 1;
+				background: url('../img/bhf-activate.jpg') -270px -70px no-repeat;
+			}
+			a.close {
+				position: fixed; right: 82px; top: 89px; z-index: 20; display: block; width: 30px; height: 30px;
+				opacity: 0.6;
+				transition: 0.3s ease-out;
+				i {
+					position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+				}
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			.light & {
+				background: #ffffff;
+			}
+		}
+	}
+
+	&-company {
+		&-vacancy {
+			display: none; position: fixed; left: 0; top: 0;width: 100%; height: 100%; z-index: 1000; padding: 54px 0 0;
+			background: $main-dark;
+			overflow-y: auto; overflow-x: hidden;
+
+			&:before {
+				content: '';
+				display: block; width: 100%; height: 100%; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
+				background: rgba(19,17,18,0.4);
+			}
+			&:after {
+				content: '';
+				display: block; width: 100%; height: 100%; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 1;
+				background: url('../img/company-vacancy.jpg') 0px -3px no-repeat;
+			}
+
+			a.close {
+				position: fixed; right: 82px; top: 89px; z-index: 20; display: block; width: 30px; height: 30px;
+				opacity: 0.6;
+				transition: 0.3s ease-out;
+				i {
+					position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+				}
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			.light & {
+				background: #ffffff;
+			}
+
+			& > div {
+				display: none; position: absolute; left: 50%; transform: translateX(-50%); z-index: 100; padding: 0 0 50px;
+				&.active-popup {
+					// position: relative; left: 0; transform: translateX(0);
+					z-index: 105;
 				}
 			}
 		}

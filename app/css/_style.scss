@@ -133,30 +133,6 @@ body {
 			&-join-info {
 				padding-bottom: 99px;
 			}
-			&-activation {
-				padding: 84px 0 140px;
-				&:before {
-					content: '';
-					display: block; width: 100%; height: 100%; position: absolute; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
-					background: rgba(19,17,18,0.4);
-				}
-				&:after {
-					content: '';
-					display: block; width: 100%; height: 100%; position: absolute; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 1;
-					background: url('../img/bhf-activate.jpg') -270px -70px no-repeat;
-				}
-				a.close {
-					position: absolute; right: 82px; top: 89px; z-index: 20; display: block; width: 30px; height: 30px;
-					opacity: 0.6;
-					transition: 0.3s ease-out;
-					i {
-						position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-					}
-					&:hover {
-						opacity: 1;
-					}
-				}
-			}
 		}
 
 		&-burgerPlace {
@@ -277,31 +253,6 @@ body {
 				padding: 0 0 188px;
 				figure {
 					position: absolute; right: 42.85714%; top: 61px; transform: translateX(100%); z-index: -1;
-				}
-			}
-
-			&-vacancy {
-				padding: 54px 0 50px;
-				&:before {
-					content: '';
-					display: block; width: 100%; height: 100%; position: absolute; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
-					background: rgba(19,17,18,0.4);
-				}
-				&:after {
-					content: '';
-					display: block; width: 100%; height: 100%; position: absolute; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 1;
-					background: url('../img/company-vacancy.jpg') 0px -3px no-repeat;
-				}
-				a.close {
-					position: absolute; right: 82px; top: 89px; z-index: 20; display: block; width: 30px; height: 30px;
-					opacity: 0.6;
-					transition: 0.3s ease-out;
-					i {
-						position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-					}
-					&:hover {
-						opacity: 1;
-					}
 				}
 			}
 

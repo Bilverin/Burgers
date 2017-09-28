@@ -16,4 +16,33 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// popups
+	$('.js-section-popup').click(function(e){
+		e.preventDefault();
+
+		var vacancyLink = $(this).attr('href');
+		$('.' + vacancyLink).addClass('active-popup').fadeIn();
+		$('.popup-company-vacancy').fadeIn();
+		$('body').addClass('ov-hidden');
+		
+	});
+	$('.js-section-popup-change').click(function(e){
+		e.preventDefault();
+
+		var vacancyLink = $(this).attr('href'),
+			activePopup = $('.active-popup');
+		$(activePopup).removeClass('active-popup').fadeOut();
+		$('.' + vacancyLink).addClass('active-popup').fadeIn();
+		
+	});
+	$('.js-popup-close').click(function(e){
+		e.preventDefault();
+
+		var activePopup = $('.active-popup');
+		$(activePopup).removeClass('active-popup');
+		$(this).parent().fadeOut(400);
+		$('.popup-company-vacancy .container').fadeOut(400);
+		$('body').removeClass('ov-hidden');
+	});
+
 });

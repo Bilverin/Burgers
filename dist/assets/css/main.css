@@ -9680,64 +9680,55 @@ ul.header-socials {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
     .meat ul li {
-      width: 33.33333%; }
+      width: 33.33333%;
+      padding-top: 110px;
+      padding-right: 50px;
+      position: relative; }
       @media (max-width: 767px) {
         .meat ul li {
           width: 100%;
-          margin-bottom: 20px; } }
+          margin-bottom: 20px;
+          padding-right: 0; } }
       .meat ul li input {
         display: none; }
-      .meat ul li label {
-        display: block;
-        padding-top: 110px;
-        padding-right: 50px;
-        position: relative;
-        cursor: pointer; }
+      .meat ul li i {
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .meat ul li [class*='icon-meat-1'] {
+        left: -6px; }
         @media (max-width: 767px) {
-          .meat ul li label {
-            padding-right: 0; } }
-        .meat ul li label i {
-          position: absolute;
-          left: 0;
-          top: 0; }
-        .meat ul li label [class*='icon-meat-1'] {
-          left: -6px; }
-          @media (max-width: 767px) {
-            .meat ul li label [class*='icon-meat-1'] {
-              left: 0; } }
-        .meat ul li label [class*='icon-meat-2'] {
-          left: 4px;
-          top: 5px; }
-          @media (max-width: 767px) {
-            .meat ul li label [class*='icon-meat-2'] {
-              left: 0; } }
-        .meat ul li label [class*='icon-meat-3'] {
-          left: -16px;
-          top: 4px; }
-          @media (max-width: 767px) {
-            .meat ul li label [class*='icon-meat-3'] {
-              left: 0; } }
-        .meat ul li label [class$='checked'] {
-          display: none; }
-        .meat ul li label h3 {
-          font-size: 18px;
-          font-family: "intro-black", sans-serif;
-          text-transform: uppercase;
-          letter-spacing: -0.25px;
-          margin-bottom: 8px; }
-        .meat ul li label p {
-          font-size: 18px;
-          font-family: "stolzl-book", sans-serif;
-          font-weight: 400;
-          line-height: 26px; }
-          @media (max-width: 991px) {
-            .meat ul li label p {
-              font-size: 16px;
-              line-height: 24px; } }
-      .meat ul li input:checked + label [class*='icon-meat'] {
+          .meat ul li [class*='icon-meat-1'] {
+            left: 0; } }
+      .meat ul li [class*='icon-meat-2'] {
+        left: 4px;
+        top: 5px; }
+        @media (max-width: 767px) {
+          .meat ul li [class*='icon-meat-2'] {
+            left: 0; } }
+      .meat ul li [class*='icon-meat-3'] {
+        left: -16px;
+        top: 4px; }
+        @media (max-width: 767px) {
+          .meat ul li [class*='icon-meat-3'] {
+            left: 0; } }
+      .meat ul li [class$='checked'] {
         display: none; }
-      .meat ul li input:checked + label [class$='checked'] {
-        display: inline-block; }
+      .meat ul li h3 {
+        font-size: 18px;
+        font-family: "intro-black", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: -0.25px;
+        margin-bottom: 8px; }
+      .meat ul li p {
+        font-size: 18px;
+        font-family: "stolzl-book", sans-serif;
+        font-weight: 400;
+        line-height: 26px; }
+        @media (max-width: 991px) {
+          .meat ul li p {
+            font-size: 16px;
+            line-height: 24px; } }
 
 .add ul {
   display: -webkit-box;
@@ -9759,7 +9750,9 @@ ul.header-socials {
       width: 100%; } }
   .add ul li {
     width: 25%;
-    margin-bottom: 84px; }
+    margin-bottom: 84px;
+    padding-top: 100px;
+    position: relative; }
     @media (max-width: 1099px) {
       .add ul li {
         text-align: center;
@@ -9770,65 +9763,52 @@ ul.header-socials {
         margin-bottom: 40px; } }
     @media (max-width: 480px) {
       .add ul li {
-        margin-bottom: 30px; } }
-    .add ul li input {
-      display: none; }
-    .add ul li label {
-      cursor: pointer;
-      padding-top: 100px;
-      position: relative;
-      margin-bottom: 0; }
+        margin-bottom: 30px;
+        padding-top: 80px; } }
+    .add ul li i {
+      position: absolute;
+      left: 0;
+      top: 0; }
       @media (max-width: 480px) {
-        .add ul li label {
-          padding-top: 80px; } }
-      .add ul li label i {
-        position: absolute;
-        left: 0;
-        top: 0; }
-        @media (max-width: 480px) {
-          .add ul li label i {
-            -webkit-transform: scale(0.7);
-            -ms-transform: scale(0.7);
-            transform: scale(0.7); } }
-      .add ul li label [class*='icon-add-1'] {
-        left: -1px;
-        top: 2px; }
-      .add ul li label [class*='icon-add-2'] {
-        left: 0;
-        top: -8px; }
-      .add ul li label [class*='icon-add-3'] {
-        left: -9px;
-        top: -8px; }
-      .add ul li label [class*='icon-add-4'] {
-        left: 0;
-        top: -6px; }
-      .add ul li label [class*='icon-add-5'] {
-        left: -14px;
-        top: 15px; }
-      .add ul li label [class*='icon-add-6'] {
-        left: -1px;
-        top: 1px; }
-      .add ul li label [class*='icon-add-7'] {
-        left: -1px;
-        top: 6px; }
-      .add ul li label [class*='icon-add-8'] {
-        left: -6px;
-        top: 11px; }
-      .add ul li label [class*='icon-add-9'] {
-        left: -12px;
-        top: 7px; }
-      .add ul li label [class$='checked'] {
-        display: none; }
-      .add ul li label p {
-        font-size: 18px;
-        font-family: "intro-black", sans-serif;
-        text-transform: uppercase;
-        line-height: 24px;
-        letter-spacing: -0.2px; }
-    .add ul li input:checked + label [class*='icon-add'] {
+        .add ul li i {
+          -webkit-transform: scale(0.7);
+          -ms-transform: scale(0.7);
+          transform: scale(0.7); } }
+    .add ul li [class*='icon-add-1'] {
+      left: -1px;
+      top: 2px; }
+    .add ul li [class*='icon-add-2'] {
+      left: 0;
+      top: -8px; }
+    .add ul li [class*='icon-add-3'] {
+      left: -9px;
+      top: -8px; }
+    .add ul li [class*='icon-add-4'] {
+      left: 0;
+      top: -6px; }
+    .add ul li [class*='icon-add-5'] {
+      left: -14px;
+      top: 15px; }
+    .add ul li [class*='icon-add-6'] {
+      left: -1px;
+      top: 1px; }
+    .add ul li [class*='icon-add-7'] {
+      left: -1px;
+      top: 6px; }
+    .add ul li [class*='icon-add-8'] {
+      left: -6px;
+      top: 11px; }
+    .add ul li [class*='icon-add-9'] {
+      left: -12px;
+      top: 7px; }
+    .add ul li [class$='checked'] {
       display: none; }
-    .add ul li input:checked + label [class$='checked'] {
-      display: inline-block; }
+    .add ul li p {
+      font-size: 18px;
+      font-family: "intro-black", sans-serif;
+      text-transform: uppercase;
+      line-height: 24px;
+      letter-spacing: -0.2px; }
 
 .company-intro h1 {
   font-size: 170px;
@@ -9989,7 +9969,16 @@ ul.header-socials {
     .company-vacancy > a:hover:after {
       width: 100%; }
   .company-vacancy-info {
-    padding-top: 65px; }
+    margin-top: 65px;
+    overflow-y: auto;
+    height: 400px;
+    padding-right: 15px; }
+    .company-vacancy-info::-webkit-scrollbar {
+      width: 6px; }
+    .company-vacancy-info::-webkit-scrollbar-thumb {
+      background: #080808;
+      -webkit-border-radius: 50px;
+      border-radius: 50px; }
     .company-vacancy-info h3 {
       font-size: 18px;
       font-family: "intro-black", sans-serif;
@@ -10116,6 +10105,139 @@ ul.header-socials {
       text-transform: uppercase;
       letter-spacing: -0.3px; }
 
+.popup-bhf-activation {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding: 84px 0 140px;
+  background: #080808;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .popup-bhf-activation:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 42.85714%;
+    top: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: 2;
+    background: rgba(19, 17, 18, 0.4); }
+  .popup-bhf-activation:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 42.85714%;
+    top: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: 1;
+    background: url("../img/bhf-activate.jpg") -270px -70px no-repeat; }
+  .popup-bhf-activation a.close {
+    position: fixed;
+    right: 82px;
+    top: 89px;
+    z-index: 20;
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out; }
+    .popup-bhf-activation a.close i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .popup-bhf-activation a.close:hover {
+      opacity: 1; }
+  .light .popup-bhf-activation {
+    background: #ffffff; }
+
+.popup-company-vacancy {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding: 54px 0 0;
+  background: #080808;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .popup-company-vacancy:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 42.85714%;
+    top: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: 2;
+    background: rgba(19, 17, 18, 0.4); }
+  .popup-company-vacancy:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 42.85714%;
+    top: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: 1;
+    background: url("../img/company-vacancy.jpg") 0px -3px no-repeat; }
+  .popup-company-vacancy a.close {
+    position: fixed;
+    right: 82px;
+    top: 89px;
+    z-index: 20;
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out; }
+    .popup-company-vacancy a.close i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .popup-company-vacancy a.close:hover {
+      opacity: 1; }
+  .light .popup-company-vacancy {
+    background: #ffffff; }
+  .popup-company-vacancy > div {
+    display: none;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 0 0 50px; }
+    .popup-company-vacancy > div.active-popup {
+      z-index: 105; }
+
 body {
   background: #080808; }
   body.light {
@@ -10225,54 +10347,6 @@ body {
     padding-bottom: 457px; }
   .app .wr-bhf-join-info {
     padding-bottom: 99px; }
-  .app .wr-bhf-activation {
-    padding: 84px 0 140px; }
-    .app .wr-bhf-activation:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      right: 42.85714%;
-      top: 0;
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
-      z-index: 2;
-      background: rgba(19, 17, 18, 0.4); }
-    .app .wr-bhf-activation:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      right: 42.85714%;
-      top: 0;
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
-      z-index: 1;
-      background: url("../img/bhf-activate.jpg") -270px -70px no-repeat; }
-    .app .wr-bhf-activation a.close {
-      position: absolute;
-      right: 82px;
-      top: 89px;
-      z-index: 20;
-      display: block;
-      width: 30px;
-      height: 30px;
-      opacity: 0.6;
-      -webkit-transition: 0.3s ease-out;
-      transition: 0.3s ease-out; }
-      .app .wr-bhf-activation a.close i {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
-      .app .wr-bhf-activation a.close:hover {
-        opacity: 1; }
   .app .wr-burgerPlace-intro {
     padding: 8px 0 150px; }
     .app .wr-burgerPlace-intro figure {
@@ -10360,54 +10434,6 @@ body {
       -ms-transform: translateX(100%);
       transform: translateX(100%);
       z-index: -1; }
-  .app .wr-company-vacancy {
-    padding: 54px 0 50px; }
-    .app .wr-company-vacancy:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      right: 42.85714%;
-      top: 0;
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
-      z-index: 2;
-      background: rgba(19, 17, 18, 0.4); }
-    .app .wr-company-vacancy:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      right: 42.85714%;
-      top: 0;
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
-      z-index: 1;
-      background: url("../img/company-vacancy.jpg") 0px -3px no-repeat; }
-    .app .wr-company-vacancy a.close {
-      position: absolute;
-      right: 82px;
-      top: 89px;
-      z-index: 20;
-      display: block;
-      width: 30px;
-      height: 30px;
-      opacity: 0.6;
-      -webkit-transition: 0.3s ease-out;
-      transition: 0.3s ease-out; }
-      .app .wr-company-vacancy a.close i {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
-      .app .wr-company-vacancy a.close:hover {
-        opacity: 1; }
   .app .wr-company-news {
     padding: 0 0 266px; }
   .app .wr-company-contacts {
