@@ -1024,6 +1024,9 @@ ul.header-socials {
 		@include respond-to(md) {
 			margin-bottom: 365px;
 		}
+		@include respond-to(sm) {
+			padding: 16px 33px 0;
+		}
 		h1 {
 			font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 136px; letter-spacing: -5.6px;
 			position: relative; left: -7px;
@@ -1031,7 +1034,7 @@ ul.header-socials {
 				font-size: 130px; line-height: 100px;
 			}
 			@include respond-to(sm) {
-				font-size: 100px; line-height: 80px;
+				font-size: 110px; line-height: 90px; letter-spacing: -3px;
 			}
 			@include respond-to(xs) {
 				font-size: 60px; line-height: 48px;
@@ -1045,7 +1048,7 @@ ul.header-socials {
 				font-size: 130px; line-height: 100px;
 			}
 			@include respond-to(sm) {
-				font-size: 100px; line-height: 80px;
+				font-size: 110px; line-height: 90px; letter-spacing: -5px;
 				margin-bottom: 20px;
 			}
 			@include respond-to(xs) {
@@ -1059,14 +1062,11 @@ ul.header-socials {
 			li {
 				font-size: 36px; font-family: $cp-light-LC; text-shadow: 1px 1px 0px #000;
 				display: inline-block;
-				@include respond-to(md) {
-					font-size: 30px;
-				}
 				@include respond-to(sm) {
-					font-size: 22px;
+					font-size: 40px;
 				}
 				@include respond-to(xs) {
-					font-size: 18px;
+					font-size: 22px;
 				}
 				&:last-child {
 					&:after {
@@ -1077,14 +1077,11 @@ ul.header-socials {
 					content: '/';
 					font-size: 36px; font-family: $i-black;
 					margin: 0 0 0 5px;
-					@include respond-to(md) {
-						font-size: 30px;
-					}
 					@include respond-to(sm) {
-						font-size: 22px;
+						font-size: 40px;
 					}
 					@include respond-to(xs) {
-						font-size: 18px;
+						font-size: 22px;
 					}
 				}
 			}

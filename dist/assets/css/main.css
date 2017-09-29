@@ -9405,6 +9405,9 @@ ul.header-socials {
   @media (max-width: 991px) {
     .intro-header {
       margin-bottom: 365px; } }
+  @media (max-width: 767px) {
+    .intro-header {
+      padding: 16px 33px 0; } }
   .intro-header h1 {
     font-size: 170px;
     font-family: "intro-black", sans-serif;
@@ -9419,8 +9422,9 @@ ul.header-socials {
         line-height: 100px; } }
     @media (max-width: 767px) {
       .intro-header h1 {
-        font-size: 100px;
-        line-height: 80px; } }
+        font-size: 110px;
+        line-height: 90px;
+        letter-spacing: -3px; } }
     @media (max-width: 480px) {
       .intro-header h1 {
         font-size: 60px;
@@ -9440,8 +9444,9 @@ ul.header-socials {
         line-height: 100px; } }
     @media (max-width: 767px) {
       .intro-header span {
-        font-size: 100px;
-        line-height: 80px;
+        font-size: 110px;
+        line-height: 90px;
+        letter-spacing: -5px;
         margin-bottom: 20px; } }
     @media (max-width: 480px) {
       .intro-header span {
@@ -9456,15 +9461,12 @@ ul.header-socials {
       font-family: "code-pro-light-lc", sans-serif;
       text-shadow: 1px 1px 0px #000;
       display: inline-block; }
-      @media (max-width: 991px) {
-        .intro-header ul li {
-          font-size: 30px; } }
       @media (max-width: 767px) {
         .intro-header ul li {
-          font-size: 22px; } }
+          font-size: 40px; } }
       @media (max-width: 480px) {
         .intro-header ul li {
-          font-size: 18px; } }
+          font-size: 22px; } }
       .intro-header ul li:last-child:after {
         content: none; }
       .intro-header ul li:after {
@@ -9472,15 +9474,12 @@ ul.header-socials {
         font-size: 36px;
         font-family: "intro-black", sans-serif;
         margin: 0 0 0 5px; }
-        @media (max-width: 991px) {
-          .intro-header ul li:after {
-            font-size: 30px; } }
         @media (max-width: 767px) {
           .intro-header ul li:after {
-            font-size: 22px; } }
+            font-size: 40px; } }
         @media (max-width: 480px) {
           .intro-header ul li:after {
-            font-size: 18px; } }
+            font-size: 22px; } }
   .intro-header figure {
     position: absolute;
     right: -368px;
