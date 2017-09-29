@@ -9975,9 +9975,11 @@ ul.header-socials {
     .company-vacancy-info::-webkit-scrollbar {
       width: 6px; }
     .company-vacancy-info::-webkit-scrollbar-thumb {
-      background: #080808;
+      background: #ffffff;
       -webkit-border-radius: 50px;
       border-radius: 50px; }
+    .light .company-vacancy-info::-webkit-scrollbar-thumb {
+      background: #080808; }
     .company-vacancy-info h3 {
       font-size: 18px;
       font-family: "intro-black", sans-serif;

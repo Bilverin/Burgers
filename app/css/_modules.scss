@@ -1509,7 +1509,12 @@ ul.header-socials {
 				width: 6px;
 			}
 			&::-webkit-scrollbar-thumb {
-				background: $main-dark; border-radius: 50px;
+				background: #ffffff; border-radius: 50px;
+			}
+			.light & {
+				&::-webkit-scrollbar-thumb {
+					background: $main-dark;
+				}
 			}
 			h3 {
 				font-size: 18px; font-family: $i-black; text-transform: uppercase; line-height: 24px;
