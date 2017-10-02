@@ -131,17 +131,27 @@ ul.header-socials {
 				display: none;
 				@include respond-to(sm) {display: block;}
 			}
+			&.icon-logo-header-dark {
+				display: none;
+			}
+			.light & {
+				&.icon-logo-header {
+					display: none;
+					&-dark {
+						display: block;
+					}
+				}
+			}
 		}
 	}
 	a.burger {
 		display: none; position: relative;z-index: 105; width: 25px; height: 26px; padding-top: 6px;
-		@include respond-to(sm) {margin-top: 5px;}
 
 		@include respond-to(md) {
 			display: block;
 		}
 		@include respond-to(sm) {
-			width: 35px; 
+			width: 35px; margin-top: 5px;
 		}
 
 		&.active {
@@ -377,6 +387,16 @@ ul.header-socials {
 	}
 	i.icon-logo-footer {
 		margin-bottom: 5px;
+		&-dark {
+			display: none;
+		}
+		.light & {
+			display: none;
+			&-dark {
+				display: block;
+			}
+		}
+		
 	}
 
 	a.logo {
@@ -391,6 +411,17 @@ ul.header-socials {
 			&.mobile {
 				display: none;
 				@include respond-to(sm) {
+					display: block;
+				}
+			}
+
+			&.dark {
+				display: none;
+			}
+
+			.light & {
+				display: none;
+				&.dark {
 					display: block;
 				}
 			}
@@ -1387,12 +1418,17 @@ ul.header-socials {
 		@include respond-to(sm) {
 			flex-wrap: wrap;
 		}
-		& > p {
-			
-			font-size: 18px; font-family: $s-regular; line-height: 32px;
+		& > div {
 			width: 430px; position: relative; top: -7px;
-			@include respond-to(sm) {
-				width: 100%; margin-bottom: 30px;
+			p {
+				font-size: 18px; font-family: $s-regular; line-height: 32px;
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				@include respond-to(sm) {
+					width: 100%; margin-bottom: 30px;
+				}
 			}
 		}
 
@@ -1931,6 +1967,27 @@ ul.header-socials {
 	}
 }
 
+//=======================//
+//==== Template Page ====//
+//=======================//
+.page {
+	&-intro {
+		h1 {
+			font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 150px; letter-spacing: -9px;
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-size: 16px; line-height: 22px; font-family: $s-regular;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
 
 //=======================//
 //======= Popups ========//
@@ -1953,7 +2010,7 @@ ul.header-socials {
 				background: url('../img/bhf-activate.jpg') -270px -70px no-repeat;
 			}
 			a.close {
-				position: fixed; right: 82px; top: 89px; z-index: 20; display: block; width: 30px; height: 30px;
+				position: fixed; right: 82px; top: 89px; z-index: 110; display: block; width: 30px; height: 30px;
 				opacity: 0.6;
 				transition: 0.3s ease-out;
 				i {
@@ -1988,7 +2045,7 @@ ul.header-socials {
 			}
 
 			a.close {
-				position: fixed; right: 82px; top: 89px; z-index: 20; display: block; width: 30px; height: 30px;
+				position: fixed; right: 82px; top: 89px; z-index: 110; display: block; width: 30px; height: 30px;
 				opacity: 0.6;
 				transition: 0.3s ease-out;
 				i {
@@ -2010,6 +2067,54 @@ ul.header-socials {
 					z-index: 105;
 				}
 			}
+		}
+	}
+
+	&-burger-place-menu {
+		display: none; position: fixed; left: 0; top: 0;width: 100%; height: 100%; z-index: 1000; padding: 84px 0 140px;
+		background: $main-dark;
+		overflow-y: auto; overflow-x: hidden;
+
+		a.close {
+			position: fixed; right: 82px; top: 89px; z-index: 110; display: block; width: 30px; height: 30px;
+			opacity: 0.6;
+			transition: 0.3s ease-out;
+			i {
+				position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.wr-menu {
+			&-tea {
+				padding: 73px 0 130px;
+			}
+
+			&-sauces {
+				padding: 0 0 123px;
+			}
+
+			&-breakfasts {
+				padding: 0 0 64px;
+			}
+		}
+
+		.popup-header {
+			padding-bottom: 17px;
+			h2 {
+				font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 150px; letter-spacing: -14px;
+				margin-bottom: 9px;
+			}
+			h3 {
+				font-size: 36px; font-family: $cp-light-LC; text-transform: uppercase; letter-spacing: 0.9px;
+				position: relative; left: 9px;
+			}
+		}
+
+		.light & {
+			background: #ffffff;
 		}
 	}
 }

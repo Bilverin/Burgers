@@ -47,6 +47,7 @@
 						<div class="header">
 							<a href="#" class="logo">
 								<i class="icon icon-logo-header"></i>
+								<i class="icon icon-logo-header-dark"></i>
 								<i class="icon icon-logo-header_mob mobile"></i>
 							</a>
 							<a href="#" class="burger js-burgerToggle">
@@ -171,7 +172,7 @@
 								</li>
 							</ul>
 							<p>Первая бургерная сети, открытая далеко не в самом очевидном месте: вход со двора, второй этаж, да еще и самый лаконичный дизайн, <br>какой только можно придумать. Ресторанные критики пророчили провал, слишком уж нетипичным казался подход для московского рынка, где «чем больше-тем лучше». Однако вышло ровно наоборот: демократичный формат оказался симпатичен гостям, а вкус и качество бургеров оказались (естественно) важнее дизайнерских излишек и нахождения на «первой линии».</p>
-							<a href="#"><i class="icon icon-menu"></i> <span>Полное меню бургер-бара</span></a>
+							<a href="menu-popup" class="js-section-popup"><i class="icon icon-menu"></i> <span>Полное меню бургер-бара</span></a>
 						</div>
 						
 					</div>
@@ -249,6 +250,7 @@
 		
 						<div class="footer">
 							<i class="icon icon-logo-footer"></i>
+							<i class="icon icon-logo-footer-dark"></i>
 						</div>
 						
 					</div>
@@ -259,6 +261,7 @@
 						<div class="footer">
 							<a href="#" class="logo">
 								<img src="assets/img/logo-footer.png">
+								<img src="assets/img/logo-footer-dark.png" class="dark">
 								<img src="assets/img/logo-footer_mob.png" class="mobile">
 							</a>
 							<nav>
@@ -286,7 +289,166 @@
 	</div>
 
 	<!-- Plugins -->
-	<div class="popup"></div>
+	<div class="wr-burger-place-menu popup-burger-place-menu menu-popup">
+		<a href="#" class="close js-popup-close"><i class="icon icon-close"></i></a>
+		<section class="wr-popup-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+	
+						<div class="popup-header">
+							<h2>Меню</h2>
+							<h3>Большая Ордынка</h3>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wr-menu-tea">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+	
+						<div class="section-header">
+							<h2>Кофе и чай</h2>
+						</div>
+	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 col-md-offset-1">
+	
+						<div class="menu-tea">
+							<ul>
+								<li>
+									<p><span>эспрессо</span></p>
+									<span>100</span>
+								</li>
+								<li>
+									<p><span>американо</span></p>
+									<span>150</span>
+								</li>
+								<li>
+									<p><span>капучино</span></p>
+									<span>199</span>
+								</li>
+								<li>
+									<p><span>латте</span></p>
+									<span>199</span>
+								</li>
+							</ul>
+						</div>
+	
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+	
+						<div class="menu-tea">
+							<ul>
+								<li>
+									<p><span>Молоко</span></p>
+									<span>10</span>
+								</li>
+								<li>
+									<p><span>Вода</span></p>
+									<span>120</span>
+								</li>
+								<li>
+									<p><span>Чай в чайнике</span></p>
+									<span>200</span>
+									<em>Черный / Зеленый / Трявяной</em>
+								</li>
+							</ul>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="wr-menu-sauces">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+	
+						<div class="section-header">
+							<h2>Соусы</h2>
+						</div>
+	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-7 col-md-offset-1">
+	
+						<div class="menu-sauces">
+							<ul>
+								<li>Сырный</li>
+								<li>Медовая горчица</li>
+								<li>Брусника</li>
+								<li>Песто</li>
+								<li>Перечный</li>
+								<li>Кремчиз</li>
+								<li>Домашний кетчуп</li>
+							</ul>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="wr-menu-breakfasts">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+	
+						<div class="section-header">
+							<h2>Завтраки</h2>
+							<h3>С 9 до 13</h3>
+						</div>
+	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-1">
+	
+						<div class="menu-breakfasts">
+							<ul>
+								<li>
+									<h3>Остин Пауэрс</h3>
+									<p>Сэндвич с омлетом, беконом и сыром чеддер</p>
+								</li>
+								<li>
+									<h3>Мини ми с вялеными томатами</h3>
+									<p>Сэндвич с омлетом, беконом и сыром чеддер</p>
+								</li>
+								<li>
+									<h3>Сладкий мини ми</h3>
+									<p>Сэндвич с омлетом, беконом и сыром чеддер</p>
+								</li>
+								<li>
+									<h3>Кофе</h3>
+									<p>Сэндвич с омлетом, беконом и сыром чеддер</p>
+								</li>
+							</ul>
+						</div>
+	
+					</div>
+					<div class="col-md-3">
+	
+						<div class="menu-places">
+							<ul>
+								<li>Кузнецкий мост</li>
+								<li>Большая ордынка</li>
+								<li>Пушкинская</li>
+							</ul>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 	
 	<!-- Scripts -->
 	<script type="text/javascript" src="assets/js/libs.min.js"></script>

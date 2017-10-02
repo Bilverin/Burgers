@@ -8504,6 +8504,12 @@ ul.header-socials {
       @media (max-width: 767px) {
         .header a.logo i.mobile {
           display: block; } }
+    .header a.logo i.icon-logo-header-dark {
+      display: none; }
+    .light .header a.logo i.icon-logo-header {
+      display: none; }
+      .light .header a.logo i.icon-logo-header-dark {
+        display: block; }
   .header a.burger {
     display: none;
     position: relative;
@@ -8511,15 +8517,13 @@ ul.header-socials {
     width: 25px;
     height: 26px;
     padding-top: 6px; }
-    @media (max-width: 767px) {
-      .header a.burger {
-        margin-top: 5px; } }
     @media (max-width: 991px) {
       .header a.burger {
         display: block; } }
     @media (max-width: 767px) {
       .header a.burger {
-        width: 35px; } }
+        width: 35px;
+        margin-top: 5px; } }
     .header a.burger.active span:nth-child(1) {
       top: 12px;
       -webkit-transform: translateX(-50%) scale(0);
@@ -8778,6 +8782,12 @@ ul.header-socials {
 
 .footer i.icon-logo-footer {
   margin-bottom: 5px; }
+  .footer i.icon-logo-footer-dark {
+    display: none; }
+  .light .footer i.icon-logo-footer {
+    display: none; }
+    .light .footer i.icon-logo-footer-dark {
+      display: block; }
 
 .footer a.logo {
   display: inline-block;
@@ -8794,6 +8804,12 @@ ul.header-socials {
     @media (max-width: 767px) {
       .footer a.logo img.mobile {
         display: block; } }
+  .footer a.logo img.dark {
+    display: none; }
+  .light .footer a.logo img {
+    display: none; }
+    .light .footer a.logo img.dark {
+      display: block; }
 
 .footer nav {
   margin-bottom: 23px; }
@@ -9911,17 +9927,21 @@ ul.header-socials {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
-  .intro-body > p {
-    font-size: 18px;
-    font-family: "stolzl-regular", sans-serif;
-    line-height: 32px;
+  .intro-body > div {
     width: 430px;
     position: relative;
     top: -7px; }
-    @media (max-width: 767px) {
-      .intro-body > p {
-        width: 100%;
-        margin-bottom: 30px; } }
+    .intro-body > div p {
+      font-size: 18px;
+      font-family: "stolzl-regular", sans-serif;
+      line-height: 32px;
+      margin-bottom: 10px; }
+      .intro-body > div p:last-child {
+        margin-bottom: 0; }
+      @media (max-width: 767px) {
+        .intro-body > div p {
+          width: 100%;
+          margin-bottom: 30px; } }
   .intro-body ul {
     margin-left: 74px; }
     @media (max-width: 767px) {
@@ -10516,6 +10536,22 @@ ul.header-socials {
       text-transform: uppercase;
       letter-spacing: -0.3px; }
 
+.page-intro h1 {
+  font-size: 170px;
+  font-family: "intro-black", sans-serif;
+  text-transform: uppercase;
+  line-height: 150px;
+  letter-spacing: -9px;
+  margin-bottom: 15px; }
+
+.page-intro p {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "stolzl-regular", sans-serif;
+  margin-bottom: 10px; }
+  .page-intro p:last-child {
+    margin-bottom: 0; }
+
 .popup-bhf-activation {
   display: none;
   position: fixed;
@@ -10558,7 +10594,7 @@ ul.header-socials {
     position: fixed;
     right: 82px;
     top: 89px;
-    z-index: 20;
+    z-index: 110;
     display: block;
     width: 30px;
     height: 30px;
@@ -10619,7 +10655,7 @@ ul.header-socials {
     position: fixed;
     right: 82px;
     top: 89px;
-    z-index: 20;
+    z-index: 110;
     display: block;
     width: 30px;
     height: 30px;
@@ -10648,6 +10684,63 @@ ul.header-socials {
     padding: 0 0 50px; }
     .popup-company-vacancy > div.active-popup {
       z-index: 105; }
+
+.popup-burger-place-menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding: 84px 0 140px;
+  background: #080808;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .popup-burger-place-menu a.close {
+    position: fixed;
+    right: 82px;
+    top: 89px;
+    z-index: 110;
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out; }
+    .popup-burger-place-menu a.close i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .popup-burger-place-menu a.close:hover {
+      opacity: 1; }
+  .popup-burger-place-menu .wr-menu-tea {
+    padding: 73px 0 130px; }
+  .popup-burger-place-menu .wr-menu-sauces {
+    padding: 0 0 123px; }
+  .popup-burger-place-menu .wr-menu-breakfasts {
+    padding: 0 0 64px; }
+  .popup-burger-place-menu .popup-header {
+    padding-bottom: 17px; }
+    .popup-burger-place-menu .popup-header h2 {
+      font-size: 170px;
+      font-family: "intro-black", sans-serif;
+      text-transform: uppercase;
+      line-height: 150px;
+      letter-spacing: -14px;
+      margin-bottom: 9px; }
+    .popup-burger-place-menu .popup-header h3 {
+      font-size: 36px;
+      font-family: "code-pro-light-lc", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      position: relative;
+      left: 9px; }
+  .light .popup-burger-place-menu {
+    background: #ffffff; }
 
 body {
   background: #080808; }
@@ -10702,6 +10795,8 @@ body {
       transform: translateX(0); }
     .light .app .wr-navigation {
       background: #ffffff; }
+  .app .wr-page-intro {
+    padding: 70px 0 140px; }
   .app .wr-main-intro {
     position: relative;
     padding-bottom: 143px; }

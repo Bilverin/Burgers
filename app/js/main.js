@@ -20,8 +20,8 @@ $(document).ready(function() {
 	$('.js-section-popup').click(function(e){
 		e.preventDefault();
 
-		var vacancyLink = $(this).attr('href');
-		$('.' + vacancyLink).addClass('active-popup').fadeIn();
+		var popupLink = $(this).attr('href');
+		$('.' + popupLink).addClass('active-popup').fadeIn();
 		$('.popup-company-vacancy').fadeIn();
 		$('body').addClass('ov-hidden');
 		
