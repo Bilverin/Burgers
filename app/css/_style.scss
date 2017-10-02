@@ -8,9 +8,11 @@ body {
 	min-width: 320px;
 	overflow-x: hidden;
 	// width: 1200px;
-
 	@include respond-to(sm) {
-		padding: 0 15px;
+		padding: 0 0 0 45px;
+	}
+	@include respond-to(xs) {
+		padding-left: 20px;
 	}
 
 	& > * {
@@ -27,6 +29,7 @@ body {
 	.wr {
 		&-header {
 			padding: 31px 0 19px; z-index: 110;
+			@include respond-to(sm) {padding-top: 53px;}
 		}
 
 		&-navigation {
@@ -35,6 +38,9 @@ body {
 			background: $main-dark;
 			transition: .4s ease-out;
 			overflow: hidden;
+			div {
+				@include respond-to(sm) {height: 100%;}
+			}
 			&.active {
 				transform: translateX(0);
 			}
@@ -46,22 +52,47 @@ body {
 
 		&-main {
 			&-intro {
-				position: relative; padding-bottom: 267px;
+				position: relative; padding-bottom: 143px;
 				figure {
 					position: absolute; right: 0; top: 16px; z-index: -1;
-				}
+					@include respond-to(md) {display: none;}
 
+					&.mobile {
+						display: none;
+						@include respond-to(md) {
+							display: block; bottom: -30px; right: 0; top: auto;
+						}
+					}
+				}
 			}
 
 			&-slider {
 				position: relative; padding-bottom: 401px;
+				@include respond-to(sm) {padding-bottom: 153px;}
+
+				h2 {
+					@include respond-to(sm) {position: absolute;
+					@media (max-width: 639px) {top: 64px;}
+					}
+				}
 				figure {
 					position: absolute; right: -75px; top: 56px; z-index: -1;
+					@include respond-to(sm) {
+						width: calc(100% + 45px); height: 455px; top: 120px; right: 0; 
+					}
+
+					img {
+						@include respond-to(sm) {
+							height: 100%;
+						}
+					}
 				}
 			}
 
 			&-info {
 				position: relative; padding-bottom: 161px;
+				@include respond-to(md) {padding-bottom: 410px;}
+				@include respond-to(sm) {display: none;}
 				figure {
 					position: absolute; right: -475px; top: 47px; z-index: -1;
 				}
@@ -69,8 +100,19 @@ body {
 
 			&-map {
 				position: relative; padding-bottom: 228px;
+				@include respond-to(sm) {padding-bottom: 557px;}
+				@media (max-width: 639px) {padding-bottom: 451px;}
+				@include respond-to(xs) {padding-bottom: 734px;}
+
 				figure {
 					position: absolute; right: -254px; top: 71px; z-index: -1;
+					@include respond-to(sm) {display: none;}
+					&.mobile {
+						display:none;
+						@include respond-to(sm) {
+							display: block; top: 55px; right: 0;
+						}
+					}
 				}
 			}
 		}
@@ -125,13 +167,36 @@ body {
 		&-bhf {
 			&-intro {
 				padding-bottom: 102px;
+				@include respond-to(sm) {padding-bottom: 172px;}
 			}
 			&-slider {
 				@extend .wr-main-slider;
 				padding-bottom: 457px;
+				@include respond-to(sm) {padding-bottom: 93px;}
 			}
 			&-join-info {
 				padding-bottom: 99px;
+				@include respond-to(sm) {padding-bottom: 135px;}
+
+				.section-header {
+					@include respond-to(sm) {
+						left: -8px; top: -3px;
+					}
+					h2 {
+						@include respond-to(md) {
+							white-space: pre-line;
+						}
+						@include respond-to(sm) {
+							font-size: 100px; line-height: 84px; letter-spacing: -2.7px;
+						}
+						@media (max-width: 639px) {
+							font-size: 64px; line-height: 50px; letter-spacing: -2px;
+						}
+						@include respond-to(xs) {
+							font-size: 52px;  line-height: 42px;
+						}
+					}
+				}
 			}
 		}
 
@@ -267,6 +332,9 @@ body {
 		
 		&-footer {
 			padding: 0 0 65px;
+			@include respond-to(sm) {
+				margin-left: -5px;
+			}
 		}
 	}
 }
