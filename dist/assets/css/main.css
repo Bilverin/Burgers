@@ -7992,37 +7992,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-add-1-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -81px;
+  background-position: -526px -242px;
   width: 88px;
   height: 81px; }
 
 .icon-add-1 {
   background-image: url(../img/sprite.png);
-  background-position: -534px 0px;
+  background-position: -526px -323px;
   width: 88px;
   height: 81px; }
 
 .icon-add-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -162px;
+  background-position: -526px -404px;
   width: 83px;
   height: 78px; }
 
 .icon-add-2 {
   background-image: url(../img/sprite.png);
-  background-position: -534px -240px;
+  background-position: -435px -184px;
   width: 83px;
   height: 78px; }
 
 .icon-add-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: -435px -83px;
+  background-position: -99px -402px;
   width: 99px;
   height: 83px; }
 
 .icon-add-3 {
   background-image: url(../img/sprite.png);
-  background-position: -435px 0px;
+  background-position: 0px -402px;
   width: 99px;
   height: 83px; }
 
@@ -8040,25 +8040,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-add-5-checked {
   background-image: url(../img/sprite.png);
-  background-position: -292px -311px;
+  background-position: -198px -402px;
   width: 122px;
   height: 67px; }
 
 .icon-add-5 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -402px;
+  background-position: -292px -311px;
   width: 122px;
   height: 67px; }
 
 .icon-add-6-checked {
   background-image: url(../img/sprite.png);
-  background-position: -242px -86px;
+  background-position: -242px 0px;
   width: 101px;
   height: 86px; }
 
 .icon-add-6 {
   background-image: url(../img/sprite.png);
-  background-position: -242px 0px;
+  background-position: -242px -86px;
   width: 101px;
   height: 86px; }
 
@@ -8088,73 +8088,91 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-add-9-checked {
   background-image: url(../img/sprite.png);
-  background-position: -435px -251px;
+  background-position: -526px -72px;
   width: 91px;
   height: 85px; }
 
 .icon-add-9 {
   background-image: url(../img/sprite.png);
-  background-position: -435px -166px;
+  background-position: -526px -157px;
   width: 91px;
   height: 85px; }
 
 .icon-bottle-light {
   background-image: url(../img/sprite.png);
-  background-position: -435px -336px;
+  background-position: -435px -337px;
   width: 61px;
   height: 62px; }
+
+.icon-bottle-light_big {
+  background-image: url(../img/sprite.png);
+  background-position: -435px 0px;
+  width: 91px;
+  height: 92px; }
 
 .icon-bottle {
   background-image: url(../img/sprite.png);
-  background-position: -138px -84px;
+  background-position: -320px -402px;
   width: 61px;
   height: 62px; }
 
+.icon-bottle_big {
+  background-image: url(../img/sprite.png);
+  background-position: -435px -92px;
+  width: 91px;
+  height: 92px; }
+
 .icon-child-bottle {
   background-image: url(../img/sprite.png);
-  background-position: -234px -402px;
+  background-position: -103px -485px;
   width: 47px;
   height: 48px; }
 
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -343px -287px;
+  background-position: -496px -364px;
   width: 24px;
   height: 24px; }
 
 .icon-coffee {
   background-image: url(../img/sprite.png);
-  background-position: -496px -336px;
+  background-position: -308px -226px;
   width: 32px;
   height: 48px; }
 
+.icon-coffee_big {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -557px;
+  width: 50px;
+  height: 73px; }
+
 .icon-logo-footer-dark {
   background-image: url(../img/sprite.png);
-  background-position: -122px -402px;
+  background-position: -442px -402px;
   width: 61px;
   height: 60px; }
 
 .icon-logo-footer {
   background-image: url(../img/sprite.png);
-  background-position: -138px -155px;
+  background-position: -381px -402px;
   width: 61px;
   height: 60px; }
 
 .icon-logo-header-dark {
   background-image: url(../img/sprite.png);
-  background-position: -308px -226px;
+  background-position: -496px -337px;
   width: 27px;
   height: 27px; }
 
 .icon-logo-header {
   background-image: url(../img/sprite.png);
-  background-position: -199px -187px;
+  background-position: -609px -440px;
   width: 27px;
   height: 27px; }
 
 .icon-logo-header_mob {
   background-image: url(../img/sprite.png);
-  background-position: -199px -84px;
+  background-position: -150px -485px;
   width: 39px;
   height: 39px; }
 
@@ -8164,63 +8182,75 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 71px;
   height: 47px; }
 
-.icon-meat-1-checked {
+.icon-lunch_big {
   background-image: url(../img/sprite.png);
-  background-position: -102px -226px;
-  width: 102px;
-  height: 85px; }
+  background-position: -526px 0px;
+  width: 110px;
+  height: 72px; }
 
-.icon-meat-1 {
+.icon-meat-1-checked {
   background-image: url(../img/sprite.png);
   background-position: 0px -226px;
   width: 102px;
   height: 85px; }
 
+.icon-meat-1 {
+  background-image: url(../img/sprite.png);
+  background-position: -102px -226px;
+  width: 102px;
+  height: 85px; }
+
 .icon-meat-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -388px;
+  background-position: -138px -155px;
   width: 74px;
   height: 70px; }
 
 .icon-meat-2 {
   background-image: url(../img/sprite.png);
-  background-position: -534px -318px;
+  background-position: -138px -84px;
   width: 74px;
   height: 70px; }
 
 .icon-meat-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: 0px -311px;
+  background-position: -94px -311px;
   width: 94px;
   height: 91px; }
 
 .icon-meat-3 {
   background-image: url(../img/sprite.png);
-  background-position: -94px -311px;
+  background-position: 0px -311px;
   width: 94px;
   height: 91px; }
 
 .icon-menu {
   background-image: url(../img/sprite.png);
-  background-position: -199px -155px;
+  background-position: -189px -485px;
   width: 36px;
   height: 32px; }
 
 .icon-omlette {
   background-image: url(../img/sprite.png);
-  background-position: -183px -402px;
+  background-position: -52px -485px;
   width: 51px;
   height: 50px; }
 
+.icon-omlette_big {
+  background-image: url(../img/sprite.png);
+  background-position: -435px -262px;
+  width: 78px;
+  height: 75px; }
+
 .icon-placeholder-active {
   background-image: url(../img/sprite.png);
-  background-position: 0px -469px;
+  background-position: 0px -485px;
   width: 52px;
   height: 72px; }
 
 .icon-placeholder {
   background-image: url(../img/sprite.png);
-  background-position: -313px -172px;
+  background-position: -609px -404px;
   width: 26px;
   height: 36px; }
 
@@ -8232,13 +8262,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-summer-prop {
   background-image: url(../img/sprite.png);
-  background-position: -343px -190px;
+  background-position: -343px -93px;
   width: 88px;
   height: 97px; }
 
 .icon-summer-proposition-inverse {
   background-image: url(../img/sprite.png);
-  background-position: -343px -93px;
+  background-position: -343px -190px;
   width: 88px;
   height: 97px; }
 
@@ -8984,7 +9014,8 @@ ul.header-socials {
     @media (max-width: 639px) {
       .main-intro-header h1, .bhf-intro-header h1, .burgerPlace-intro-header h1, .burgers-header h1 {
         font-size: 80px;
-        line-height: 66px; } }
+        line-height: 66px;
+        text-shadow: 1px 1px 0 #000; } }
     @media (max-width: 480px) {
       .main-intro-header h1, .bhf-intro-header h1, .burgerPlace-intro-header h1, .burgers-header h1 {
         font-size: 64px;
@@ -9019,6 +9050,9 @@ ul.header-socials {
         display: block;
         margin-top: -32px;
         margin-left: -3px; } }
+    @media (max-width: 639px) {
+      .main-intro-body p.mobile, .bhf-intro-body p.mobile {
+        text-shadow: 1px 1px 0 #000; } }
     @media (max-width: 480px) {
       .main-intro-body p.mobile, .bhf-intro-body p.mobile {
         font-size: 32px;
@@ -9039,10 +9073,16 @@ ul.header-socials {
       padding-left: 17px;
       padding-top: 9px;
       border-width: 6px; } }
+  @media (max-width: 639px) {
+    .main-intro-body a, .bhf-intro-body a {
+      text-shadow: 1px 1px 0 #000; } }
   @media (max-width: 480px) {
     .main-intro-body a, .bhf-intro-body a {
       font-size: 20px;
       width: 285px; } }
+  @media (max-width: 639px) {
+    .main-intro-body a:hover, .bhf-intro-body a:hover {
+      text-shadow: none; } }
 
 .main-slider, .bhf-slider, .burgerPlace-slider {
   padding-top: 41px; }
@@ -9181,9 +9221,9 @@ ul.header-socials {
         font-size: 36px;
         letter-spacing: -0.5px;
         margin-bottom: 4px; } }
-    @media (max-width: 480px) {
+    @media (max-width: 639px) {
       .main-map h4 {
-        font-size: 34px;
+        font-size: 32px;
         margin-bottom: 10px; } }
   .main-map ul li {
     font-size: 14px;
@@ -9193,7 +9233,7 @@ ul.header-socials {
       .main-map ul li {
         font-size: 24px;
         line-height: 35px; } }
-    @media (max-width: 480px) {
+    @media (max-width: 639px) {
       .main-map ul li {
         font-size: 20px;
         line-height: 31px; } }
@@ -9220,7 +9260,14 @@ ul.header-socials {
 
 @media (max-width: 639px) {
   .bhf-intro-body p {
+    font-size: 22px;
+    line-height: 36px;
     margin-left: 0; } }
+
+@media (max-width: 480px) {
+  .bhf-intro-body p {
+    font-size: 20px;
+    line-height: 32px; } }
 
 .bhf-intro-body a.btn {
   letter-spacing: -1.3px;
@@ -9237,7 +9284,7 @@ ul.header-socials {
       letter-spacing: 1.2px;
       width: 422px;
       padding-bottom: 13px;
-      margin-left: 63px;
+      margin-left: 47px;
       margin-top: 51px; } }
   @media (max-width: 639px) {
     .bhf-intro-body a.btn {
@@ -9267,8 +9314,7 @@ ul.header-socials {
     .bhf-slider p {
       font-size: 28px;
       padding: 0;
-      margin-left: 48px;
-      margin-top: 9px; } }
+      margin-left: 48px; } }
   @media (max-width: 639px) {
     .bhf-slider p {
       margin-left: 0; } }
@@ -9346,6 +9392,10 @@ ul.header-socials {
   @media (max-width: 639px) {
     .bhf-join-info p {
       margin-left: 0; } }
+  @media (max-width: 480px) {
+    .bhf-join-info p {
+      font-size: 24px;
+      line-height: 37px; } }
 
 .bhf-join-info a.btn {
   display: block;
@@ -9357,6 +9407,7 @@ ul.header-socials {
   @media (max-width: 767px) {
     .bhf-join-info a.btn {
       letter-spacing: 1.4px;
+      white-space: pre-line;
       width: 423px;
       margin-top: 35px;
       margin-left: 47px;
@@ -9366,9 +9417,6 @@ ul.header-socials {
     .bhf-join-info a.btn {
       margin-left: 0;
       width: 95%; } }
-  @media (max-width: 767px) {
-    .bhf-join-info a.btn {
-      white-space: pre-line; } }
 
 .bhf-activation form {
   position: relative;
@@ -9483,8 +9531,29 @@ ul.header-socials {
     line-height: 140px;
     letter-spacing: -9.7px;
     margin-bottom: 50px; }
+    @media (max-width: 991px) {
+      .burgerPlace-intro-header h1 {
+        font-size: 130px;
+        line-height: 106px; } }
+    @media (max-width: 767px) {
+      .burgerPlace-intro-header h1 {
+        font-size: 110px;
+        line-height: 90px;
+        letter-spacing: -3.9px;
+        margin: 22px 0 22px 3px; } }
+    @media (max-width: 639px) {
+      .burgerPlace-intro-header h1 {
+        font-size: 80px;
+        line-height: 64px; } }
+    @media (max-width: 480px) {
+      .burgerPlace-intro-header h1 {
+        font-size: 56px;
+        line-height: 46px; } }
   .burgerPlace-intro-header ul {
     padding-left: 7px; }
+    @media (max-width: 767px) {
+      .burgerPlace-intro-header ul {
+        padding-left: 0; } }
     .burgerPlace-intro-header ul li {
       font-size: 36px;
       line-height: 48px;
@@ -9493,6 +9562,17 @@ ul.header-socials {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
+      @media (max-width: 767px) {
+        .burgerPlace-intro-header ul li {
+          font-size: 30px;
+          line-height: 38px; } }
+      @media (max-width: 639px) {
+        .burgerPlace-intro-header ul li {
+          font-size: 24px;
+          line-height: 34px; } }
+      @media (max-width: 480px) {
+        .burgerPlace-intro-header ul li {
+          font-size: 20px; } }
       .burgerPlace-intro-header ul li:last-child {
         margin-bottom: 0; }
       .burgerPlace-intro-header ul li span {
@@ -9512,13 +9592,60 @@ ul.header-socials {
   flex-wrap: wrap;
   margin-bottom: -webkit-calc(-23px + 84px);
   margin-bottom: calc(-23px + 84px); }
+  @media (max-width: 767px) {
+    .burgerPlace-intro-body ul {
+      margin: 45px 0 -webkit-calc(-102px + 84px) 38px;
+      margin: 45px 0 calc(-102px + 84px) 38px; } }
+  @media (max-width: 639px) {
+    .burgerPlace-intro-body ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-left: 0; } }
   .burgerPlace-intro-body ul li {
     width: 40%;
     padding-top: 70px;
     position: relative;
     margin-bottom: 23px; }
+    @media (max-width: 767px) {
+      .burgerPlace-intro-body ul li {
+        width: 60%;
+        padding-top: 60px;
+        margin-bottom: 108px;
+        padding-left: 10px; } }
+    @media (max-width: 639px) {
+      .burgerPlace-intro-body ul li {
+        width: 100%; } }
+    @media (max-width: 767px) {
+      .burgerPlace-intro-body ul li:nth-child(2) {
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3; } }
     .burgerPlace-intro-body ul li:nth-child(3) {
       width: 20%; }
+      @media (max-width: 767px) {
+        .burgerPlace-intro-body ul li:nth-child(3) {
+          width: 40%;
+          -webkit-box-ordinal-group: 3;
+          -webkit-order: 2;
+          -ms-flex-order: 2;
+          order: 2; } }
+      @media (max-width: 639px) {
+        .burgerPlace-intro-body ul li:nth-child(3) {
+          width: 100%; } }
+    @media (max-width: 767px) {
+      .burgerPlace-intro-body ul li:nth-child(4) {
+        -webkit-box-ordinal-group: 5;
+        -webkit-order: 4;
+        -ms-flex-order: 4;
+        order: 4;
+        width: 40%; } }
+    @media (max-width: 639px) {
+      .burgerPlace-intro-body ul li:nth-child(4) {
+        width: 100%; } }
     .burgerPlace-intro-body ul li i {
       position: absolute;
       left: 0;
@@ -9526,28 +9653,71 @@ ul.header-socials {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
+      @media (max-width: 767px) {
+        .burgerPlace-intro-body ul li i {
+          display: none; } }
+  @media (max-width: 767px) and (max-width: 767px) {
+    .burgerPlace-intro-body ul li i {
+      top: 0;
+      left: 10px; } }
+      .burgerPlace-intro-body ul li i[class*='_big'] {
+        display: none; }
+        @media (max-width: 767px) {
+          .burgerPlace-intro-body ul li i[class*='_big'] {
+            display: block; } }
     .burgerPlace-intro-body ul li p {
       font-size: 14px;
       font-family: "intro-black", sans-serif;
       text-transform: uppercase; }
+      @media (max-width: 767px) {
+        .burgerPlace-intro-body ul li p {
+          font-size: 24px; } }
     .burgerPlace-intro-body ul li span {
       font-size: 14px;
       font-family: "stolzl-book", sans-serif;
       line-height: 14px;
       position: relative;
       top: -3px; }
+      @media (max-width: 767px) {
+        .burgerPlace-intro-body ul li span {
+          font-size: 24px;
+          top: 9px; } }
 
 .burgerPlace-intro-body > p {
   font-size: 16px;
   font-family: "stolzl-book", sans-serif;
   line-height: 28px;
   margin-bottom: 42px; }
+  @media (max-width: 767px) {
+    .burgerPlace-intro-body > p {
+      display: none; } }
 
 .burgerPlace-intro-body > a {
   font-size: 14px;
   font-family: "intro-black", sans-serif;
   text-transform: uppercase;
   margin-left: 6px; }
+  @media (max-width: 767px) {
+    .burgerPlace-intro-body > a {
+      display: none; } }
+  .burgerPlace-intro-body > a.mobile {
+    display: none; }
+    @media (max-width: 767px) {
+      .burgerPlace-intro-body > a.mobile {
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: -0.7px;
+        display: block;
+        width: 50%;
+        margin-left: 45px; } }
+    @media (max-width: 639px) {
+      .burgerPlace-intro-body > a.mobile {
+        font-size: 24px;
+        width: 100%;
+        margin-left: 0; } }
+    @media (max-width: 480px) {
+      .burgerPlace-intro-body > a.mobile {
+        width: 210px; } }
   .burgerPlace-intro-body > a:hover span:after {
     width: 100%; }
   .burgerPlace-intro-body > a i {
@@ -9574,10 +9744,25 @@ ul.header-socials {
 
 .burgerPlace-slider {
   padding-top: 63px; }
+  @media (max-width: 767px) {
+    .burgerPlace-slider {
+      padding-top: 27px; } }
   .burgerPlace-slider p {
     font-size: 16px;
     font-family: "stolzl-book", sans-serif;
     line-height: 28px; }
+    @media (max-width: 991px) {
+      .burgerPlace-slider p {
+        text-shadow: 1px 1px 0 #000; } }
+    @media (max-width: 767px) {
+      .burgerPlace-slider p {
+        font-size: 24px;
+        line-height: 36px;
+        padding-right: 43px; } }
+    @media (max-width: 639px) {
+      .burgerPlace-slider p {
+        font-size: 20px;
+        line-height: 34px; } }
 
 .burgerPlace-list {
   padding-top: 49px; }
@@ -10860,6 +11045,9 @@ body {
   .app .wr-main-map {
     position: relative;
     padding-bottom: 228px; }
+    @media (max-width: 991px) {
+      .app .wr-main-map {
+        padding-bottom: 255px; } }
     @media (max-width: 767px) {
       .app .wr-main-map {
         padding-bottom: 557px; } }
@@ -10949,6 +11137,9 @@ body {
         line-height: 42px; } }
   .app .wr-burgerPlace-intro {
     padding: 8px 0 150px; }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-intro {
+        padding-bottom: 135px; } }
     .app .wr-burgerPlace-intro figure {
       position: absolute;
       right: 42.85714%;
@@ -10957,11 +11148,43 @@ body {
       -ms-transform: translateX(100%);
       transform: translateX(100%);
       z-index: -1; }
+      @media (max-width: 991px) {
+        .app .wr-burgerPlace-intro figure {
+          display: none; } }
   .app .wr-burgerPlace-slider {
     padding: 0 0 422px; }
+    @media (max-width: 991px) {
+      .app .wr-burgerPlace-slider {
+        padding-bottom: 550px; } }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-slider {
+        padding: 0 0 162px; } }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-slider h2 {
+        font-size: 100px;
+        letter-spacing: -3.9px;
+        line-height: 83px;
+        position: relative;
+        left: -4px; } }
+    @media (max-width: 639px) {
+      .app .wr-burgerPlace-slider h2 {
+        font-size: 90px;
+        line-height: 74px;
+        top: 0; } }
+    @media (max-width: 480px) {
+      .app .wr-burgerPlace-slider h2 {
+        font-size: 56px;
+        line-height: 47px; } }
     .app .wr-burgerPlace-slider figure {
       right: 0;
       top: 194px; }
+      @media (max-width: 767px) {
+        .app .wr-burgerPlace-slider figure {
+          position: relative;
+          top: 18px;
+          left: -45px;
+          right: auto;
+          height: 459px; } }
   .app .wr-burgerPlace-gallery {
     padding: 0 0 732px; }
     .app .wr-burgerPlace-gallery figure {

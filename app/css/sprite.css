@@ -18,37 +18,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-add-1-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -81px;
+  background-position: -526px -242px;
   width: 88px;
   height: 81px;
 }
 .icon-add-1 {
   background-image: url(../img/sprite.png);
-  background-position: -534px 0px;
+  background-position: -526px -323px;
   width: 88px;
   height: 81px;
 }
 .icon-add-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -162px;
+  background-position: -526px -404px;
   width: 83px;
   height: 78px;
 }
 .icon-add-2 {
   background-image: url(../img/sprite.png);
-  background-position: -534px -240px;
+  background-position: -435px -184px;
   width: 83px;
   height: 78px;
 }
 .icon-add-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: -435px -83px;
+  background-position: -99px -402px;
   width: 99px;
   height: 83px;
 }
 .icon-add-3 {
   background-image: url(../img/sprite.png);
-  background-position: -435px 0px;
+  background-position: 0px -402px;
   width: 99px;
   height: 83px;
 }
@@ -66,25 +66,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-add-5-checked {
   background-image: url(../img/sprite.png);
-  background-position: -292px -311px;
+  background-position: -198px -402px;
   width: 122px;
   height: 67px;
 }
 .icon-add-5 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -402px;
+  background-position: -292px -311px;
   width: 122px;
   height: 67px;
 }
 .icon-add-6-checked {
   background-image: url(../img/sprite.png);
-  background-position: -242px -86px;
+  background-position: -242px 0px;
   width: 101px;
   height: 86px;
 }
 .icon-add-6 {
   background-image: url(../img/sprite.png);
-  background-position: -242px 0px;
+  background-position: -242px -86px;
   width: 101px;
   height: 86px;
 }
@@ -114,73 +114,91 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-add-9-checked {
   background-image: url(../img/sprite.png);
-  background-position: -435px -251px;
+  background-position: -526px -72px;
   width: 91px;
   height: 85px;
 }
 .icon-add-9 {
   background-image: url(../img/sprite.png);
-  background-position: -435px -166px;
+  background-position: -526px -157px;
   width: 91px;
   height: 85px;
 }
 .icon-bottle-light {
   background-image: url(../img/sprite.png);
-  background-position: -435px -336px;
+  background-position: -435px -337px;
   width: 61px;
   height: 62px;
+}
+.icon-bottle-light_big {
+  background-image: url(../img/sprite.png);
+  background-position: -435px 0px;
+  width: 91px;
+  height: 92px;
 }
 .icon-bottle {
   background-image: url(../img/sprite.png);
-  background-position: -138px -84px;
+  background-position: -320px -402px;
   width: 61px;
   height: 62px;
 }
+.icon-bottle_big {
+  background-image: url(../img/sprite.png);
+  background-position: -435px -92px;
+  width: 91px;
+  height: 92px;
+}
 .icon-child-bottle {
   background-image: url(../img/sprite.png);
-  background-position: -234px -402px;
+  background-position: -103px -485px;
   width: 47px;
   height: 48px;
 }
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -343px -287px;
+  background-position: -496px -364px;
   width: 24px;
   height: 24px;
 }
 .icon-coffee {
   background-image: url(../img/sprite.png);
-  background-position: -496px -336px;
+  background-position: -308px -226px;
   width: 32px;
   height: 48px;
 }
+.icon-coffee_big {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -557px;
+  width: 50px;
+  height: 73px;
+}
 .icon-logo-footer-dark {
   background-image: url(../img/sprite.png);
-  background-position: -122px -402px;
+  background-position: -442px -402px;
   width: 61px;
   height: 60px;
 }
 .icon-logo-footer {
   background-image: url(../img/sprite.png);
-  background-position: -138px -155px;
+  background-position: -381px -402px;
   width: 61px;
   height: 60px;
 }
 .icon-logo-header-dark {
   background-image: url(../img/sprite.png);
-  background-position: -308px -226px;
+  background-position: -496px -337px;
   width: 27px;
   height: 27px;
 }
 .icon-logo-header {
   background-image: url(../img/sprite.png);
-  background-position: -199px -187px;
+  background-position: -609px -440px;
   width: 27px;
   height: 27px;
 }
 .icon-logo-header_mob {
   background-image: url(../img/sprite.png);
-  background-position: -199px -84px;
+  background-position: -150px -485px;
   width: 39px;
   height: 39px;
 }
@@ -190,63 +208,75 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 71px;
   height: 47px;
 }
-.icon-meat-1-checked {
+.icon-lunch_big {
   background-image: url(../img/sprite.png);
-  background-position: -102px -226px;
-  width: 102px;
-  height: 85px;
+  background-position: -526px 0px;
+  width: 110px;
+  height: 72px;
 }
-.icon-meat-1 {
+.icon-meat-1-checked {
   background-image: url(../img/sprite.png);
   background-position: 0px -226px;
   width: 102px;
   height: 85px;
 }
+.icon-meat-1 {
+  background-image: url(../img/sprite.png);
+  background-position: -102px -226px;
+  width: 102px;
+  height: 85px;
+}
 .icon-meat-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -534px -388px;
+  background-position: -138px -155px;
   width: 74px;
   height: 70px;
 }
 .icon-meat-2 {
   background-image: url(../img/sprite.png);
-  background-position: -534px -318px;
+  background-position: -138px -84px;
   width: 74px;
   height: 70px;
 }
 .icon-meat-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: 0px -311px;
+  background-position: -94px -311px;
   width: 94px;
   height: 91px;
 }
 .icon-meat-3 {
   background-image: url(../img/sprite.png);
-  background-position: -94px -311px;
+  background-position: 0px -311px;
   width: 94px;
   height: 91px;
 }
 .icon-menu {
   background-image: url(../img/sprite.png);
-  background-position: -199px -155px;
+  background-position: -189px -485px;
   width: 36px;
   height: 32px;
 }
 .icon-omlette {
   background-image: url(../img/sprite.png);
-  background-position: -183px -402px;
+  background-position: -52px -485px;
   width: 51px;
   height: 50px;
 }
+.icon-omlette_big {
+  background-image: url(../img/sprite.png);
+  background-position: -435px -262px;
+  width: 78px;
+  height: 75px;
+}
 .icon-placeholder-active {
   background-image: url(../img/sprite.png);
-  background-position: 0px -469px;
+  background-position: 0px -485px;
   width: 52px;
   height: 72px;
 }
 .icon-placeholder {
   background-image: url(../img/sprite.png);
-  background-position: -313px -172px;
+  background-position: -609px -404px;
   width: 26px;
   height: 36px;
 }
@@ -258,13 +288,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-summer-prop {
   background-image: url(../img/sprite.png);
-  background-position: -343px -190px;
+  background-position: -343px -93px;
   width: 88px;
   height: 97px;
 }
 .icon-summer-proposition-inverse {
   background-image: url(../img/sprite.png);
-  background-position: -343px -93px;
+  background-position: -343px -190px;
   width: 88px;
   height: 97px;
 }
