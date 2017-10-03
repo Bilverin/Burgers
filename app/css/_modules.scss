@@ -135,10 +135,16 @@ ul.header-socials {
 				display: none;
 			}
 			.light & {
+				&.mobile {display: none;}
 				&.icon-logo-header {
 					display: none;
 					&-dark {
 						display: block;
+						@include respond-to(sm) {display: none;}
+						&_mob {
+							display: none;
+							@include respond-to(sm) {display: block;}
+						}
 					}
 				}
 			}
@@ -912,28 +918,44 @@ ul.header-socials {
 	&-activation {
 		form {
 			position: relative; z-index: 5; padding-top: 115px;
+			@include respond-to(sm) {
+				padding-top: 62px; padding-left: 7px;
+			}
 			.floating-labels {
 				position: relative; margin-bottom: 45px;
-				input {
-					
-				}
+				@include respond-to(sm) {margin-bottom: 79px;}
+				@include respond-to(xs) {margin-bottom: 70px;}
+				input {}
 				label {
 					font-size: 18px; font-family: $s-regular;
 					position: absolute; top: 4px; left: 0;
 					transition: .15s ease-out;
 					pointer-events: none;
 					opacity: 0.2;
+					@include respond-to(sm) {
+						font-family: $s-book; font-size: 28px;
+						left: 2px;
+					}
+					@include respond-to(xs) {font-size: 22px;}
 				}
 				input:valid ~ label, select:valid ~ label {
 					font-size: 12px; font-family: $i-black; text-transform: uppercase;
 					top: -22px;
 					opacity: 1;
+					@include respond-to(sm) {
+						font-size: 18px; top: -31px;
+					}
 				}
 			}
 			select {
 				font-size: 18px; font-family: $s-regular; line-height: 26px;
 				width: 100%; display: block; padding-bottom: 9px;
 				background: transparent; border: none; border-bottom: solid 3px #ffffff;
+				@include respond-to(sm) {
+					width: 92%; padding-bottom: 28px;
+					border-width: 7px;
+				}
+
 				option {
 					color: $main-dark;
 				}
@@ -943,6 +965,10 @@ ul.header-socials {
 					font-size: 18px; font-family: $s-regular; line-height: 26px;
 					display: block; width: 100%; padding-bottom: 9px;
 					background: transparent; border: none; border-bottom: solid 3px #ffffff;
+					@include respond-to(sm) {
+						width: 92%; font-family: $s-book; font-size: 28px; letter-spacing: 0.9px;
+						border-width: 7px; padding-bottom: 26px;
+					}
 				}
 				&[type=checkbox] {
 					display: none;
@@ -953,12 +979,21 @@ ul.header-socials {
 				&.agreement {
 					line-height: 16px;
 					padding-left: 45px; position: relative; top: -4px; margin-bottom: 77px;
+					@include respond-to(sm) {
+						font-size: 16px; line-height: 20px; font-weight: 300;
+						padding-left: 70px; padding-right: 35px; top: -24px; margin-bottom: 57px
+					}
+
 					&:before {
 						content: '\f00c';
 						color: transparent; font: normal normal normal 22px FontAwesome;
 						display: block; width: 32px; height: 32px; padding: 2px 0 0 2px; position: absolute; left: 0; top: 4px;
 						border: solid 3px $main-light;
 						opacity: 1; cursor: pointer; transition: 0.15s ease-out;
+						@include respond-to(sm) {
+							width: 45px; height: 45px;
+							border-width: 6px;
+						}
 					}
 					span {
 						opacity: 0.2;
@@ -992,6 +1027,12 @@ ul.header-socials {
 				@extend .btn;
 				left: 0; width: 100%; padding: 13px 27px 24px;
 				border-width: 3px;
+				@include respond-to(sm) {
+					letter-spacing: 1.2px;
+					left: -2px; width: 92%; padding: 6px 27px 22px 17px;
+					border-width: 6px;
+				}
+				@include respond-to(xs) {font-size: 22px}
 			}
 		}
 	}
@@ -1239,11 +1280,19 @@ ul.header-socials {
 	&-menu {
 		h2 {
 			font-size: 170px; font-family: $i-black; text-transform: uppercase; letter-spacing: -13px;
+			@include respond-to(sm) {
+				font-size: 130px; letter-spacing: -12px;
+			}
+			@include respond-to(xs) {
+				font-size: 90px; letter-spacing: -8px; line-height: 75px;
+			}
 		}
 
 		p {
 			font-size: 36px; font-family: $cp-light-LC; text-transform: uppercase; letter-spacing: 0.9px;
 			padding-left: 10px;
+			@include respond-to(sm) {font-size: 28px}
+			@include respond-to(xs) {font-size: 21px;} 
 		}
 	}
 }
@@ -1255,8 +1304,21 @@ ul.header-socials {
 	&-header {
 		@extend .main-intro-header;
 		padding-top: 13px; margin-bottom: 42px;
+		@include respond-to(sm) {margin-bottom: 7px;}
+
 		h1 {
 			letter-spacing: -9px;
+			@include respond-to(md) {
+				font-size: 110px; letter-spacing: -5px;
+			}
+			@include respond-to(sm) {
+				font-size: 110px; letter-spacing: -4.5px;
+				padding-top: 22px; margin-left: 2px;
+			}
+			@media (max-width: 639px) {font-size: 76px;}
+			@include respond-to(xs) {
+				font-size: 56px;  letter-spacing: -2.5px;
+			}
 		}
 	}
 	
@@ -1267,6 +1329,18 @@ ul.header-socials {
 		& > p {
 			font-size: 16px; font-family: $s-book; line-height: 28px;
 			padding-left: 85px; margin-bottom: 197px;
+			@include respond-to(sm) {
+				font-size: 24px; line-height: 36px; letter-spacing: 0.3px;
+				padding-left: 46px; padding-right: 80px; margin-bottom: 113px;
+			}
+			@include respond-to(xs) {padding: 0;}
+
+			br {
+				@include respond-to(sm) {display: none;}
+				&.mob {
+					@include respond-to(sm) {display: block;}
+				}
+			}
 		}
 
 		&.menu {
@@ -1287,6 +1361,13 @@ ul.header-socials {
 
 		a {
 			display: block; width: 344px; margin-left: auto; margin-bottom: 141px; position: relative;
+			@include respond-to(sm) {
+				width: 548px; height: auto; margin-bottom: 137px;
+			}
+			@include respond-to(xs) {
+				width: 350px; left: -20px;
+			}
+
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -1308,6 +1389,8 @@ ul.header-socials {
 			}
 			&.main {
 				width: 100%; margin-bottom: 197px;
+				@include respond-to(md) {width: 90%;}
+
 				figure {
 					figcaption {
 						left: 82px; top: 23px; bottom: auto;
@@ -1315,13 +1398,18 @@ ul.header-socials {
 				}
 			}
 			&.summer {
+				@include respond-to(sm) {display: none;}
+
 				i {
 					position: absolute; left: -43px; top: -33px; z-index: 3;
 				}
 			}
 			&.pushk-only {
+				@include respond-to(sm) {margin-top: 137px;}
 				i {
 					position: absolute; right: -34px; top: -29px; z-index: 3;
+					@include respond-to(lg) {right: -5px;}
+					@include respond-to(sm) {display: none;}
 				}
 			}			figure {
 				position: relative;
@@ -1339,11 +1427,23 @@ ul.header-socials {
 
 				figcaption {
 					position: absolute; z-index: 3; left: -84px; top: 0; transform: translateY(-50%);
+					@include respond-to(lg) {left: -52px;}
+					@include respond-to(sm) {
+						left: -44px; top: 25px;
+					}
+					@media (max-width: 639px) {left: -35px;}
+					@include respond-to(xs) {left: 5px;}
+
 					h2 {
 						font-size: 60px; font-family: $i-black; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px;
+						@include respond-to(sm) {font-size: 64px;}
+						@include respond-to(xs) {
+							font-size: 50px; line-height: 42px;
+						}
 					}
 					h3 {
 						font-size: 60px; font-family: $cp-light-LC; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px;
+						@include respond-to(sm) {font-size: 64px;}
 					}
 					p {
 						font-size: 14px; font-family: $s-book; line-height: 22px;
@@ -1366,6 +1466,9 @@ ul.header-socials {
 						font-size: 34px; font-family: $i-black; line-height: 34px; text-transform: uppercase; -letter-spacing: 0.6px;
 						padding-right: 5px;
 						background: $main-dark;
+						@include respond-to(sm) {
+							font-size: 26px; line-height: 26px; 
+						}
 					}
 					&:after {
 						content:'';
@@ -1376,6 +1479,9 @@ ul.header-socials {
 				& > span {
 					font-size: 34px; font-family: $cp-light; line-height: 34px; letter-spacing: 1px;
 					width: 20%; padding-left: 5px;
+					@include respond-to(sm) {
+						font-size: 26px; line-height: 26px; 
+					}
 				}
 				& > em {
 					font-size: 18px; font-family: $s-book; line-height: 24px;
@@ -1391,6 +1497,13 @@ ul.header-socials {
 			li {
 				font-size: 34px; font-family: $i-black; line-height: 34px; text-transform: uppercase;
 				display: inline-block;
+				@include respond-to(sm) {
+					font-size: 26px; line-height: 26px; 
+				}
+				@media (max-width: 639px){
+					display: block; margin-bottom: 15px;
+				}
+
 				&:last-child {
 					&:after {
 						display: none;
@@ -1412,9 +1525,13 @@ ul.header-socials {
 				margin-bottom: 26px;
 				h3 {
 					font-size: 34px; font-family: $i-black; text-transform: uppercase; line-height: 34px; letter-spacing: -0.3px;
+					@include respond-to(sm) {
+						font-size: 26px; line-height: 26px; 
+					}
 				}
 				p {
 					font-size: 18px; font-family: $s-book;
+					@include respond-to(xs) {line-height: 26px;}
 				}
 			}
 		}
@@ -1426,10 +1543,13 @@ ul.header-socials {
 			li {
 				font-size: 18px; font-family: $i-black; text-transform: uppercase;
 				padding-left: 30px; position: relative; margin-bottom: 16px;
+				@include respond-to(sm) {line-height: 40px;}
+
 				&:before {
 					content: '';
 					position: absolute; left: 0; top: 0; display: block; width: 20px; height: 20px;
 					background: url('../img/intro-star.png') center center no-repeat;
+					@include respond-to(sm) {top: 9px;}
 				}
 			}
 		}
@@ -1449,6 +1569,7 @@ ul.header-socials {
 		}
 		@include respond-to(sm) {
 			padding: 16px 33px 0;
+			//Временные стили для страницы burger.html padding: 4px 33px 0 3px;
 		}
 		h1 {
 			font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 136px; letter-spacing: -5.6px;
@@ -1458,6 +1579,8 @@ ul.header-socials {
 			}
 			@include respond-to(sm) {
 				font-size: 110px; line-height: 90px; letter-spacing: -3px;
+				//Временные стили для страницы burger.html font-size: 110px; line-height: 90px; letter-spacing: -3.2px;
+
 			}
 			@include respond-to(xs) {
 				font-size: 60px; line-height: 48px;
@@ -1803,9 +1926,16 @@ ul.header-socials {
 .company {
 	// intro
 	&-intro {
+		@include respond-to(sm) {
+			padding-top: 340px;
+		}
 		h1 {
 			font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 140px; letter-spacing: -6px;
 			margin-bottom: 20px;
+			@include respond-to(sm) {
+				font-size: 110px; line-height: 90px; letter-spacing: -6.8px;
+				position: relative; left: -7px; margin-bottom: 67px;
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -1814,6 +1944,13 @@ ul.header-socials {
 		p {
 			font-size: 24px; font-family: $i-light; text-transform: uppercase; line-height: 32px; letter-spacing: 0.65px;
 			margin-bottom: 15px;
+			@include respond-to(sm) {
+				font-family: $s-book; font-size: 34px; line-height: 52px; text-transform: none; letter-spacing: 0.7px;
+				margin-bottom: 0; padding-right: 20px;
+			}
+			br {
+				@include respond-to(sm) {display: none;}
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -1826,6 +1963,11 @@ ul.header-socials {
 		p {
 			font-size: 16px; font-family: $s-book; line-height: 28px; letter-spacing: 0.1px;
 			margin-bottom: 28px;
+			@include respond-to(sm) {
+				font-size: 28px; line-height: 40px; letter-spacing: -0.1px;
+				padding-right: 50px; margin-bottom: 30px;
+			}
+
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -1839,11 +1981,19 @@ ul.header-socials {
 			li {
 				font-size: 16px; font-family: $s-book; line-height: 26px; letter-spacing: 0.1px;
 				padding-left: 23px; position: relative; margin-bottom: 15px;
+				@include respond-to(sm) {
+					line-height: 40px; letter-spacing: 0; font-size: 28px;
+					padding-left: 0; padding-right: 45px; margin-bottom: 31px; position: relative; left: -3px;
+				}
 				&:before {
 					content: '';
 					display: block; width: 5px; height: 5px; position: absolute; left: 8px; top: 11px;
 					background: $main-dark; border-radius: 50%;
 				}
+				span {
+					font-family: $s-bold;
+				}
+				
 			}
 		}
 	}
@@ -2102,26 +2252,45 @@ ul.header-socials {
 			display: none; position: fixed; left: 0; top: 0;width: 100%; height: 100%; z-index: 1000; padding: 84px 0 140px;
 			background: $main-dark;
 			overflow-y: auto; overflow-x: hidden;
+			@include respond-to(sm) {
+				padding-left: 40px;
+				background: #000;
+			}
 
 			&:before {
 				content: '';
 				display: block; width: 100%; height: 100%; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
 				background: rgba(19,17,18,0.4);
+				@include respond-to(sm) {
+					background: rgba(0,0,0,1);
+				}
 			}
 			&:after {
 				content: '';
 				display: block; width: 100%; height: 100%; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 1;
 				background: url('../img/bhf-activate.jpg') -270px -70px no-repeat;
+				@include respond-to(sm) {
+					background-image: none; background-color: #000;
+				}
 			}
 			a.close {
 				position: fixed; right: 82px; top: 89px; z-index: 110; display: block; width: 30px; height: 30px;
 				opacity: 0.6;
 				transition: 0.3s ease-out;
+				@include respond-to(sm) {
+					top: 20px; right: 44px;
+				}
+
 				i {
 					position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
 				}
 				&:hover {
 					opacity: 1;
+				}
+			}
+			.section-header {
+				h2 {
+					@include respond-to(sm) {letter-spacing: -2.6px;}
 				}
 			}
 

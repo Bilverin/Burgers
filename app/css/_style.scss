@@ -283,6 +283,8 @@ body {
 								a {
 									&:last-child {
 										margin-bottom: -229px;
+										@include respond-to(lg) {margin-bottom: -130px;}
+										@include respond-to(md) {margin-bottom: 108px;}
 									}
 								}
 							}
@@ -316,31 +318,91 @@ body {
 
 			&-tea {
 				padding: 73px 0 130px;
+				h2 {
+					@include respond-to(sm) {
+						font-size: 76px; line-height: 67px;
+					}
+					@media (max-width: 639px){font-size: 64px;}
+					@include respond-to(xs) {font-size: 44px;}
+				}
 			}
 
 			&-sauces {
 				padding: 0 0 123px;
+				@include respond-to(sm) {
+					font-size: 76px; line-height: 67px;
+				}
 			}
 
 			&-breakfasts {
 				padding: 0 0 64px;
+				@include respond-to(sm) {
+					font-size: 76px; line-height: 67px;
+				}
+				@include respond-to(sm) {line-height: 34px;}
+
+				h3 {
+					@media (max-width: 639px) {
+						font-size: 36px; line-height: 32px; letter-spacing: -2px;
+					}
+					@include respond-to(xs) {
+						font-size: 28px; letter-spacing: -0.8px;
+					}
+					
+				}
 			}
 		}
 
 		&-company {
 			&-intro {
 				padding: 14px 0 135px;
+				@include respond-to(sm) {padding-bottom: 74px;}
+				figure {
+					display: none;
+					@include respond-to(sm) {
+						display: block; position: absolute; top: -113px; left:-45px; z-index: -1; 
+					}
+					img {
+						@include respond-to(sm) {
+							width: 100%;
+						}
+					}
+				}
 			}
 
 			&-mission {
 				padding: 0 0 162px;
+				@include respond-to(sm) {padding-left: 48px; padding-bottom: 70px;}
+				h2 {
+					@include respond-to(sm) {
+						font-size: 42px; letter-spacing: -1.5px; line-height: 37px;
+					}
+					span {
+						display: none;
+						@include respond-to(sm) {display: inline-block;}
+					}
+				}
 				figure {
 					position: absolute; right: 42.85714%; top: -314px; transform: translateX(100%); z-index: -1;
+					@include respond-to(sm) {display: none;}
 				}
 			}
 
 			&-worth {
 				padding: 0 0 137px;
+				@include respond-to(sm) {padding-left: 48px;}
+				h2 {
+					@include respond-to(sm) {
+						font-size: 42px; letter-spacing: -1.5px; line-height: 37px;
+					}
+					br {
+						@include respond-to(sm) {display: none;}
+					}
+					span {
+						display: none;
+						@include respond-to(sm) {display: inline-block;}
+					}
+				}
 			}
 
 			&-command {

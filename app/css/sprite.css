@@ -18,13 +18,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-add-1-checked {
   background-image: url(../img/sprite.png);
-  background-position: -526px -242px;
+  background-position: -526px -323px;
   width: 88px;
   height: 81px;
 }
 .icon-add-1 {
   background-image: url(../img/sprite.png);
-  background-position: -526px -323px;
+  background-position: -526px -242px;
   width: 88px;
   height: 81px;
 }
@@ -190,6 +190,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 27px;
   height: 27px;
 }
+.icon-logo-header-dark_mob {
+  background-image: url(../img/sprite.png);
+  background-position: -150px -485px;
+  width: 39px;
+  height: 39px;
+}
 .icon-logo-header {
   background-image: url(../img/sprite.png);
   background-position: -609px -440px;
@@ -198,7 +204,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-logo-header_mob {
   background-image: url(../img/sprite.png);
-  background-position: -150px -485px;
+  background-position: -189px -485px;
   width: 39px;
   height: 39px;
 }
@@ -252,7 +258,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-menu {
   background-image: url(../img/sprite.png);
-  background-position: -189px -485px;
+  background-position: -228px -485px;
   width: 36px;
   height: 32px;
 }
