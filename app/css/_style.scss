@@ -23,6 +23,7 @@ body {
 		position: relative;
 		.wr-header {
 			position: absolute; width: 100%; top: 0; left: 0;
+			@include respond-to(sm) {position: relative;}
 		}
 	}
 
@@ -254,6 +255,23 @@ body {
 			}
 			&-list {
 				width: 100%; height: 100vh; padding-top: 130px;
+				@include respond-to(sm) {padding-top: 0;}
+				.nav {
+					display: none;
+					@include respond-to(sm) {
+						display: block; position: absolute;
+					}
+
+					li {
+						display: none;
+						&.active {display: block;}
+
+						a {
+							font-family: $i-black; text-transform: uppercase; 
+						}
+					}
+					
+				}
 				figure {
 					position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%;
 					overflow: hidden;
@@ -415,7 +433,7 @@ body {
 				@include respond-to(sm) {
 					padding-top: 413px;
 				}
-				@include respond-to(sm) {
+				@include respond-to(xs) {
 					padding-top: 283px;
 				}
 				h2 {
