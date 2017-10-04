@@ -133,6 +133,9 @@ ul.header-socials {
 			}
 			&.icon-logo-header-dark {
 				display: none;
+				&_mob {
+					display: none;
+				}
 			}
 			.light & {
 				&.mobile {display: none;}
@@ -550,7 +553,7 @@ ul.header-socials {
 			font-size: 64px; line-height: 56px; margin-top: 25px;
 		}
 		@include respond-to(xs) {
-			font-size: 44px; line-height: 36px; letter-spacing: -2px;
+			font-size: 44px; line-height: 40px; letter-spacing: -2px;
 		}
 	}
 	h3 {
@@ -560,13 +563,16 @@ ul.header-socials {
 			font-size: 100px; line-height: 80px;
 		}
 		@include respond-to(sm) {
-			font-size: 80px; line-height: 70px;
+			font-size: 90px; line-height: 84px; letter-spacing: -4.6px;
 		}
 		@include respond-to(xs) {
 			font-size: 40px; line-height: 36px;
 		}
 		span {
 			color: $main-light; font-family: $i-black;
+			@include respond-to(sm) {
+				display: none;
+			}
 		}
 	}
 }
@@ -1593,8 +1599,10 @@ ul.header-socials {
 			margin-bottom: 365px;
 		}
 		@include respond-to(sm) {
-			padding: 16px 33px 0;
-			//Временные стили для страницы burger.html padding: 4px 33px 0 3px;
+			padding: 4px 3px 0; margin-bottom: 490px;
+		}
+		@include respond-to(xs) {
+			margin-bottom: 190px;
 		}
 		h1 {
 			font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 136px; letter-spacing: -5.6px;
@@ -1604,11 +1612,10 @@ ul.header-socials {
 			}
 			@include respond-to(sm) {
 				font-size: 110px; line-height: 90px; letter-spacing: -3px;
-				//Временные стили для страницы burger.html font-size: 110px; line-height: 90px; letter-spacing: -3.2px;
 
 			}
 			@include respond-to(xs) {
-				font-size: 60px; line-height: 48px;
+				font-size: 64px; line-height: 52px;
 			}
 		}
 
@@ -1620,24 +1627,30 @@ ul.header-socials {
 			}
 			@include respond-to(sm) {
 				font-size: 110px; line-height: 90px; letter-spacing: -5px;
-				margin-bottom: 20px;
+				margin-bottom: 32px;
 			}
 			@include respond-to(xs) {
-				font-size: 60px; line-height: 48px;
+				font-size: 64px; line-height: 52px;
 				margin-bottom: 15px;
 			}
 		}
 
 		ul {
 			position: relative; left: -2px;
+			@include respond-to(sm) {
+				left: 2px;
+			}
+			@include respond-to(xs) {
+				left: -5px;
+			}
 			li {
 				font-size: 36px; font-family: $cp-light-LC; text-shadow: 1px 1px 0px #000;
 				display: inline-block;
 				@include respond-to(sm) {
-					font-size: 40px;
+					font-size: 40px; line-height: 38px;
 				}
 				@include respond-to(xs) {
-					font-size: 22px;
+					font-size: 26px; line-height: 24px;
 				}
 				&:last-child {
 					&:after {
@@ -1649,10 +1662,10 @@ ul.header-socials {
 					font-size: 36px; font-family: $i-black;
 					margin: 0 0 0 5px;
 					@include respond-to(sm) {
-						font-size: 40px;
+						font-size: 40px; line-height: 40px;
 					}
 					@include respond-to(xs) {
-						font-size: 22px;
+						font-size: 26px; line-height: 24px;
 					}
 				}
 			}
@@ -1663,16 +1676,34 @@ ul.header-socials {
 			@include respond-to(md) {
 				width: 600px; right: 50px; top: 0;
 			}
+			@include respond-to(sm) {
+				width: 1080px; left: calc(50% - 37px); top: 292px; transform: translateX(-50%);
+			}
+			@include respond-to(xs) {
+				width: 600px; left: calc(50% - 20px); top: 145px;
+			}
+
+			img {
+				@include respond-to(sm) {
+					width: 100%;
+				}
+			}
 		}
 	}
 
 	&-body {
 		display: flex;
 		@include respond-to(sm) {
-			flex-wrap: wrap;
+			flex-wrap: wrap; padding: 0 47px;
+		}
+		@include respond-to(xs) {
+			padding: 0 20px 0 0;
 		}
 		& > div {
 			width: 430px; position: relative; top: -7px;
+			@include respond-to(sm) {
+				width: 100%; margin-bottom: 55px;
+			}
 			p {
 				font-size: 18px; font-family: $s-regular; line-height: 32px;
 				margin-bottom: 10px;
@@ -1680,7 +1711,11 @@ ul.header-socials {
 					margin-bottom: 0;
 				}
 				@include respond-to(sm) {
-					width: 100%; margin-bottom: 30px;
+					font-size: 24px; font-family: $s-book; line-height: 36px; letter-spacing: 0.2px;
+					margin-bottom: 30px;
+				}
+				@include respond-to(xs) {
+					font-size: 20px; line-height: 28px;
 				}
 			}
 		}
@@ -1693,7 +1728,7 @@ ul.header-socials {
 			li {
 				padding-left: 30px; position: relative; margin-bottom: 36px;
 				@include respond-to(sm) {
-					padding: 0 30px;
+					padding: 0 0 0 34px; margin-bottom: 49px;
 				}
 				&:last-child {
 					margin-bottom: 0;
@@ -1702,16 +1737,42 @@ ul.header-socials {
 					content: '';
 					display: block; width: 20px; height: 20px; position: absolute; left: 0; top: -2px;
 					background: url('../img/intro-star.png') center center no-repeat;
+					@include respond-to(sm) {
+						width: 29px; height: 29px; left: -5px; top: -5px;
+						background: url('../img/intro-star_mob.png') center center no-repeat;
+					}
 				}
 				span {
 					font-size: 18px; font-family: $i-black; text-transform: uppercase;
 					display: block; margin-bottom: 3px;
+					@include respond-to(sm) {
+						font-size: 28px; letter-spacing: -0.4px;
+						margin-bottom: 14px;
+					}
+					@include respond-to(xs) {
+						font-size: 24px; line-height: 24px;
+					}
 				}
 
 				p {
-					
 					font-size: 12px; font-family: $s-regular; line-height: 18px;
 					max-width: 175px;
+					@include respond-to(sm) {
+						font-size: 22px; line-height: 28px; letter-spacing: 0.05px;
+						max-width: 100%;
+					}
+					@include respond-to(xs) {
+						font-size: 18px; line-height: 22px;
+					}
+
+					br {
+						@include respond-to(sm) {
+							display: none;
+						}
+						&.mob {
+							display: block;
+						}
+					}
 				}
 			}
 		}
@@ -1722,16 +1783,22 @@ ul.header-socials {
 .composition {
 	display: flex; padding: 37px 0 0 2px; position: relative;
 	@include respond-to(sm) {
-		flex-wrap: wrap;
+		flex-wrap: wrap; padding: 42px 0 0 0;
 	}
 	ul {
 		width: 390px; padding-top: 3px;
 		@include respond-to(sm) {
-			width: 100%; margin-bottom: 30px;
+			width: 100%; margin-bottom: 43px; padding-top: 0; padding-left: 46px;
+		}
+		@include respond-to(xs) {
+			padding-left: 0; padding-right: 40px;
 		}
 		li {
 			margin-bottom: 19px;
 			@include respond-to(sm) {
+				margin-bottom: 20px; position: relative;
+			}
+			@include respond-to(xs) {
 				margin-bottom: 10px;
 			}
 			&:last-child {
@@ -1741,15 +1808,20 @@ ul.header-socials {
 				font-size: 26px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.6px; line-height: 1;
 				display: inline-block; position: relative;
 				@include respond-to(sm) {
-					font-size: 20px;
+					font-size: 32px;
+					position: initial;
+				}
+				@include respond-to(xs) {
+					font-size: 24px;
+					margin-bottom: 10px;
 				}
 				&:after {
 					content: '';
 					display: block; width: 0px; height: 4px; position: absolute; right: -20px; top: 50%; transform: translate(100%,-50%);
 					background: $main-light;
 					transition: 0.4s ease-out;
-					@include respond-to(sm) {
-						display: none;
+					@include respond-to(xs) {
+						right: -60px;
 					}
 				}
 				&:hover,
@@ -1763,7 +1835,10 @@ ul.header-socials {
 					&:after {
 						width: 73px; right: -62px;
 						@include respond-to(sm) {
-							width: 50px; right: -25px;
+							width: 50px; right: 48px;
+						}
+						@include respond-to(xs) {
+							right: -10px;
 						}
 					}
 				}
@@ -1774,13 +1849,19 @@ ul.header-socials {
 	div {
 		width: calc(100% - 390px); padding-left: 28px;
 		@include respond-to(sm) {
-			width: 100%; padding: 0;
+			width: 100%; padding: 0 47px;
+		}
+		@include respond-to(xs) {
+			padding: 0 20px 0 0;
 		}
 		p {
 			
 			font-size: 18px; font-family: $s-regular; line-height: 32px; letter-spacing: 0.2px;
 			@include respond-to(sm) {
-				font-size: 16px; line-height: 22px;
+				font-size: 24px; line-height: 36px; font-family: $s-book;
+			}
+			@include respond-to(xs) {
+				font-size: 20px; line-height: 28px;
 			}
 			br {
 				@include respond-to(md) {
@@ -1792,25 +1873,35 @@ ul.header-socials {
 
 	figure {
 		position: absolute; left: -419px; top: -75px; z-index: -1;
+		@include respond-to(sm) {
+			display: none;
+		}
 	}
 }
 
 // roasting
 .roasting {
 	padding-top: 145px; z-index: 2; position: relative;
+	@include respond-to(sm) {
+		padding-top: 315px;
+	}
 	@include respond-to(xs) {
-		padding-top: 75px;
+		padding: 200px 20px 0 0;
 	}
 	p {
 		
 		font-size: 18px; font-family: $s-book; line-height: 26px; text-shadow: 1px 1px 0 #000;
 		width: 345px;
+		@include respond-to(sm) {
+			font-size: 24px; line-height: 36px; font-family: $s-book; letter-spacing: 0.2px;
+			width: 100%; padding: 0 47px;
+		}
 		@include respond-to(xs) {
-			font-size: 16px; line-height: 22px;
-			width: 100%;
+			font-size: 20px; line-height: 28px;
+			padding: 0;
 		}
 		br {
-			@include respond-to(xs) {
+			@include respond-to(sm) {
 				display: none;
 			}
 		}
@@ -1820,6 +1911,12 @@ ul.header-socials {
 // meat
 .meat {
 	position: relative; z-index: 2;
+	@include respond-to(sm) {
+		padding: 0 5px 0 47px;
+	}
+	@include respond-to(xs) {
+		padding: 0 20px 0 0;
+	}
 	ul {
 		display: flex; width: 1030px;
 		@include respond-to(1099px) {
@@ -1831,32 +1928,51 @@ ul.header-socials {
 		li {
 			width: 33.33333%; padding-top: 110px; padding-right: 50px; position: relative;
 			@include respond-to(sm) {
-				width: 100%; margin-bottom: 20px; padding-right: 0;
+				width: 50%; margin-bottom: 61px; padding-right: 0;
 			}
+			@include respond-to(xs) {
+				width: 100%; margin-bottom: 50px;
+			}
+
+			&:last-child {
+				@include respond-to(sm) {
+					margin-bottom: 0;
+				}
+			}
+
 			input {
 				display: none;
 			}
 
 			i {
 				position: absolute; left: 0; top: 0;
+				@include respond-to(sm) {
+					display: none;
+				}
 			}
 
 			[class*='icon-meat-1'] {
 				left: -6px;
 				@include respond-to(sm) {
-					left: 0;
+					left: 2px; top: -3px;
 				}
 			}
 			[class*='icon-meat-2'] {
 				left: 4px; top: 5px;
 				@include respond-to(sm) {
-					left: 0;
+					left: -3px; top: 0;
 				}
 			}
 			[class*='icon-meat-3'] {
 				left: -16px; top: 4px;
 				@include respond-to(sm) {
-					left: 0;
+					left: 9px; top: 11px;
+				}
+			}
+			[class*='_mob'] {
+				display: none;
+				@include respond-to(sm) {
+					display: block;
 				}
 			}
 			[class$='checked'] {
@@ -1866,6 +1982,18 @@ ul.header-socials {
 			h3 {
 				font-size: 18px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.25px;
 				margin-bottom: 8px;
+				@include respond-to(sm) {
+					font-size: 28px;
+					margin-bottom: 0;
+				}
+				@include respond-to(xs) {
+					margin-bottom: 10px;
+				}
+				span {
+					@include respond-to(sm) {
+						display: none;
+					}
+				}
 			}
 
 			p {
@@ -1873,6 +2001,13 @@ ul.header-socials {
 				font-size: 18px; font-family: $s-book; font-weight: 400; line-height: 26px;
 				@include respond-to(md) {
 					font-size: 16px; line-height: 24px;
+				}
+				@include respond-to(sm) {
+					display: none;
+				}
+				@include respond-to(xs) {
+					font-size: 20px; line-height: 28px;
+					display: block;
 				}
 			}
 		}
@@ -1886,23 +2021,33 @@ ul.header-socials {
 		@include respond-to(1099px) {
 			width: 100%;
 		}
+		@include respond-to(sm) {
+			padding: 81px 5px 0 47px; margin: 0 0 -52px;
+		}
+		@include respond-to(xs) {
+			padding: 30px 20px 0 0; margin: 0;
+		}
 		li {
 			width: 25%; margin-bottom: 84px; padding-top: 100px; position: relative;
+			&:last-child {
+				@include respond-to(xs) {
+					margin-bottom: 0;
+				}
+			}
 			@include respond-to(1099px) {
-				text-align: center;
 				width: 33.33333%;
 			}
 			@include respond-to(sm) {
-				width: 50%; margin-bottom: 40px;
+				width: 50%; margin-bottom: 52px;
 			}
 			@include respond-to(xs) {
-				margin-bottom: 30px; padding-top: 80px;
+				width: 100%; margin-bottom: 50px; padding-top: 100px;
 			}
 
 			i {
 				position: absolute; left: 0; top: 0;
 				@include respond-to(xs) {
-					transform: scale(0.7);
+					top: 0 !important; left: 0 !important;
 				}
 			}
 
@@ -1940,6 +2085,10 @@ ul.header-socials {
 
 			p {
 				font-size: 18px; font-family: $i-black; text-transform: uppercase; line-height: 24px; letter-spacing: -0.2px;
+				@include respond-to(sm) {
+					font-size: 28px; line-height: 29px;
+					max-width: 250px;
+				}
 			}
 		}
 	}

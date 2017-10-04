@@ -127,38 +127,49 @@ body {
 
 		&-intro {
 			padding: 6px 0 209px; position: relative;
-			// background: url('../img/burger-1.jpg') no-repeat; background-position: right -283px top 255px;
-			// figure {
-			// 	position: absolute; right: -283px; top: 255px;
-			// 	@include respond-to(md) {
-			// 		width: 600px; right: 50px; top: 0;
-			// 	}
-			// }
-
-			
+			@include respond-to(sm) {
+				padding: 6px 0 115px;
+			}
+			@include respond-to(xs) {
+				padding: 0 0 80px;
+			}
 		}
 
 		&-composition {
 			position: relative; padding: 0 0 328px;
-			// background: url('../img/burger-2.jpg') no-repeat; background-position: left -248px top 51px;
-			// figure {
-			// 	position: absolute; left: -248px; top: 51px; z-index: -1;
-			// }
+			@include respond-to(sm) {
+				padding: 0 0 126px;
+			}
+			@include respond-to(xs) {
+				padding: 0 0 80px;
+			}
 		}
 
 		&-roasting {
 			position: relative; padding: 0 0 165px;
+			@include respond-to(sm) {
+				padding: 0 0 74px;
+			}
 			figure {
 				position: absolute; right: 0; top: 77px; z-index: 1;
 				@include respond-to(sm) {
-					right: -15px;
+					left: calc(50% - 27px); top: 53px; transform: translateX(-50%); right: auto;
 				}
 				@include respond-to(xs) {
-					width: 500px;
+					width: 500px; left: calc(50% - 10px);
 				}
 				img {
-					@include respond-to(xs) {
-						width: 100%;
+					@include respond-to(sm) {
+						display: none;
+					}
+					&.mob {
+						display: none;
+						@include respond-to(sm) {
+							display: block;
+						}
+						@include respond-to(xs) {
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -166,10 +177,19 @@ body {
 
 		&-meat {
 			padding: 0 0 101px;
+			@include respond-to(sm) {
+				padding: 0 0 167px;
+			}
 		}
 
 		&-add {
 			padding: 0 0 145px;
+			@include respond-to(sm) {
+				padding: 0 0 263px;
+			}
+			@include respond-to(xs) {
+				padding: 0 0 120px;
+			}
 		}
 
 		&-bhf {
