@@ -361,11 +361,14 @@ body {
 					display: none;
 					@include respond-to(sm) {
 						display: block; position: absolute; top: -113px; left:-45px; z-index: -1; 
+						@include respond-to(xs) {left: -20px;}
 					}
 					img {
 						@include respond-to(sm) {
 							width: 100%;
 						}
+						@media (max-width: 639px) {width: 640px;}
+						@include respond-to(xs) {width: 480px;}
 					}
 				}
 			}
@@ -373,6 +376,7 @@ body {
 			&-mission {
 				padding: 0 0 162px;
 				@include respond-to(sm) {padding-left: 48px; padding-bottom: 70px;}
+				@include respond-to(xs) {padding-left: 0;}
 				h2 {
 					@include respond-to(sm) {
 						font-size: 42px; letter-spacing: -1.5px; line-height: 37px;
@@ -391,6 +395,7 @@ body {
 			&-worth {
 				padding: 0 0 137px;
 				@include respond-to(sm) {padding-left: 48px;}
+				@include respond-to(xs) {padding-left: 25px;}
 				h2 {
 					@include respond-to(sm) {
 						font-size: 42px; letter-spacing: -1.5px; line-height: 37px;
@@ -407,17 +412,82 @@ body {
 
 			&-command {
 				padding: 0 0 188px;
+				@include respond-to(sm) {
+					padding-top: 413px;
+				}
+				@include respond-to(sm) {
+					padding-top: 283px;
+				}
+				h2 {
+					@include respond-to(sm) {
+						font-size: 110px; line-height: 90px; letter-spacing: -6.8px;
+						position: relative; left: -2px;
+					}
+					@media (max-width: 639px) {
+						font-size: 80px;  line-height: 64px;
+					}
+					@include respond-to(xs) {
+						font-size: 60px; line-height: 46px;
+					}
+				}
 				figure {
 					position: absolute; right: 42.85714%; top: 61px; transform: translateX(100%); z-index: -1;
+					@include respond-to(sm) {display: none;}
+					&.mobile {
+						display: none;
+						@include respond-to(sm) {
+							display: block; right: auto; left: -45px; top: -50px; transform: none; 
+						}
+					}
+
+					img {
+						@include respond-to(xs) {width: 480px;}
+					}
 				}
 			}
 
 			&-news {
 				padding: 0 0 266px;
+				@include respond-to(sm) {padding-bottom: 180px;}
+				@include respond-to(xs) {padding-bottom: 150px;}
+				h2 {
+					@include respond-to(sm) {
+						font-size: 110px; letter-spacing: -6.4px; left: -3px;
+						position: relative; 
+					}
+					@media (max-width: 639px) {
+						font-size: 80px;  line-height: 64px;
+					}
+					@include respond-to(xs) {
+						font-size: 60px; line-height: 46px;
+					}
+					span {
+						@include respond-to(sm) {display: none;}
+						&.mob {
+							display: none;
+							@include respond-to(sm) {display: inline;}
+						}
+					}
+				}
 			}
 
 			&-contacts {
 				padding: 0 0 146px;
+				@include respond-to(sm) {
+					padding-bottom: 83px;
+				}
+				h2 {
+					@include respond-to(sm) {
+						font-size: 110px; letter-spacing: -7.1px;
+						position: relative; left: -3px;
+					}
+					@media (max-width: 639px) {
+						font-size: 80px;  line-height: 64px;
+					}
+					@include respond-to(xs) {
+						font-size: 60px; line-height: 46px;
+					}
+				}
 			}
 		}
 		

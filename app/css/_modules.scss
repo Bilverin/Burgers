@@ -1926,15 +1926,20 @@ ul.header-socials {
 .company {
 	// intro
 	&-intro {
-		@include respond-to(sm) {
-			padding-top: 340px;
-		}
+		@include respond-to(sm) {padding-top: 340px;}
+		@media (max-width: 639px) {padding-top: 330px;}
+		@include respond-to(xs) {padding-top: 224px;}
+
 		h1 {
 			font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 140px; letter-spacing: -6px;
 			margin-bottom: 20px;
 			@include respond-to(sm) {
 				font-size: 110px; line-height: 90px; letter-spacing: -6.8px;
 				position: relative; left: -7px; margin-bottom: 67px;
+			}
+			@include respond-to(xs) {
+				font-size: 64px; line-height: 50px;
+				margin-bottom: 40px;
 			}
 			&:last-child {
 				margin-bottom: 0;
@@ -1947,6 +1952,12 @@ ul.header-socials {
 			@include respond-to(sm) {
 				font-family: $s-book; font-size: 34px; line-height: 52px; text-transform: none; letter-spacing: 0.7px;
 				margin-bottom: 0; padding-right: 20px;
+			}
+			@media (max-width: 639px) {
+				font-size: 26px; line-height: 44px;
+			}
+			@include respond-to(xs) {
+				font-size: 20px; line-height: 34px;
 			}
 			br {
 				@include respond-to(sm) {display: none;}
@@ -1963,9 +1974,13 @@ ul.header-socials {
 		p {
 			font-size: 16px; font-family: $s-book; line-height: 28px; letter-spacing: 0.1px;
 			margin-bottom: 28px;
+			@include respond-to(md) {text-shadow: 0 1px 0 #9a9a9a;}
 			@include respond-to(sm) {
-				font-size: 28px; line-height: 40px; letter-spacing: -0.1px;
+				text-shadow: none; font-size: 28px; line-height: 40px; letter-spacing: -0.1px; 
 				padding-right: 50px; margin-bottom: 30px;
+			}
+			@include respond-to(xs) {
+				font-size: 20px; line-height: 32px;
 			}
 
 			&:last-child {
@@ -1985,10 +2000,17 @@ ul.header-socials {
 					line-height: 40px; letter-spacing: 0; font-size: 28px;
 					padding-left: 0; padding-right: 45px; margin-bottom: 31px; position: relative; left: -3px;
 				}
+				@media (max-width: 639px) {
+					font-size: 24px; line-height: 36px;
+				}
+				@include respond-to(xs) {font-size: 20px; line-height: 30px;}
 				&:before {
 					content: '';
 					display: block; width: 5px; height: 5px; position: absolute; left: 8px; top: 11px;
 					background: $main-dark; border-radius: 50%;
+					@include respond-to(sm) {
+						width: 10px; height: 10px; top: 16px; left: -28px;
+					}
 				}
 				span {
 					font-family: $s-bold;
@@ -2001,15 +2023,45 @@ ul.header-socials {
 	// command
 	&-command {
 		padding-top: 40px; position: relative; z-index: 3;
+		@include respond-to(sm) {
+			padding-right: 20px;
+		}
 		p {
 			font-size: 16px; font-family: $s-book; line-height: 28px; letter-spacing: 0.1px;
 			margin-bottom: 25px;
+			@include respond-to(md) {text-shadow: 0 1px 0 #9a9a9a;}
+			@include respond-to(sm) {
+				font-size: 33px; line-height: 50px;
+			}
+			@media (max-width: 639px) {
+				text-shadow: none; font-size: 26px; line-height: 42px;
+			}
+			@include respond-to(xs) {
+				font-size: 20px; line-height: 34px;
+			}
+
+			span {
+				@include respond-to(sm) {
+					font-size: 28px; line-height: 40px;
+					display: block; padding-top: 37px; padding-left: 45px
+				}
+				@media (max-width: 639px) {
+					font-size: 20px; line-height: 34px;
+				}
+				@include respond-to(xs) {
+					font-size: 16px; line-height: 28px;
+				}
+				
+			}
 		}
 
 		ul {
+			@include respond-to(sm) {display: none;}
 			li {
 				font-size: 16px; font-family: $s-book; line-height: 24px; letter-spacing: 0.1px;
 				padding-left: 15px; position: relative; margin-bottom: 10px;
+				@include respond-to(md) {text-shadow: 0 1px 0 #9a9a9a;}
+
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -2025,9 +2077,25 @@ ul.header-socials {
 	// vacancy
 	&-vacancy {
 		padding-top: 48px; position: relative; left: -5px; z-index: 3;
+		@include respond-to(sm) {
+			left: 45px; padding-top: 32px;
+		}
+		@include respond-to(xs) {left: 0;}
 		h3 {
 			color: #ffffff; font-size: 42px; font-family: $cp-light; text-transform: uppercase; line-height: 36px;
 			margin-bottom: 30px;
+			@include respond-to(md) {color: #000;}
+			@include respond-to(sm) {
+				font-size: 60px; line-height: 54px; letter-spacing: 0.4px;
+				margin-bottom: 26px;  
+				
+			}
+			@media (max-width: 639px) {
+				font-size: 52px; line-height: 43px;
+			}
+			@include respond-to(xs) {
+				font-size: 44px; line-height: 36px;
+			}
 		}
 		h4 {
 			color: #ffffff; font-size: 24px; font-family: $i-light; text-transform: uppercase;
@@ -2038,17 +2106,31 @@ ul.header-socials {
 			margin-bottom: 40px;
 			li {
 				margin-bottom: 24px;
+				@include respond-to(sm) {margin-bottom: 27px;}
 				&:last-child {
 					margin-bottom: 0;
 				}
 				a {
 					color: #ffffff; font-size: 42px; font-family: $i-black; text-transform: uppercase; line-height: 33px; letter-spacing: -0.5px;
 					position: relative;
+					@include respond-to(md) {color: #000; text-shadow: 0 1px 0 #9a9a9a;}
+					@include respond-to(sm) {
+						font-size: 60px; line-height: 54px; letter-spacing: -0.8px;
+						padding-right: 50px;
+					}
+					@media (max-width: 639px) {
+						font-size: 52px; line-height: 43px;
+					}
+					@include respond-to(xs) {
+						font-size: 44px; line-height: 36px;
+					}
+
 					&:after {
 						content: '';
 						display: block; width: 0%; height: 3px; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%);
 						background: #ffffff;
 						transition: .4s ease-out;
+						@include respond-to(md) {background: #000;}
 					}
 					&:hover {
 						&:after {
@@ -2067,6 +2149,11 @@ ul.header-socials {
 		& > a {
 			color: #ffffff; font-size: 16px; font-family: $i-black; text-transform: uppercase; letter-spacing: 0.4px;
 			position: relative;
+			@include respond-to(md) {color: #000;}
+			@include respond-to(sm) {
+				color: #000; font-size: 24px; letter-spacing: 0.7px;
+				display: block; padding: 23px 0 0 2px;
+			}
 			&:after {
 				content: '';
 				display: block; width: 0%; height: 2px; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%);
@@ -2154,15 +2241,45 @@ ul.header-socials {
 	// news
 	&-news {
 		padding-top: 40px;
+		@include respond-to(sm) {
+			padding: 53px 10px 0 46px;
+		}
+		@include respond-to(xs) {padding-left: 0;}
+
 		& > p {
 			font-size: 16px; font-family: $s-book; line-height: 28px;
 			margin-bottom: 15px;
+			@include respond-to(md) {margin-bottom: 30px;}
+			@include respond-to(sm) {
+				font-size: 28px; line-height: 40px;
+			}
+			@media (max-width: 639px) {
+				font-size: 22px; line-height: 32px;
+			}
+			@include respond-to(xs) {
+				font-size: 18px; line-height: 28px;
+			}
+
+			br {
+				@include respond-to(sm) {display: none;}
+				&.mob {
+					display: none;
+					@include respond-to(sm) {display: block;}
+				}
+			}
 		}
 
 		ul {
 			display: flex; width: 1000%; padding-top: 32px;
+			@include respond-to(sm) {padding-top: 20px;}
 			li {
-				width: 345px; margin-right: 50px;
+				width: 345px; margin-right: 50px; 
+				@include respond-to(sm) {
+					width: 595px; margin-right: 0; position: relative; left: -641px;
+				}
+				@include respond-to(xs) {
+					left: -520px; width: 480px;
+				}
 				&:last-child {
 					margin-right: 0;
 				}
@@ -2180,17 +2297,35 @@ ul.header-socials {
 
 					figure {
 						img {
-
+							@include respond-to(sm) {width: 595px;}
+							@include respond-to(xs) {width: 480px;}
 						}
 						figcaption {
 							padding-top: 11px;
+							@include respond-to(sm) {
+								padding: 32px 20px 0 47px;
+							}
+							@media (max-width: 639px) {width: 430px;}
 							p {
 								font-size: 12px; font-family: $s-regular;
 								margin-bottom: 6px;
+								@include respond-to(sm) {
+									font-size: 21px; letter-spacing: 0.5px; 
+									margin-bottom: 6px;
+								}
+								@media (max-width: 639px) {font-size: 18px;}
 							}
 
 							h3 {
 								font-size: 16px; font-family: $i-black; text-transform: uppercase; line-height: 22px; letter-spacing: -0.15px;
+								@include respond-to(sm) {
+									font-size: 24px; letter-spacing: -0.2px; line-height: 30px;
+									margin-top: 18px;
+								}
+								@media (max-width: 639px) {
+									font-size: 20px; line-height: 26px;
+								}
+								
 							}
 						}
 					}
@@ -2202,19 +2337,37 @@ ul.header-socials {
 	// contacts
 	&-contacts {
 		padding-top: 48px;
+		@include respond-to(sm) {
+			padding: 57px 0 0 49px;
+		}
+		@include respond-to(xs) {padding-left: 0;}
 		ul {
 			li {
 				margin-bottom: 22px;
+				@include respond-to(sm) {margin-bottom: 46px;}
+				@media (max-width: 639px) {margin-bottom: 35px;}
 				&:last-child {
 					margin-bottom: 0;
 				}
 				h3 {
 					font-size: 18px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.2px;
 					margin-bottom: 3px;
+					font-size: 30px;
+					@include respond-to(sm) {
+						font-size: 30px; letter-spacing: -0.5px;
+						margin-bottom: 9px;
+					}
+					@media (max-width: 639px) {font-size: 24px;}
+					@include respond-to(xs) {font-size: 22px;}
 				}
 
 				p {
 					font-size: 18px; font-family: $i-light; text-transform: uppercase; letter-spacing: -0.3px;
+					@include respond-to(sm) {
+						font-size: 30px; letter-spacing: -0.5px;
+					}
+					@media (max-width: 639px) {font-size: 20px;}
+					@include respond-to(xs) {font-size: 16px;}
 				}
 			}
 		}
