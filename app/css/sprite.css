@@ -30,25 +30,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-add-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -460px -262px;
+  background-position: -460px -184px;
   width: 83px;
   height: 78px;
 }
 .icon-add-2 {
   background-image: url(../img/sprite.png);
-  background-position: -460px -184px;
+  background-position: -460px -262px;
   width: 83px;
   height: 78px;
 }
 .icon-add-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: -99px -403px;
+  background-position: 0px -403px;
   width: 99px;
   height: 83px;
 }
 .icon-add-3 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -403px;
+  background-position: -99px -403px;
   width: 99px;
   height: 83px;
 }
@@ -114,15 +114,33 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-add-9-checked {
   background-image: url(../img/sprite.png);
-  background-position: -551px -167px;
+  background-position: -551px -82px;
   width: 91px;
   height: 85px;
 }
 .icon-add-9 {
   background-image: url(../img/sprite.png);
-  background-position: -551px -82px;
+  background-position: -551px -167px;
   width: 91px;
   height: 85px;
+}
+.icon-arrow {
+  background-image: url(../img/sprite.png);
+  background-position: -442px -450px;
+  width: 39px;
+  height: 15px;
+}
+.icon-arrow_active_mob {
+  background-image: url(../img/sprite.png);
+  background-position: -286px -486px;
+  width: 60px;
+  height: 24px;
+}
+.icon-arrow_mob {
+  background-image: url(../img/sprite.png);
+  background-position: -368px -287px;
+  width: 60px;
+  height: 25px;
 }
 .icon-bottle-light {
   background-image: url(../img/sprite.png);
@@ -132,7 +150,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-bottle-light_big {
   background-image: url(../img/sprite.png);
-  background-position: -460px 0px;
+  background-position: -460px -92px;
   width: 91px;
   height: 92px;
 }
@@ -144,7 +162,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-bottle_big {
   background-image: url(../img/sprite.png);
-  background-position: -460px -92px;
+  background-position: -460px 0px;
   width: 91px;
   height: 92px;
 }
@@ -160,6 +178,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 24px;
   height: 24px;
 }
+.icon-close_mob {
+  background-image: url(../img/sprite.png);
+  background-position: -157px -558px;
+  width: 27px;
+  height: 27px;
+}
 .icon-coffee {
   background-image: url(../img/sprite.png);
   background-position: -199px -155px;
@@ -174,13 +198,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-logo-footer-dark {
   background-image: url(../img/sprite.png);
-  background-position: -138px -155px;
+  background-position: -303px -163px;
   width: 61px;
   height: 60px;
 }
 .icon-logo-footer {
   background-image: url(../img/sprite.png);
-  background-position: -303px -163px;
+  background-position: -138px -155px;
   width: 61px;
   height: 60px;
 }
@@ -192,7 +216,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-logo-header-dark_mob {
   background-image: url(../img/sprite.png);
-  background-position: -208px -486px;
+  background-position: -247px -486px;
   width: 39px;
   height: 39px;
 }
@@ -204,7 +228,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-logo-header_mob {
   background-image: url(../img/sprite.png);
-  background-position: -247px -486px;
+  background-position: -208px -486px;
   width: 39px;
   height: 39px;
 }
@@ -240,13 +264,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-meat-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -551px -414px;
+  background-position: -138px -84px;
   width: 74px;
   height: 70px;
 }
 .icon-meat-2 {
   background-image: url(../img/sprite.png);
-  background-position: -138px -84px;
+  background-position: -551px -414px;
   width: 74px;
   height: 70px;
 }

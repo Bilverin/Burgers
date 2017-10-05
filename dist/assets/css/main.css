@@ -8004,25 +8004,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-add-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -460px -262px;
+  background-position: -460px -184px;
   width: 83px;
   height: 78px; }
 
 .icon-add-2 {
   background-image: url(../img/sprite.png);
-  background-position: -460px -184px;
+  background-position: -460px -262px;
   width: 83px;
   height: 78px; }
 
 .icon-add-3-checked {
   background-image: url(../img/sprite.png);
-  background-position: -99px -403px;
+  background-position: 0px -403px;
   width: 99px;
   height: 83px; }
 
 .icon-add-3 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -403px;
+  background-position: -99px -403px;
   width: 99px;
   height: 83px; }
 
@@ -8088,15 +8088,33 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-add-9-checked {
   background-image: url(../img/sprite.png);
-  background-position: -551px -167px;
+  background-position: -551px -82px;
   width: 91px;
   height: 85px; }
 
 .icon-add-9 {
   background-image: url(../img/sprite.png);
-  background-position: -551px -82px;
+  background-position: -551px -167px;
   width: 91px;
   height: 85px; }
+
+.icon-arrow {
+  background-image: url(../img/sprite.png);
+  background-position: -442px -450px;
+  width: 39px;
+  height: 15px; }
+
+.icon-arrow_active_mob {
+  background-image: url(../img/sprite.png);
+  background-position: -286px -486px;
+  width: 60px;
+  height: 24px; }
+
+.icon-arrow_mob {
+  background-image: url(../img/sprite.png);
+  background-position: -368px -287px;
+  width: 60px;
+  height: 25px; }
 
 .icon-bottle-light {
   background-image: url(../img/sprite.png);
@@ -8106,7 +8124,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-bottle-light_big {
   background-image: url(../img/sprite.png);
-  background-position: -460px 0px;
+  background-position: -460px -92px;
   width: 91px;
   height: 92px; }
 
@@ -8118,7 +8136,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-bottle_big {
   background-image: url(../img/sprite.png);
-  background-position: -460px -92px;
+  background-position: -460px 0px;
   width: 91px;
   height: 92px; }
 
@@ -8134,6 +8152,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 24px;
   height: 24px; }
 
+.icon-close_mob {
+  background-image: url(../img/sprite.png);
+  background-position: -157px -558px;
+  width: 27px;
+  height: 27px; }
+
 .icon-coffee {
   background-image: url(../img/sprite.png);
   background-position: -199px -155px;
@@ -8148,13 +8172,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-logo-footer-dark {
   background-image: url(../img/sprite.png);
-  background-position: -138px -155px;
+  background-position: -303px -163px;
   width: 61px;
   height: 60px; }
 
 .icon-logo-footer {
   background-image: url(../img/sprite.png);
-  background-position: -303px -163px;
+  background-position: -138px -155px;
   width: 61px;
   height: 60px; }
 
@@ -8166,7 +8190,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-logo-header-dark_mob {
   background-image: url(../img/sprite.png);
-  background-position: -208px -486px;
+  background-position: -247px -486px;
   width: 39px;
   height: 39px; }
 
@@ -8178,7 +8202,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-logo-header_mob {
   background-image: url(../img/sprite.png);
-  background-position: -247px -486px;
+  background-position: -208px -486px;
   width: 39px;
   height: 39px; }
 
@@ -8214,13 +8238,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-meat-2-checked {
   background-image: url(../img/sprite.png);
-  background-position: -551px -414px;
+  background-position: -138px -84px;
   width: 74px;
   height: 70px; }
 
 .icon-meat-2 {
   background-image: url(../img/sprite.png);
-  background-position: -138px -84px;
+  background-position: -551px -414px;
   width: 74px;
   height: 70px; }
 
@@ -9868,11 +9892,98 @@ ul.header-socials {
   @media (max-width: 767px) {
     .burgerPlace-list {
       padding-top: 56px; } }
+  @media (max-width: 639px) {
+    .burgerPlace-list {
+      padding-top: 90px; } }
   .burgerPlace-list .map-mob {
     display: none; }
     @media (max-width: 767px) {
       .burgerPlace-list .map-mob {
-        display: block; } }
+        display: block;
+        padding-bottom: 20px; } }
+    .burgerPlace-list .map-mob figure {
+      position: absolute;
+      top: -111px;
+      left: -45px; }
+      .burgerPlace-list .map-mob figure img {
+        width: 100%;
+        height: 832px; }
+    .burgerPlace-list .map-mob .addess {
+      padding-top: 706px;
+      position: relative; }
+      .burgerPlace-list .map-mob .addess h3 {
+        font-size: 27px;
+        font-family: "intro-black", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 10px; }
+        @media (max-width: 480px) {
+          .burgerPlace-list .map-mob .addess h3 {
+            font-size: 20px; } }
+      .burgerPlace-list .map-mob .addess p {
+        font-size: 21px;
+        font-family: "stolzl-book", sans-serif;
+        padding-left: 2px;
+        margin-top: 3px;
+        position: relative;
+        left: -2px; }
+        @media (max-width: 480px) {
+          .burgerPlace-list .map-mob .addess p {
+            font-size: 16px; } }
+      .burgerPlace-list .map-mob .addess ul {
+        margin-top: 10px;
+        position: relative;
+        left: -2px; }
+        .burgerPlace-list .map-mob .addess ul li {
+          font-size: 21px;
+          font-family: "stolzl-book", sans-serif;
+          padding-left: 2px;
+          margin-bottom: 10px; }
+          @media (max-width: 480px) {
+            .burgerPlace-list .map-mob .addess ul li {
+              font-size: 16px; } }
+          .burgerPlace-list .map-mob .addess ul li span {
+            font-family: "stolzl-bold", sans-serif; }
+            @media (max-width: 767px) {
+              .burgerPlace-list .map-mob .addess ul li span.day {
+                font-size: 18px; } }
+      .burgerPlace-list .map-mob .addess a.close {
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        right: 42px;
+        top: 679px;
+        opacity: 1;
+        -webkit-transition: 0.4s ease-out;
+        transition: 0.4s ease-out; }
+        @media (max-width: 480px) {
+          .burgerPlace-list .map-mob .addess a.close {
+            right: 22px;
+            top: 624px; } }
+        .burgerPlace-list .map-mob .addess a.close:hover {
+          opacity: .2; }
+        .burgerPlace-list .map-mob .addess a.close i {
+          position: static; }
+          @media (max-width: 480px) {
+            .burgerPlace-list .map-mob .addess a.close i {
+              display: block; } }
+      .burgerPlace-list .map-mob .addess > a {
+        font-family: "stolzl-bold", sans-serif;
+        font-size: 24px;
+        letter-spacing: 0.1px;
+        display: block;
+        width: 407px;
+        margin-top: 28px;
+        position: relative; }
+        @media (max-width: 480px) {
+          .burgerPlace-list .map-mob .addess > a {
+            font-size: 20px; } }
+        .burgerPlace-list .map-mob .addess > a i {
+          position: absolute;
+          right: 0;
+          bottom: -11px; }
+          @media (max-width: 480px) {
+            .burgerPlace-list .map-mob .addess > a i {
+              display: none; } }
   .burgerPlace-list > ul > li {
     margin-bottom: 29px; }
     @media (max-width: 767px) {
@@ -9902,6 +10013,9 @@ ul.header-socials {
       @media (max-width: 767px) {
         .burgerPlace-list > ul > li h3 {
           font-size: 27px; } }
+      @media (max-width: 639px) {
+        .burgerPlace-list > ul > li h3 {
+          font-size: 22px; } }
     .burgerPlace-list > ul > li p {
       font-size: 14px;
       font-family: "stolzl-book", sans-serif; }
@@ -9910,6 +10024,9 @@ ul.header-socials {
           font-size: 21px;
           padding-left: 2px;
           margin-top: 3px; } }
+      @media (max-width: 639px) {
+        .burgerPlace-list > ul > li p {
+          font-size: 18px; } }
       .burgerPlace-list > ul > li p span {
         font-family: "stolzl-bold", sans-serif; }
     .burgerPlace-list > ul > li ul {
@@ -9926,21 +10043,50 @@ ul.header-socials {
             font-size: 21px;
             padding-left: 2px;
             margin-bottom: 10px; } }
+        @media (max-width: 639px) {
+          .burgerPlace-list > ul > li ul li {
+            font-size: 18px; } }
         .burgerPlace-list > ul > li ul li span {
           font-family: "stolzl-bold", sans-serif; }
           @media (max-width: 767px) {
             .burgerPlace-list > ul > li ul li span.day {
               font-size: 18px; } }
+          @media (max-width: 639px) {
+            .burgerPlace-list > ul > li ul li span.day {
+              font-size: 15px; } }
     .burgerPlace-list > ul > li a {
       font-size: 14px;
-      font-family: "stolzl-book", sans-serif; }
+      font-family: "stolzl-book", sans-serif;
+      position: relative; }
       @media (max-width: 767px) {
         .burgerPlace-list > ul > li a {
           font-family: "stolzl-bold", sans-serif;
           font-size: 24px;
           letter-spacing: 0.1px;
           display: block;
-          margin-top: 3px; } }
+          width: 408px;
+          margin-top: 3px;
+          position: relative; } }
+      @media (max-width: 480px) {
+        .burgerPlace-list > ul > li a {
+          font-size: 20px; } }
+      .burgerPlace-list > ul > li a i {
+        position: absolute;
+        right: -62px;
+        bottom: -3px; }
+        @media (max-width: 767px) {
+          .burgerPlace-list > ul > li a i {
+            display: none; } }
+        .burgerPlace-list > ul > li a i[class*='_mob'] {
+          display: none; }
+          @media (max-width: 767px) {
+            .burgerPlace-list > ul > li a i[class*='_mob'] {
+              display: block;
+              right: 0;
+              bottom: -11px; } }
+          @media (max-width: 480px) {
+            .burgerPlace-list > ul > li a i[class*='_mob'] {
+              display: none; } }
 
 .burgerPlace-menu h2 {
   font-size: 170px;
@@ -12047,6 +12193,12 @@ body {
           z-index: 111;
           top: -50px;
           right: 0; } }
+      @media (max-width: 639px) {
+        .app .wr-burgerPlace-list .nav-map {
+          text-align: left;
+          top: 0;
+          left: 0;
+          width: 100%; } }
       .app .wr-burgerPlace-list .nav-map li {
         display: none; }
         .app .wr-burgerPlace-list .nav-map li.active {
@@ -12056,16 +12208,23 @@ body {
           font-size: 32px;
           letter-spacing: -0.7px;
           text-transform: uppercase; }
-    .app .wr-burgerPlace-list figure {
+          @media (max-width: 639px) {
+            .app .wr-burgerPlace-list .nav-map li a {
+              font-size: 26px;
+              letter-spacing: 0.5px; } }
+    .app .wr-burgerPlace-list > figure {
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
       width: 100%;
-      height: 100%;
+      height: 734px;
       overflow: hidden; }
-      .app .wr-burgerPlace-list figure img {
+      @media (max-width: 767px) {
+        .app .wr-burgerPlace-list > figure {
+          display: none; } }
+      .app .wr-burgerPlace-list > figure img {
         width: 100%;
         position: absolute;
         left: 50%;
