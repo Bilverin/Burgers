@@ -9882,6 +9882,9 @@ ul.header-socials {
       margin-bottom: 0; }
     .burgerPlace-list > ul > li.active {
       margin-bottom: 43px; }
+      @media (max-width: 767px) {
+        .burgerPlace-list > ul > li.active {
+          margin-bottom: 75px; } }
       .burgerPlace-list > ul > li.active * {
         color: #fbb040; }
         @media (max-width: 767px) {
@@ -9921,12 +9924,23 @@ ul.header-socials {
         @media (max-width: 767px) {
           .burgerPlace-list > ul > li ul li {
             font-size: 21px;
-            padding-left: 2px; } }
+            padding-left: 2px;
+            margin-bottom: 10px; } }
         .burgerPlace-list > ul > li ul li span {
           font-family: "stolzl-bold", sans-serif; }
+          @media (max-width: 767px) {
+            .burgerPlace-list > ul > li ul li span.day {
+              font-size: 18px; } }
     .burgerPlace-list > ul > li a {
       font-size: 14px;
       font-family: "stolzl-book", sans-serif; }
+      @media (max-width: 767px) {
+        .burgerPlace-list > ul > li a {
+          font-family: "stolzl-bold", sans-serif;
+          font-size: 24px;
+          letter-spacing: 0.1px;
+          display: block;
+          margin-top: 3px; } }
 
 .burgerPlace-menu h2 {
   font-size: 170px;
@@ -12020,18 +12034,27 @@ body {
     @media (max-width: 767px) {
       .app .wr-burgerPlace-list {
         padding-top: 0; } }
-    .app .wr-burgerPlace-list .nav {
+    .app .wr-burgerPlace-list .nav-map {
       display: none; }
       @media (max-width: 767px) {
-        .app .wr-burgerPlace-list .nav {
+        .app .wr-burgerPlace-list .nav-map {
+          text-align: right;
           display: block;
-          position: absolute; } }
-      .app .wr-burgerPlace-list .nav li {
+          padding-right: 45px;
+          width: -webkit-calc(100% - 100px);
+          width: calc(100% - 100px);
+          position: absolute;
+          z-index: 111;
+          top: -50px;
+          right: 0; } }
+      .app .wr-burgerPlace-list .nav-map li {
         display: none; }
-        .app .wr-burgerPlace-list .nav li.active {
+        .app .wr-burgerPlace-list .nav-map li.active {
           display: block; }
-        .app .wr-burgerPlace-list .nav li a {
+        .app .wr-burgerPlace-list .nav-map li a {
           font-family: "intro-black", sans-serif;
+          font-size: 32px;
+          letter-spacing: -0.7px;
           text-transform: uppercase; }
     .app .wr-burgerPlace-list figure {
       position: absolute;

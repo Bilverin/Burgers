@@ -1257,6 +1257,8 @@ ul.header-socials {
 
 				&.active {
 					margin-bottom: 43px;
+					@include respond-to(sm) {margin-bottom: 75px;}
+					
 					* {
 						color: $main-light;
 						@include respond-to(sm) {margin-left: -1px;}
@@ -1292,17 +1294,24 @@ ul.header-socials {
 						font-size: 14px; font-family: $s-book;
 						@include respond-to(sm) {
 							font-size: 21px;
-							padding-left: 2px;
+							padding-left: 2px; margin-bottom: 10px;
 						}
-
+						
 						span {
 							font-family: $s-bold;
+							&.day {
+								@include respond-to(sm) {font-size: 18px;}
+							}
 						}
 					}
 				}
 
 				a {
 					font-size: 14px; font-family: $s-book;
+					@include respond-to(sm) {
+						font-family: $s-bold; font-size: 24px; letter-spacing: 0.1px;
+						display: block; margin-top: 3px;
+					}
 				}
 			}
 		}
