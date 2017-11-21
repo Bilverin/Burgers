@@ -118,7 +118,7 @@ $(document).ready(function() {
 					$('.roasting-slider').swipe('option', 'allowPageScroll', 'vertical');
 					setTimeout(function () {
 						$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
-					}, 400);
+					}, 800);
 				}
 			} else if (direction === 'down') {
 				updateSlides(slides, getPrev(oldState));
@@ -126,7 +126,7 @@ $(document).ready(function() {
 					$('.roasting-slider').swipe('option', 'allowPageScroll', 'vertical');
 					setTimeout(function () {
 						$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
-					}, 400);
+					}, 800);
 				}
 			}
 		}
