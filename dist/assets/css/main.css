@@ -12267,7 +12267,7 @@ body {
         display: none; } }
     .app .wr-main-info figure {
       position: absolute;
-      right: -475px;
+      right: 0;
       top: 47px;
       z-index: -1; }
   .app .wr-main-map {
@@ -12381,11 +12381,8 @@ body {
         padding-bottom: 135px; } }
     .app .wr-burgerPlace-intro figure {
       position: absolute;
-      right: 42.85714%;
+      right: 0;
       top: 248px;
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
       z-index: -1; }
       @media (max-width: 991px) {
         .app .wr-burgerPlace-intro figure {
@@ -12593,11 +12590,8 @@ body {
           display: inline-block; } }
     .app .wr-company-mission figure {
       position: absolute;
-      right: 42.85714%;
+      right: 0;
       top: -314px;
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
       z-index: -1; }
       @media (max-width: 767px) {
         .app .wr-company-mission figure {
@@ -12648,11 +12642,8 @@ body {
         line-height: 46px; } }
     .app .wr-company-command figure {
       position: absolute;
-      right: 42.85714%;
+      right: 0;
       top: 61px;
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
       z-index: -1; }
       @media (max-width: 767px) {
         .app .wr-company-command figure {

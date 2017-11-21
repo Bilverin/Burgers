@@ -186,8 +186,8 @@ $(window).on('load', function() {
 	function updateFigure(newState) {
 		var posY = newState < 900 ? newState > 50 ?
 			newState * 0.5 - 225 : 0 - 4 * newState : 225;
-		figure.css('transform', 'translate(100%, ' + posY + 'px)');
-		figure_2.css('transform', 'translate(100%, ' + (posY - 100) + 'px)');
+		figure.css('transform', 'translate(0, ' + posY + 'px)');
+		figure_2.css('transform', 'translate(0, ' + (posY - 100) + 'px)');
 	}
 	$(window).scroll(function () {
 		var offset = wnd.scrollTop();
