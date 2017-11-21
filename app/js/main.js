@@ -112,16 +112,19 @@ $(document).ready(function() {
 	// Подключаем свайп
 	$('.roasting-slider').swipe({
 		swipe: function (event, direction) {
-			$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
 			if (direction === 'up') {
 				updateSlides(slides, getNext(oldState));
 				if (oldState === count - 1) {
 					$('.roasting-slider').swipe('option', 'allowPageScroll', 'vertical');
+				} else {
+					$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
 				}
 			} else if (direction === 'down') {
 				updateSlides(slides, getPrev(oldState));
 				if (oldState === 0) {
 					$('.roasting-slider').swipe('option', 'allowPageScroll', 'vertical');
+				} else {
+					$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
 				}
 			}
 		}
