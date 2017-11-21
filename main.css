@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8452,22 +8452,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     font-family: "rouble";
     src: url("../fonts/rouble/rouble.svg#rouble") format("svg"); } }
 
-@-webkit-keyframes preloader {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0);
-    transform: translate(-50%, -50%) rotate(0); }
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
-    transform: translate(-50%, -50%) rotate(-360deg); } }
-
-@keyframes preloader {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0);
-    transform: translate(-50%, -50%) rotate(0); }
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
-    transform: translate(-50%, -50%) rotate(-360deg); } }
-
+/*********************************/
+/********** Typography ***********/
+/*********************************/
+/*********************************/
+/*********** Buttons *************/
+/*********************************/
+/*********************************/
+/******** Class Helpers **********/
+/*********************************/
+/*********************************/
+/*********** Modules *************/
+/*********************************/
 /*********************************/
 /********** Typography ***********/
 /*********************************/
@@ -8524,46 +8520,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 /*********************************/
 /*********** Modules *************/
 /*********************************/
-.preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  background: #080808; }
-  .preloader:before {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%) rotate(0);
-    -ms-transform: translate(-50%, -50%) rotate(0);
-    transform: translate(-50%, -50%) rotate(0);
-    border: solid 5px transparent;
-    border-right: solid 5px #ffffff;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-animation: preloader 1s infinite linear;
-    animation: preloader 1s infinite linear; }
-  .preloader:after {
-    content: '';
-    display: block;
-    width: 37px;
-    height: 36px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: url("../img/preloader.png") center center no-repeat; }
-
 ul.header-socials {
   position: fixed;
   top: 50%;
