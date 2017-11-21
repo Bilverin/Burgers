@@ -181,6 +181,7 @@ $(document).ready(function() {
 // Типа параллакса что-то
 (function ($) {
 	var figure = $('.wr-burgerPlace-intro > figure');
+	var figure_2 = $('.wr-company-mission > figure');
 	var wnd = $(window);
 	// Обновляет положение фигурки
 	// newState - новое значение скролла
@@ -188,6 +189,7 @@ $(document).ready(function() {
 		var posY = newState < 900 ? newState > 50 ?
 			newState * 0.5 - 225 : 0 - 4 * newState : 225;
 		figure.css('transform', 'translate(100%, ' + posY + 'px)');
+		figure_2.css('transform', 'translate(100%, ' + (posY - 100) + 'px)');
 	}
 	$(window).scroll(function () {
 		var offset = wnd.scrollTop();
