@@ -44,6 +44,12 @@
 		color: $main-dark;
 		background: #ffffff;
 	}
+	&:focus {
+		color: #ffffff;
+		&:hover {
+			color: $main-dark;	
+		}
+	}
 }
 
 
@@ -970,9 +976,6 @@ ul.header-socials {
 				}
 			}
 			input {
-				&.error {
-					border-color: $main-light;
-				}
 				&[type=text] {
 					font-size: 18px; font-family: $s-regular; line-height: 26px;
 					display: block; width: 100%; padding-bottom: 9px;
@@ -980,6 +983,9 @@ ul.header-socials {
 					@include respond-to(sm) {
 						width: 92%; font-family: $s-book; font-size: 28px; letter-spacing: 0.9px;
 						border-width: 7px; padding-bottom: 26px;
+					}
+					&.error {
+						border-color: $main-light;
 					}
 				}
 				&[type=checkbox] {
@@ -1049,6 +1055,9 @@ ul.header-socials {
 					border-width: 6px;
 				}
 				@include respond-to(xs) {font-size: 22px}
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 	}

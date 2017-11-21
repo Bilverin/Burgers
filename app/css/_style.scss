@@ -27,6 +27,16 @@ body {
 		}
 	}
 
+	&.home {
+		.wr {
+			&-main {
+				&-info {
+					padding-bottom: 380px;
+				}
+			}
+		}
+	}
+
 	.wr {
 		&-header {
 			padding: 31px 0 19px; z-index: 110;
@@ -74,7 +84,7 @@ body {
 			}
 
 			&-slider {
-				position: relative; padding-bottom: 401px;
+				position: relative; padding-bottom: 160px; padding-top: 50px;
 				@include respond-to(sm) {padding-bottom: 153px;}
 
 				h2 {
@@ -180,7 +190,7 @@ body {
 				@include respond-to(sm) {padding-bottom: 93px;}
 			}
 			&-join-info {
-				padding-bottom: 99px;
+				padding-bottom: 99px; padding-top: 50px;
 				@include respond-to(sm) {padding-bottom: 135px;}
 
 				.section-header {
