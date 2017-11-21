@@ -1,5 +1,38 @@
 $(document).ready(function() {
 
+	$('.owl-slider').owlCarousel({
+		loop: true,
+		margin: 10,
+		navRewind: false,
+		nav : true,
+		navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-left.png'>"],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			1000: {
+				items: 1
+			}
+		}
+	});
+
+	$('.owl-news').owlCarousel({
+		items:5,
+		margin:10,
+		merge:true,
+		responsive:{
+			678:{
+				mergeFit:true
+			},
+			1000:{
+				mergeFit:false
+			}
+		}
+	});
+
 	$('.js-composition-toggle li a').click(function(){
 
 		$('.js-composition-toggle li a').removeClass('active');
