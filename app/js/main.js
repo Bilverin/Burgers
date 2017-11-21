@@ -115,7 +115,7 @@ $(document).ready(function() {
 			$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
 			if (direction === 'up') {
 				updateSlides(slides, getNext(oldState));
-				if (oldState >= count - 1) {
+				if (oldState === count - 1) {
 					$('.roasting-slider').swipe('option', 'allowPageScroll', 'vertical');
 				}
 			} else if (direction === 'down') {
