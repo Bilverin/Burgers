@@ -73,6 +73,11 @@ $(document).ready(function() {
 
 });
 
+$(window).on('load', function() {
+	// preloader
+	$('.preloader').fadeOut();
+});
+
 // Карусель с вертикальной прокруткой (прожарка)
 (function ($) {
 	var slides = $('.roasting-slider-item');
