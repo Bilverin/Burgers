@@ -2949,6 +2949,12 @@ ul.header-socials {
 		@include respond-to(sm) {
 			width: 100%; padding: 0 15px;
 		}
+		&:hover {
+			cursor: grab;
+		}
+		&:active {
+			cursor: grabbing;
+		}
 		&.active {
 			transform: translate(-50%, 0);
 			opacity: 1; pointer-events: all;
