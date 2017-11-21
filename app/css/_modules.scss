@@ -60,7 +60,7 @@
 /*********************************/
 // header socials
 ul.header-socials {
-	position: absolute; top: 255px; right: -147px; transform: translate(-50%,-50%) rotate(90deg); z-index: 10;
+	position: fixed; top: 50%; right: -147px; transform: translate(-50%,-50%) rotate(90deg); z-index: 10;
 	@include respond-to(md) {
 		display: none;
 	}
@@ -307,7 +307,7 @@ ul.header-socials {
 					}
 
 					&:hover {
-						color: #ffffff; font-family: $i-thin;
+						color: $main-light;
 					}
 
 					.light & {
@@ -554,6 +554,9 @@ ul.header-socials {
 		}
 		@include respond-to(xs) {
 			font-size: 44px; line-height: 40px; letter-spacing: -2px;
+		}
+		small {
+			color: inherit; font-size: inherit; font-family: $cp-light;
 		}
 	}
 	h3 {
@@ -1483,8 +1486,7 @@ ul.header-socials {
 			}
 		}
 
-
-		a {
+		a, div {
 			display: block; width: 344px; margin-left: auto; margin-bottom: 141px; position: relative;
 			@include respond-to(sm) {
 				width: 548px; height: auto; margin-bottom: 137px;
@@ -1496,19 +1498,7 @@ ul.header-socials {
 			&:last-child {
 				margin-bottom: 0;
 			}
-			&:hover {
-				figure {
-					&:after {
-						opacity: 1;
-						background: rgba(8,8,8,0.7) url('../img/burgers-arrow.png') 50% center no-repeat;
-					}
-					figcaption {
-						p {
-							opacity: 1;
-						}
-					}
-				}
-			}
+			
 			&.right {
 				margin-top: 46px;
 			}
@@ -1536,7 +1526,27 @@ ul.header-socials {
 					@include respond-to(lg) {right: -5px;}
 					@include respond-to(sm) {display: none;}
 				}
-			}			figure {
+			}
+			
+		}
+		a {
+			&:hover {
+				figure {
+					&:after {
+						opacity: 1;
+						background: rgba(8,8,8,0.7) url('../img/burgers-arrow.png') 50% center no-repeat;
+					}
+					figcaption {
+						h2 {
+							color: $main-light;
+						}
+						p {
+							opacity: 1;
+						}
+					}
+				}
+			}
+			figure {
 				position: relative;
 				&:after {
 					content: '';
@@ -1545,36 +1555,50 @@ ul.header-socials {
 					opacity: 0;
 					transition: 0.4s ease-out;
 				}
-				
-				img {
-					position: relative; width: 100%;
+			}
+		}
+		figure {
+			position: relative;
+			&:after {
+				content: '';
+				display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; bottom: 0; right: 0; z-index: 2;
+				background: rgba(8,8,8,0.7) url('../img/burgers-arrow.png') 45% center no-repeat;
+				opacity: 0;
+				transition: 0.4s ease-out;
+			}
+
+			img {
+				position: relative; width: 100%;
+			}
+
+			figcaption {
+				position: absolute; z-index: 3; left: -84px; top: 0; transform: translateY(-50%);
+				@include respond-to(lg) {left: -52px;}
+				@include respond-to(sm) {
+					left: -44px; top: 25px;
 				}
+				@media (max-width: 639px) {left: -35px;}
+				@include respond-to(xs) {left: 5px;}
 
-				figcaption {
-					position: absolute; z-index: 3; left: -84px; top: 0; transform: translateY(-50%);
-					@include respond-to(lg) {left: -52px;}
-					@include respond-to(sm) {
-						left: -44px; top: 25px;
+				h2 {
+					font-size: 60px; font-family: $i-black; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px;
+					transition: .4s ease-out;
+					@include respond-to(sm) {font-size: 64px;}
+					@include respond-to(xs) {
+						font-size: 50px; line-height: 42px;
 					}
-					@media (max-width: 639px) {left: -35px;}
-					@include respond-to(xs) {left: 5px;}
-
-					h2 {
-						font-size: 60px; font-family: $i-black; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px;
-						@include respond-to(sm) {font-size: 64px;}
-						@include respond-to(xs) {
-							font-size: 50px; line-height: 42px;
-						}
+				}
+				h3 {
+					font-size: 60px; font-family: $cp-light-LC; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px;
+					@include respond-to(sm) {font-size: 64px;}
+					em {
+						font-family: $rouble;
 					}
-					h3 {
-						font-size: 60px; font-family: $cp-light-LC; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px;
-						@include respond-to(sm) {font-size: 64px;}
-					}
-					p {
-						font-size: 14px; font-family: $s-book; line-height: 22px;
-						position: absolute; left: 0; bottom: -8px; transform: translateY(100%);
-						opacity: 0; transition: .4s ease-out;
-					}
+				}
+				p {
+					font-size: 14px; font-family: $s-book; line-height: 22px;
+					position: absolute; left: 0; bottom: -8px; transform: translateY(100%);
+					opacity: 0; transition: .4s ease-out;
 				}
 			}
 		}
@@ -1975,7 +1999,10 @@ ul.header-socials {
 
 // roasting
 .roasting {
-	padding-top: 145px; z-index: 2; position: relative;
+	padding-top: 145px; z-index: 2; position: relative; padding-left: 8.33333%;
+	@include respond-to(md) {
+		padding-left: 0;
+	}
 	@include respond-to(sm) {
 		padding-top: 315px;
 	}
@@ -2253,6 +2280,37 @@ ul.header-socials {
 
 			&:last-child {
 				margin-bottom: 0;
+			}
+		}
+
+		ul {
+			margin-bottom: 28px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			li {
+				font-size: 16px; font-family: $s-book; line-height: 26px; letter-spacing: 0.1px;
+				padding-left: 23px; position: relative; margin-bottom: 15px;
+				@include respond-to(sm) {
+					line-height: 40px; letter-spacing: 0; font-size: 28px;
+					padding-left: 0; padding-right: 45px; margin-bottom: 31px; position: relative; left: -3px;
+				}
+				@media (max-width: 639px) {
+					font-size: 24px; line-height: 36px;
+				}
+				@include respond-to(xs) {font-size: 20px; line-height: 30px;}
+				&:before {
+					content: '';
+					display: block; width: 5px; height: 5px; position: absolute; left: 8px; top: 11px;
+					background: $main-dark; border-radius: 50%;
+					@include respond-to(sm) {
+						width: 10px; height: 10px; top: 16px; left: -28px;
+					}
+				}
+				span {
+					font-family: $s-bold;
+				}
+				
 			}
 		}
 	}
