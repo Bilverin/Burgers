@@ -150,29 +150,6 @@ body {
 			@include respond-to(sm) {
 				padding: 0 0 74px;
 			}
-			figure {
-				position: absolute; right: 0; top: 77px; z-index: 1;
-				@include respond-to(sm) {
-					left: calc(50% - 27px); top: 53px; transform: translateX(-50%); right: auto;
-				}
-				@include respond-to(xs) {
-					width: 500px; left: calc(50% - 10px);
-				}
-				img {
-					@include respond-to(sm) {
-						display: none;
-					}
-					&.mob {
-						display: none;
-						@include respond-to(sm) {
-							display: block;
-						}
-						@include respond-to(xs) {
-							width: 100%;
-						}
-					}
-				}
-			}
 		}
 
 		&-meat {
