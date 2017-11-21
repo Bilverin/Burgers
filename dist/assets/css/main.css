@@ -11634,34 +11634,28 @@ ul.header-socials {
       display: inline-block; }
       @media (max-width: 767px) {
         .company-news div.section div.section_item {
-          width: 595px;
           margin-right: 0;
-          position: relative;
-          left: -641px; } }
+          position: relative; } }
       @media (max-width: 480px) {
         .company-news div.section div.section_item {
-          left: -520px;
-          width: 480px; } }
+          width: 290px; } }
       .company-news div.section div.section_item:last-child {
         margin-right: 0; }
       .company-news div.section div.section_item a {
         display: inline-block; }
         .company-news div.section div.section_item a:hover figure figcaption * {
           color: #fbb040; }
-        @media (max-width: 767px) {
-          .company-news div.section div.section_item a figure img {
-            width: 595px; } }
         @media (max-width: 480px) {
           .company-news div.section div.section_item a figure img {
-            width: 480px; } }
+            width: 100%; } }
         .company-news div.section div.section_item a figure figcaption {
           padding-top: 11px; }
           @media (max-width: 767px) {
             .company-news div.section div.section_item a figure figcaption {
               padding: 32px 20px 0 47px; } }
-          @media (max-width: 639px) {
+          @media (max-width: 480px) {
             .company-news div.section div.section_item a figure figcaption {
-              width: 430px; } }
+              padding: 20px 0 0; } }
           .company-news div.section div.section_item a figure figcaption p {
             font-size: 12px;
             font-family: "stolzl-regular", sans-serif;
@@ -11690,6 +11684,23 @@ ul.header-socials {
               .company-news div.section div.section_item a figure figcaption h3 {
                 font-size: 20px;
                 line-height: 26px; } }
+            @media (max-width: 480px) {
+              .company-news div.section div.section_item a figure figcaption h3 {
+                font-size: 18px;
+                line-height: 25px; } }
+  .company-news .owl-carousel .owl-nav {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1170px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
 
 .company-contacts {
   padding-top: 48px; }
@@ -12085,6 +12096,11 @@ ul.header-socials {
         margin-bottom: 0; }
       .roasting-slider-nav ul li.active {
         opacity: 1; }
+
+.owl-carousel .owl-nav {
+  top: 20px; }
+  .owl-carousel .owl-nav .owl-prev:before, .owl-carousel .owl-nav .owl-next:before {
+    content: none; }
 
 body {
   background: #080808; }
