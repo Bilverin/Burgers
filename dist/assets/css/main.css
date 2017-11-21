@@ -12267,7 +12267,7 @@ body {
         display: none; } }
     .app .wr-main-info figure {
       position: absolute;
-      right: -475px;
+      right: 0;
       top: 47px;
       z-index: -1; }
   .app .wr-main-map {
@@ -12593,7 +12593,7 @@ body {
           display: inline-block; } }
     .app .wr-company-mission figure {
       position: absolute;
-      right: 42.85714%;
+      right: 0;
       top: -314px;
       -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
@@ -12648,7 +12648,7 @@ body {
         line-height: 46px; } }
     .app .wr-company-command figure {
       position: absolute;
-      right: 42.85714%;
+      right: 0;
       top: 61px;
       -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
