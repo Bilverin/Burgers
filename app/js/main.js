@@ -99,6 +99,15 @@ $(document).ready(function() {
 
 		oldState = newState;
 	}
+	// Обновляет размер карусельки
+	function updateCarousel() {
+		var maxHeight = 0;
+		slides.each(function () {
+			var h = $(this).height();
+			maxHeight = h > maxHeight ? h : maxHeight;
+		});
+		$('.roasting-slider').height(maxHeight);
+	}
 	// Выдаёт номер следующего слайда
 	function getNext(state) {
 		return state < count - 1 ? state + 1 : state;
@@ -131,4 +140,7 @@ $(document).ready(function() {
 			}
 		}
 	});
+	// Инициализация карусели
+	updateCarousel();
+	$(window).resize(updateCarousel);
 })(jQuery);
