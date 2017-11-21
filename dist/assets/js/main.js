@@ -5,7 +5,7 @@ $(document).ready(function() {
 		margin: 10,
 		navRewind: false,
 		nav : true,
-		navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-left.png'>"],
+		navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-right.png'>"],
 		responsive: {
 			0: {
 				items: 1
@@ -22,15 +22,8 @@ $(document).ready(function() {
 	$('.owl-news').owlCarousel({
 		items:5,
 		margin:50,
-		merge:true,
-		responsive:{
-			678:{
-				mergeFit:true
-			},
-			1000:{
-				mergeFit:false
-			}
-		}
+		autoWidth:true,
+		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
 	});
 
 	$('.js-composition-toggle li a').click(function(){
