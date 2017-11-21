@@ -116,15 +116,17 @@ $(document).ready(function() {
 				updateSlides(slides, getNext(oldState));
 				if (oldState === count - 1) {
 					$('.roasting-slider').swipe('option', 'allowPageScroll', 'vertical');
-				} else {
-					$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
+					setTimeout(function () {
+						$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
+					}, 400);
 				}
 			} else if (direction === 'down') {
 				updateSlides(slides, getPrev(oldState));
 				if (oldState === 0) {
 					$('.roasting-slider').swipe('option', 'allowPageScroll', 'vertical');
-				} else {
-					$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
+					setTimeout(function () {
+						$('.roasting-slider').swipe('option', 'allowPageScroll', 'none');
+					}, 400);
 				}
 			}
 		}
