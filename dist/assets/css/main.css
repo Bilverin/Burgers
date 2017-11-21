@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8440,6 +8440,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     font-family: "stolzl-bold";
     src: url("../fonts/stolzl-bold/stolzl-bold.svg#stolzl-bold") format("svg"); } }
 
+@font-face {
+  font-family: "rouble";
+  src: url("../fonts/rouble/rouble.eot");
+  src: url("../fonts/rouble/rouble.eot") format("embedded-opentype"), url("../fonts/rouble/rouble.woff2") format("woff2"), url("../fonts/rouble/rouble.woff") format("woff"), url("../fonts/rouble/rouble.ttf") format("truetype"), url("../fonts/rouble/rouble.svg#rouble") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "rouble";
+    src: url("../fonts/rouble/rouble.svg#rouble") format("svg"); } }
+
 /*********************************/
 /********** Typography ***********/
 /*********************************/
@@ -8505,8 +8517,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 /*********** Modules *************/
 /*********************************/
 ul.header-socials {
-  position: absolute;
-  top: 255px;
+  position: fixed;
+  top: 50%;
   right: -147px;
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
   -ms-transform: translate(-50%, -50%) rotate(90deg);
@@ -8781,8 +8793,7 @@ ul.header-socials {
           line-height: 58px;
           letter-spacing: -1.8px; } }
       .navigation nav ul.links li a:hover {
-        color: #ffffff;
-        font-family: "intro-thin", sans-serif; }
+        color: #fbb040; }
       .light .navigation nav ul.links li a {
         color: #080808; }
         .light .navigation nav ul.links li a:hover {
@@ -9033,6 +9044,10 @@ ul.header-socials {
         font-size: 44px;
         line-height: 40px;
         letter-spacing: -2px; } }
+    .section-header h2 small {
+      color: inherit;
+      font-size: inherit;
+      font-family: "code-pro-light", sans-serif; }
   .section-header h3 {
     font-size: 130px;
     font-family: "code-pro-light-lc", sans-serif;
@@ -9544,6 +9559,8 @@ ul.header-socials {
         border-width: 7px; } }
     .bhf-activation form select option {
       color: #080808; }
+  .bhf-activation form input.error {
+    border-color: #fbb040; }
   .bhf-activation form input[type=text] {
     font-size: 18px;
     font-family: "stolzl-regular", sans-serif;
@@ -9632,11 +9649,17 @@ ul.header-socials {
             width: 100%; }
   .bhf-activation form input[type=checkbox]:checked ~ label:before {
     color: #fbb040; }
+  .bhf-activation form input[type=checkbox]:checked ~ button {
+    opacity: 1;
+    pointer-events: all; }
   .bhf-activation form button {
     left: 0;
     width: 100%;
     padding: 13px 27px 24px;
-    border-width: 3px; }
+    margin-top: 77px;
+    border-width: 3px;
+    opacity: 0.6;
+    pointer-events: none; }
     @media (max-width: 767px) {
       .bhf-activation form button {
         letter-spacing: 1.2px;
@@ -10172,138 +10195,166 @@ ul.header-socials {
 .menu-list.menu a figure figcaption h2 {
   letter-spacing: -1.7px; }
 
-.menu-list a {
+.menu-list a, .menu-list div {
   display: block;
   width: 344px;
   margin-left: auto;
   margin-bottom: 141px;
   position: relative; }
   @media (max-width: 767px) {
-    .menu-list a {
+    .menu-list a, .menu-list div {
       width: 548px;
       height: auto;
       margin-bottom: 137px; } }
   @media (max-width: 480px) {
-    .menu-list a {
+    .menu-list a, .menu-list div {
       width: 350px;
       left: -20px; } }
-  .menu-list a:last-child {
+  .menu-list a:last-child, .menu-list div:last-child {
     margin-bottom: 0; }
-  .menu-list a:hover figure:after {
-    opacity: 1;
-    background: rgba(8, 8, 8, 0.7) url("../img/burgers-arrow.png") 50% center no-repeat; }
-  .menu-list a:hover figure figcaption p {
-    opacity: 1; }
-  .menu-list a.right {
+  .menu-list a.right, .menu-list div.right {
     margin-top: 46px; }
-  .menu-list a.main {
+  .menu-list a.main, .menu-list div.main {
     width: 100%;
     margin-bottom: 197px; }
     @media (max-width: 991px) {
-      .menu-list a.main {
+      .menu-list a.main, .menu-list div.main {
         width: 90%; } }
-    .menu-list a.main figure figcaption {
+    .menu-list a.main figure figcaption, .menu-list div.main figure figcaption {
       left: 82px;
       top: 23px;
       bottom: auto; }
   @media (max-width: 767px) {
-    .menu-list a.summer {
+    .menu-list a.summer, .menu-list div.summer {
       display: none; } }
-  .menu-list a.summer i {
+  .menu-list a.summer i, .menu-list div.summer i {
     position: absolute;
     left: -43px;
     top: -33px;
     z-index: 3; }
   @media (max-width: 767px) {
-    .menu-list a.pushk-only {
+    .menu-list a.pushk-only, .menu-list div.pushk-only {
       margin-top: 137px; } }
-  .menu-list a.pushk-only i {
+  .menu-list a.pushk-only i, .menu-list div.pushk-only i {
     position: absolute;
     right: -34px;
     top: -29px;
     z-index: 3; }
     @media (max-width: 1199px) {
-      .menu-list a.pushk-only i {
+      .menu-list a.pushk-only i, .menu-list div.pushk-only i {
         right: -5px; } }
     @media (max-width: 767px) {
-      .menu-list a.pushk-only i {
+      .menu-list a.pushk-only i, .menu-list div.pushk-only i {
         display: none; } }
-  .menu-list a figure {
-    position: relative; }
-    .menu-list a figure:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
+
+.menu-list a:hover figure:after {
+  opacity: 1;
+  background: rgba(8, 8, 8, 0.7) url("../img/burgers-arrow.png") 50% center no-repeat; }
+
+.menu-list a:hover figure figcaption h2 {
+  color: #fbb040; }
+
+.menu-list a:hover figure figcaption p {
+  opacity: 1; }
+
+.menu-list a figure {
+  position: relative; }
+  .menu-list a figure:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(8, 8, 8, 0.7) url("../img/burgers-arrow.png") 45% center no-repeat;
+    opacity: 0;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out; }
+
+.menu-list figure {
+  position: relative; }
+  .menu-list figure:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(8, 8, 8, 0.7) url("../img/burgers-arrow.png") 45% center no-repeat;
+    opacity: 0;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out; }
+  .menu-list figure img {
+    position: relative;
+    width: 100%; }
+  .menu-list figure figcaption {
+    position: absolute;
+    z-index: 3;
+    left: -84px;
+    top: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    @media (max-width: 1199px) {
+      .menu-list figure figcaption {
+        left: -52px; } }
+    @media (max-width: 767px) {
+      .menu-list figure figcaption {
+        left: -44px;
+        top: 25px; } }
+    @media (max-width: 639px) {
+      .menu-list figure figcaption {
+        left: -35px; } }
+    @media (max-width: 480px) {
+      .menu-list figure figcaption {
+        left: 5px; } }
+    .menu-list figure figcaption h2 {
+      font-size: 60px;
+      font-family: "intro-black", sans-serif;
+      text-transform: uppercase;
+      line-height: 55px;
+      letter-spacing: -0.7px;
+      -webkit-transition: .4s ease-out;
+      transition: .4s ease-out; }
+      @media (max-width: 767px) {
+        .menu-list figure figcaption h2 {
+          font-size: 64px; } }
+      @media (max-width: 480px) {
+        .menu-list figure figcaption h2 {
+          font-size: 50px;
+          line-height: 42px; } }
+    .menu-list figure figcaption h3 {
+      font-size: 60px;
+      font-family: "code-pro-light-lc", sans-serif;
+      text-transform: uppercase;
+      line-height: 55px;
+      letter-spacing: -0.7px; }
+      @media (max-width: 767px) {
+        .menu-list figure figcaption h3 {
+          font-size: 64px; } }
+      .menu-list figure figcaption h3 em {
+        font-family: "rouble", sans-serif; }
+    .menu-list figure figcaption p {
+      font-size: 14px;
+      font-family: "stolzl-book", sans-serif;
+      line-height: 22px;
       position: absolute;
       left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 2;
-      background: rgba(8, 8, 8, 0.7) url("../img/burgers-arrow.png") 45% center no-repeat;
+      bottom: -8px;
+      -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%);
       opacity: 0;
-      -webkit-transition: 0.4s ease-out;
-      transition: 0.4s ease-out; }
-    .menu-list a figure img {
-      position: relative;
-      width: 100%; }
-    .menu-list a figure figcaption {
-      position: absolute;
-      z-index: 3;
-      left: -84px;
-      top: 0;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
-      @media (max-width: 1199px) {
-        .menu-list a figure figcaption {
-          left: -52px; } }
-      @media (max-width: 767px) {
-        .menu-list a figure figcaption {
-          left: -44px;
-          top: 25px; } }
-      @media (max-width: 639px) {
-        .menu-list a figure figcaption {
-          left: -35px; } }
-      @media (max-width: 480px) {
-        .menu-list a figure figcaption {
-          left: 5px; } }
-      .menu-list a figure figcaption h2 {
-        font-size: 60px;
-        font-family: "intro-black", sans-serif;
-        text-transform: uppercase;
-        line-height: 55px;
-        letter-spacing: -0.7px; }
-        @media (max-width: 767px) {
-          .menu-list a figure figcaption h2 {
-            font-size: 64px; } }
-        @media (max-width: 480px) {
-          .menu-list a figure figcaption h2 {
-            font-size: 50px;
-            line-height: 42px; } }
-      .menu-list a figure figcaption h3 {
-        font-size: 60px;
-        font-family: "code-pro-light-lc", sans-serif;
-        text-transform: uppercase;
-        line-height: 55px;
-        letter-spacing: -0.7px; }
-        @media (max-width: 767px) {
-          .menu-list a figure figcaption h3 {
-            font-size: 64px; } }
-      .menu-list a figure figcaption p {
-        font-size: 14px;
-        font-family: "stolzl-book", sans-serif;
-        line-height: 22px;
-        position: absolute;
-        left: 0;
-        bottom: -8px;
-        -webkit-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-        transform: translateY(100%);
-        opacity: 0;
-        -webkit-transition: .4s ease-out;
-        transition: .4s ease-out; }
+      -webkit-transition: .4s ease-out;
+      transition: .4s ease-out; }
 
 .menu-tea {
   padding-top: 41px; }
@@ -10785,7 +10836,11 @@ ul.header-socials {
 .roasting {
   padding-top: 145px;
   z-index: 2;
-  position: relative; }
+  position: relative;
+  padding-left: 8.33333%; }
+  @media (max-width: 991px) {
+    .roasting {
+      padding-left: 0; } }
   @media (max-width: 767px) {
     .roasting {
       padding-top: 315px; } }
@@ -11110,6 +11165,55 @@ ul.header-socials {
         line-height: 32px; } }
     .company-mission p:last-child {
       margin-bottom: 0; }
+  .company-mission ul {
+    margin-bottom: 28px; }
+    .company-mission ul:last-child {
+      margin-bottom: 0; }
+    .company-mission ul li {
+      font-size: 16px;
+      font-family: "stolzl-book", sans-serif;
+      line-height: 26px;
+      letter-spacing: 0.1px;
+      padding-left: 23px;
+      position: relative;
+      margin-bottom: 15px; }
+      @media (max-width: 767px) {
+        .company-mission ul li {
+          line-height: 40px;
+          letter-spacing: 0;
+          font-size: 28px;
+          padding-left: 0;
+          padding-right: 45px;
+          margin-bottom: 31px;
+          position: relative;
+          left: -3px; } }
+      @media (max-width: 639px) {
+        .company-mission ul li {
+          font-size: 24px;
+          line-height: 36px; } }
+      @media (max-width: 480px) {
+        .company-mission ul li {
+          font-size: 20px;
+          line-height: 30px; } }
+      .company-mission ul li:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 8px;
+        top: 11px;
+        background: #080808;
+        -webkit-border-radius: 50%;
+        border-radius: 50%; }
+        @media (max-width: 767px) {
+          .company-mission ul li:before {
+            width: 10px;
+            height: 10px;
+            top: 16px;
+            left: -28px; } }
+      .company-mission ul li span {
+        font-family: "stolzl-bold", sans-serif; }
 
 .company-worth {
   padding-top: 32px; }
@@ -11938,7 +12042,13 @@ ul.header-socials {
     @media (max-width: 767px) {
       .roasting-slider-item {
         width: 100%;
-        padding: 0 15px; } }
+        padding: 0 15px 0 0; } }
+    .roasting-slider-item:hover {
+      cursor: -webkit-grab;
+      cursor: grab; }
+    .roasting-slider-item:active {
+      cursor: -webkit-grabbing;
+      cursor: grabbing; }
     .roasting-slider-item.active {
       -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
