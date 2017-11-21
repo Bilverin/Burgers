@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 	$('.owl-news').owlCarousel({
 		items:5,
-		margin:10,
+		margin:50,
 		merge:true,
 		responsive:{
 			678:{

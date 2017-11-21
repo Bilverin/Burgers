@@ -2633,10 +2633,10 @@ ul.header-socials {
 			}
 		}
 
-		ul {
+		div.section {
 			display: flex; width: 1000%; padding-top: 32px;
 			@include respond-to(sm) {padding-top: 20px;}
-			li {
+			div {
 				width: 345px; margin-right: 50px; 
 				@include respond-to(sm) {
 					width: 595px; margin-right: 0; position: relative; left: -641px;
