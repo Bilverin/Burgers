@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 	merge = require('merge-stream'),
 	buffer = require('vinyl-buffer');
 
-// browser 
+// browser
 gulp.task('browser-sync', function() {
 	browserSync.init({
 		server: {
@@ -49,7 +49,8 @@ gulp.task('sass', function () {
 // libs js
 gulp.task('js:libs', function () {
 	gulp.src([
-		'bower_components/jquery/dist/jquery.min.js'
+		'bower_components/jquery/dist/jquery.min.js',
+		'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
