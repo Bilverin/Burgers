@@ -24,7 +24,7 @@ $(document).ready(function() {
 		$('.' + popupLink).addClass('active-popup').fadeIn();
 		$('.popup-company-vacancy').fadeIn();
 		$('body').addClass('ov-hidden');
-		
+
 	});
 	$('.js-section-popup-change').click(function(e){
 		e.preventDefault();
@@ -33,7 +33,7 @@ $(document).ready(function() {
 			activePopup = $('.active-popup');
 		$(activePopup).removeClass('active-popup').fadeOut();
 		$('.' + vacancyLink).addClass('active-popup').fadeIn();
-		
+
 	});
 	$('.js-popup-close').click(function(e){
 		e.preventDefault();
@@ -46,3 +46,77 @@ $(document).ready(function() {
 	});
 
 });
+
+// Карусель с вертикальной прокруткой (прожарка)
+(function ($) {
+	var slides = $('.roasting-slider-item');
+	var backgrounds = $('.roasting-slider-photo figure');
+	var count = slides.length;
+	var oldState = 0;
+	var dots;
+	// Создаёт точки
+	function makeDots(container, slides) {
+		slides.each(function (index) {
+			var dot = $('<li>').attr('class', index === 0 ? 'active' : '');
+			container.append(dot);
+		});
+		return container.find('li');
+	}
+	// Обновляет класс слайда: 0 - prev, 1 - active, 2 - next
+	function updateSlide(slide, newState) {
+		var className = 'roasting-slider-item '
+			+ (newState === 0 ? 'prev' : newState === 1 ? 'active' : 'next');
+		slide.attr('class', className);
+	}
+	// Обновляет класс точки
+	function updateDot(dot, isActive) {
+		var className = isActive ? 'active' : '';
+		dot.attr('class', className);
+	}
+	// Обновляет класс фона
+	function updateBg(bg, isVisible) {
+		var className = isVisible ? 'active' : '';
+		bg.attr('class', className);
+	}
+	// Обновляет слайды, если новое состояние отличается от старого
+	function updateSlides(slides, newState) {
+		if (oldState === newState) {
+			return;
+		}
+
+		slides.each(function (index) {
+			var state = index === newState ? 1 : index < newState ? 0 : 2;
+			updateSlide($(this), state);
+		});
+
+		backgrounds.each(function (index) {
+			updateBg($(this), index <= newState)
+		});
+
+		dots.each(function (index) {
+			updateDot($(this), index === newState)
+		});
+
+		oldState = newState;
+	}
+	// Выдаёт номер следующего слайда
+	function getNext(state) {
+		return state < count - 1 ? state + 1 : state;
+	}
+	// Выдаёт номер предыдущего слайда
+	function getPrev(state) {
+		return state > 0 ? state - 1 : state;
+	}
+	// Создаём точки
+	dots = makeDots($('.roasting-slider-nav ul'), slides);
+	// Подключаем свайп
+	$('.roasting-slider').swipe({
+		swipe: function (event, direction) {
+			if (direction === 'up') {
+				updateSlides(slides, getNext(oldState));
+			} else if (direction === 'down') {
+				updateSlides(slides, getPrev(oldState));
+			}
+		}
+	});
+})(jQuery);
