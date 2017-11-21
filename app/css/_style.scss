@@ -221,7 +221,7 @@ body {
 				@include respond-to(sm) {padding-bottom: 135px;}
 
 				figure {
-					position: absolute; right: 42.85714%; top: 248px; transform: translateX(100%); z-index: -1;
+					position: absolute; right: 0; top: 248px; z-index: -1;
 					@include respond-to(md) {display: none;}
 				}
 			}
@@ -423,7 +423,7 @@ body {
 					}
 				}
 				figure {
-					position: absolute; right: 0; top: -314px; transform: translateX(100%); z-index: -1;
+					position: absolute; right: 0; top: -314px; z-index: -1;
 					@include respond-to(sm) {display: none;}
 				}
 			}
@@ -467,7 +467,7 @@ body {
 					}
 				}
 				figure {
-					position: absolute; right: 0; top: 61px; transform: translateX(100%); z-index: -1;
+					position: absolute; right: 0; top: 61px; z-index: -1;
 					@include respond-to(sm) {display: none;}
 					&.mobile {
 						display: none;
