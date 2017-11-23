@@ -2656,13 +2656,10 @@ ul.header-socials {
 		div.section {
 			padding-top: 32px;
 			@include respond-to(sm) {padding-top: 20px;}
-<<<<<<< HEAD
-			li {
-				width: 345px; margin-right: 50px;
-=======
+
 			div.section_item {
 				width: 345px; margin-right: 50px; display: inline-block;
->>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35
+
 				@include respond-to(sm) {
 					margin-right: 0; position: relative;
 				}
@@ -2715,14 +2712,9 @@ ul.header-socials {
 								@media (max-width: 639px) {
 									font-size: 20px; line-height: 26px;
 								}
-<<<<<<< HEAD
-
-=======
 								@include respond-to(xs) {
 									font-size: 18px; line-height: 25px;
 								}
-
->>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35
 							}
 						}
 					}

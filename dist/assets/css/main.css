@@ -12144,7 +12144,6 @@ ul.header-socials {
       .roasting-slider-nav ul li.active {
         opacity: 1; }
 
-<<<<<<< HEAD
 /* Карта */
 .side-map {
   position: relative;
@@ -12158,12 +12157,11 @@ ul.header-socials {
   .side-map canvas {
     -webkit-filter: invert(100%) grayscale(0.8);
     filter: invert(100%) grayscale(0.8); }
-=======
+
 .owl-carousel .owl-nav {
   top: 20px; }
   .owl-carousel .owl-nav .owl-prev:before, .owl-carousel .owl-nav .owl-next:before {
     content: none; }
->>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35
 
 body {
   background: #080808; }
