@@ -3041,7 +3041,7 @@ ul.header-socials {
 
 /* Карта */
 .side-map {
-	position: relative;
+	width: 1120px; height: 568px;
 	z-index: 1 !important;
 	&__map {
 		position: absolute;

@@ -1,30 +1,30 @@
 $(document).ready(function() {
 
-	$('.owl-slider').owlCarousel({
-		loop: true,
-		margin: 10,
-		navRewind: false,
-		nav : true,
-		navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-right.png'>"],
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 1
-			},
-			1000: {
-				items: 1
-			}
-		}
-	});
+	// $('.owl-slider').owlCarousel({
+	// 	loop: true,
+	// 	margin: 10,
+	// 	navRewind: false,
+	// 	nav : true,
+	// 	navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-right.png'>"],
+	// 	responsive: {
+	// 		0: {
+	// 			items: 1
+	// 		},
+	// 		600: {
+	// 			items: 1
+	// 		},
+	// 		1000: {
+	// 			items: 1
+	// 		}
+	// 	}
+	// });
 
-	$('.owl-news').owlCarousel({
-		items:5,
-		margin:50,
-		autoWidth:true,
-		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
-	});
+	// $('.owl-news').owlCarousel({
+	// 	items:5,
+	// 	margin:50,
+	// 	autoWidth:true,
+	// 	navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
+	// });
 
 	$('.js-composition-toggle li a').click(function(){
 
