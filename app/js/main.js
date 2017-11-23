@@ -227,12 +227,16 @@ $(window).on('load', function() {
 // Модуль управления картой
 (function ($) {
 	ymaps.ready(init);
+	// Большая ли карта
+	var isBigMap = $('body').hasClass('big-map');
 	// Координаты мест
 	var coords = [];
 	// Информация о местах
-	var items = $('.place-info').hide();
-	// Показываем первое место
-	items.eq(0).show();
+	var items = $('.place-info');
+	// Скрываем элементы на небольших картах
+	if (!isBigMap) {
+		items.hide().eq(0).show();
+	}
 	// Загружаем координаты
 	items.each(function (index) {
 		var coordData = $(this).data('coord');
@@ -285,8 +289,23 @@ $(window).on('load', function() {
 		}
 		// Обновляем итемы
 		function updateItems(index) {
-			items.eq(current).hide();
-			items.eq(index).show();
+			if (isBigMap) {
+				items.eq(current).removeClass('active');
+				items.eq(index).addClass('active');
+			} else {
+				items.eq(current).hide();
+				items.eq(index).show();
+			}
+		}
+		// Обратная связка с картой
+		if (isBigMap) {
+			items.each(function (index) {
+				$(this).click(function (event) {
+					updatePlacemark(index);
+					updateItems(index);
+					current = index;
+				});
+			});
 		}
 		// Делаем первую метку крупной
 		updatePlacemark(0);
