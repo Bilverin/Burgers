@@ -12166,9 +12166,9 @@ ul.header-socials {
     top: 0;
     width: 100%;
     height: 100%; }
-  .side-map ymaps[class*="ground"] {
-    -webkit-filter: invert(100%) grayscale(0.8);
-    filter: invert(100%) grayscale(0.8); }
+    .side-map__map ymaps[class*="ground"] {
+      -webkit-filter: invert(100%) grayscale(0.8);
+      filter: invert(100%) grayscale(0.8); }
 
 .owl-carousel .owl-nav {
   top: 20px; }
