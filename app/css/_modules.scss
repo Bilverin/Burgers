@@ -44,6 +44,12 @@
 		color: $main-dark;
 		background: #ffffff;
 	}
+	&:focus {
+		color: #ffffff;
+		&:hover {
+			color: $main-dark;	
+		}
+	}
 }
 
 
@@ -58,6 +64,26 @@
 /*********************************/
 /*********** Modules *************/
 /*********************************/
+// container realtive
+.container {
+	position: relative;
+}
+// preloader
+.preloader {
+	position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 1000;
+	background: #080808;
+	&:before {
+		content: '';
+		display: block; width: 60px; height: 60px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(0);
+		border: solid 5px transparent; border-right: solid 5px #ffffff; border-radius: 50%;
+		animation: preloader 1s infinite linear;
+	}
+	&:after {
+		content: '';
+		display: block; width: 37px; height: 36px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+		background: url('../img/preloader.png') center center no-repeat;
+	}
+}
 // header socials
 ul.header-socials {
 	position: fixed; top: 50%; right: -147px; transform: translate(-50%,-50%) rotate(90deg); z-index: 10;
@@ -970,9 +996,6 @@ ul.header-socials {
 				}
 			}
 			input {
-				&.error {
-					border-color: $main-light;
-				}
 				&[type=text] {
 					font-size: 18px; font-family: $s-regular; line-height: 26px;
 					display: block; width: 100%; padding-bottom: 9px;
@@ -980,6 +1003,9 @@ ul.header-socials {
 					@include respond-to(sm) {
 						width: 92%; font-family: $s-book; font-size: 28px; letter-spacing: 0.9px;
 						border-width: 7px; padding-bottom: 26px;
+					}
+					&.error {
+						border-color: $main-light;
 					}
 				}
 				&[type=checkbox] {
@@ -1049,6 +1075,9 @@ ul.header-socials {
 					border-width: 6px;
 				}
 				@include respond-to(xs) {font-size: 22px}
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 	}
@@ -2624,16 +2653,21 @@ ul.header-socials {
 			}
 		}
 
-		ul {
-			display: flex; width: 1000%; padding-top: 32px;
+		div.section {
+			padding-top: 32px;
 			@include respond-to(sm) {padding-top: 20px;}
+<<<<<<< HEAD
 			li {
 				width: 345px; margin-right: 50px;
+=======
+			div.section_item {
+				width: 345px; margin-right: 50px; display: inline-block;
+>>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35
 				@include respond-to(sm) {
-					width: 595px; margin-right: 0; position: relative; left: -641px;
+					margin-right: 0; position: relative;
 				}
 				@include respond-to(xs) {
-					left: -520px; width: 480px;
+					width: 290px;
 				}
 				&:last-child {
 					margin-right: 0;
@@ -2652,15 +2686,16 @@ ul.header-socials {
 
 					figure {
 						img {
-							@include respond-to(sm) {width: 595px;}
-							@include respond-to(xs) {width: 480px;}
+							@include respond-to(xs) {width: 100%;}
 						}
 						figcaption {
 							padding-top: 11px;
 							@include respond-to(sm) {
 								padding: 32px 20px 0 47px;
 							}
-							@media (max-width: 639px) {width: 430px;}
+							@include respond-to(xs) {
+								padding: 20px 0 0;
+							}
 							p {
 								font-size: 12px; font-family: $s-regular;
 								margin-bottom: 6px;
@@ -2680,11 +2715,24 @@ ul.header-socials {
 								@media (max-width: 639px) {
 									font-size: 20px; line-height: 26px;
 								}
+<<<<<<< HEAD
 
+=======
+								@include respond-to(xs) {
+									font-size: 18px; line-height: 25px;
+								}
+								
+>>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35
 							}
 						}
 					}
 				}
+			}
+		}
+
+		.owl-carousel {
+			.owl-nav {
+				display: flex !important; width: 100%; padding: 0 15px; margin: 0 auto; max-width: 1170px; justify-content: space-between;
 			}
 		}
 	}
@@ -2992,6 +3040,7 @@ ul.header-socials {
 	}
 }
 
+<<<<<<< HEAD
 /* Карта */
 .side-map {
 	position: relative;
@@ -3007,3 +3056,16 @@ ul.header-socials {
 		filter: invert(100%) grayscale(0.8);
 	}
 }
+=======
+// owl navigations
+.owl-carousel {
+	.owl-nav {
+		top: 20px;
+		.owl-prev, .owl-next {
+			&:before {
+				content: none;
+			}
+		}
+	}
+}
+>>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35

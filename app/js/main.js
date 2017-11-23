@@ -1,5 +1,31 @@
 $(document).ready(function() {
 
+	$('.owl-slider').owlCarousel({
+		loop: true,
+		margin: 10,
+		navRewind: false,
+		nav : true,
+		navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-right.png'>"],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			1000: {
+				items: 1
+			}
+		}
+	});
+
+	$('.owl-news').owlCarousel({
+		items:5,
+		margin:50,
+		autoWidth:true,
+		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
+	});
+
 	$('.js-composition-toggle li a').click(function(){
 
 		$('.js-composition-toggle li a').removeClass('active');
@@ -45,6 +71,11 @@ $(document).ready(function() {
 		$('body').removeClass('ov-hidden');
 	});
 
+});
+
+$(window).on('load', function() {
+	// preloader
+	$('.preloader').fadeOut();
 });
 
 // Карусель с вертикальной прокруткой (прожарка)
@@ -155,8 +186,8 @@ $(document).ready(function() {
 	function updateFigure(newState) {
 		var posY = newState < 900 ? newState > 50 ?
 			newState * 0.5 - 225 : 0 - 4 * newState : 225;
-		figure.css('transform', 'translate(100%, ' + posY + 'px)');
-		figure_2.css('transform', 'translate(100%, ' + (posY - 100) + 'px)');
+		figure.css('transform', 'translate(0, ' + posY + 'px)');
+		figure_2.css('transform', 'translate(0, ' + (posY - 100) + 'px)');
 	}
 	$(window).scroll(function () {
 		var offset = wnd.scrollTop();
