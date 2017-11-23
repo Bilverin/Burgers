@@ -163,3 +163,80 @@ $(document).ready(function() {
 		updateFigure(offset);
 	});
 })(jQuery);
+
+// Модуль управления картой
+(function ($) {
+	ymaps.ready(init);
+	// Координаты мест
+	var coords = [
+		[55.74159657, 37.62564850],
+		[55.76160857, 37.62112050],
+		[55.77490707, 37.58290650],
+		[55.74217781, 37.65531793],
+		[55.76826357, 37.59540200],
+		[55.75740907, 37.63368800],
+		[55.76627857, 37.60761900],
+		[55.76610107, 37.64007500],
+		[55.75935457, 37.61300000],
+		[55.75979507, 37.58214300],
+		[55.77377807, 37.61218250]
+	];
+	// Информация о местах
+	var items = $('.place-info').hide();
+	// Показываем первое место
+	items.eq(0).show();
+
+	function init(){
+		var myMap = new ymaps.Map("side-map", {
+			center: [55.74159657, 37.62564850],
+			zoom: 13,
+			controls: []
+		}, {
+			maxZoom: 14,
+			minZoom: 14
+		});
+		// Номер активной метки
+		var current = 0;
+		// Создаём метки на карте
+		var placeMarks = coords.map(function (coord, index) {
+			var placemark = new ymaps.Placemark(coord, {}, {
+	        iconLayout: 'default#image',
+	        iconImageHref: 'assets/img/marker.png',
+	        iconImageSize: [26, 36],
+	        iconImageOffset: [-19, -36]
+	    });
+			placemark.events.add('click', function () {
+				if (current === index) {
+					return;
+				}
+
+				updatePlacemark(index);
+				updateItems(index);
+				current = index;
+			});
+			return placemark;
+		});
+		// Обновляем метки
+		function updatePlacemark(index) {
+			var pmOld = placeMarks[current];
+			var pmNew = placeMarks[index];
+			pmOld.options.set('iconImageHref', 'assets/img/marker.png');
+			pmOld.options.set('iconImageSize', [26, 36]);
+			pmOld.options.set('iconImageOffset', [-19, -36]);
+			pmNew.options.set('iconImageHref', 'assets/img/marker-active.png');
+			pmNew.options.set('iconImageSize', [52, 72]);
+			pmNew.options.set('iconImageOffset', [-36, -72]);
+		}
+		// Обновляем итемы
+		function updateItems(index) {
+			items.eq(current).hide();
+			items.eq(index).show();
+		}
+		// Делаем первую метку крупной
+		updatePlacemark(0);
+		// Размещаем метки на карте
+		placeMarks.forEach(function (pm) {
+			myMap.geoObjects.add(pm);
+		});
+	}
+})(jQuery);
