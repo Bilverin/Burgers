@@ -1,5 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
 
 	// $('.owl-slider').owlCarousel({
 	// 	loop: true,
@@ -26,7 +25,7 @@ $(document).ready(function() {
 	// 	autoWidth:true,
 	// 	navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
 	// });
-=======
+
 	/*
 	$('.owl-slider').owlCarousel({
 		loop: true,
@@ -54,7 +53,7 @@ $(document).ready(function() {
 		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
 	});
 	*/
->>>>>>> 3326c138b653c107275e54c3c3386b96dd238f9d
+
 
 	$('.js-composition-toggle li a').click(function(){
 
