@@ -47,7 +47,7 @@
 	&:focus {
 		color: #ffffff;
 		&:hover {
-			color: $main-dark;	
+			color: $main-dark;
 		}
 	}
 }
@@ -2721,7 +2721,7 @@ ul.header-socials {
 								@include respond-to(xs) {
 									font-size: 18px; line-height: 25px;
 								}
-								
+
 >>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35
 							}
 						}
@@ -3040,7 +3040,6 @@ ul.header-socials {
 	}
 }
 
-<<<<<<< HEAD
 /* Карта */
 .side-map {
 	position: relative;
@@ -3056,7 +3055,7 @@ ul.header-socials {
 		filter: invert(100%) grayscale(0.8);
 	}
 }
-=======
+
 // owl navigations
 .owl-carousel {
 	.owl-nav {
@@ -3068,4 +3067,3 @@ ul.header-socials {
 		}
 	}
 }
->>>>>>> 55b0265bf9f8cd08da3a9591d8681010425d0e35
