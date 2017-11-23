@@ -3043,7 +3043,7 @@ ul.header-socials {
 		width: 100%;
 		height: 100%;
 	}
-	canvas {
+	ymaps[class*="ground"] {
 		filter: invert(100%) grayscale(0.8);
 	}
 }
