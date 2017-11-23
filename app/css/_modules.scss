@@ -1276,7 +1276,14 @@ ul.header-socials {
 	}
 
 	&-list {
-		padding-top: 49px;
+		display: inline-block; height: 70vh; overflow-y: scroll;
+		position: absolute; top: 130px; left: 20%;
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #ffffff; border-radius: 50px;
+		}
 		@include respond-to(sm) {padding-top: 56px;}
 		@media (max-width: 639px) {padding-top: 90px;}
 
