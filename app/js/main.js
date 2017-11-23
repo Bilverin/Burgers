@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	/*
 	$('.owl-slider').owlCarousel({
 		loop: true,
 		margin: 10,
@@ -25,6 +25,7 @@ $(document).ready(function() {
 		autoWidth:true,
 		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
 	});
+	*/
 
 	$('.js-composition-toggle li a').click(function(){
 
@@ -199,24 +200,20 @@ $(window).on('load', function() {
 (function ($) {
 	ymaps.ready(init);
 	// Координаты мест
-	var coords = [
-		[55.74159657, 37.62564850],
-		[55.76160857, 37.62112050],
-		[55.77490707, 37.58290650],
-		[55.74217781, 37.65531793],
-		[55.76826357, 37.59540200],
-		[55.75740907, 37.63368800],
-		[55.76627857, 37.60761900],
-		[55.76610107, 37.64007500],
-		[55.75935457, 37.61300000],
-		[55.75979507, 37.58214300],
-		[55.77377807, 37.61218250]
-	];
+	var coords = [];
 	// Информация о местах
 	var items = $('.place-info').hide();
 	// Показываем первое место
 	items.eq(0).show();
-
+	// Загружаем координаты
+	items.each(function (index) {
+		var coordData = $(this).data('coord');
+		var coord = coordData.split(',').map(function (item) {
+			return parseFloat(item.trim());
+		});
+		coords.push(coord);
+	});
+	// Инициализация
 	function init(){
 		var myMap = new ymaps.Map("side-map", {
 			center: [55.74159657, 37.62564850],
