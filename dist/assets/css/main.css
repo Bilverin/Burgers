@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9966,7 +9966,18 @@ ul.header-socials {
         line-height: 34px; } }
 
 .burgerPlace-list {
-  padding-top: 49px; }
+  display: inline-block;
+  height: 70vh;
+  overflow-y: scroll;
+  position: absolute;
+  top: 130px;
+  left: 20%; }
+  .burgerPlace-list::-webkit-scrollbar {
+    width: 6px; }
+  .burgerPlace-list::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    -webkit-border-radius: 50px;
+    border-radius: 50px; }
   @media (max-width: 767px) {
     .burgerPlace-list {
       padding-top: 56px; } }
@@ -12145,6 +12156,21 @@ ul.header-socials {
         margin-bottom: 0; }
       .roasting-slider-nav ul li.active {
         opacity: 1; }
+
+/* Карта */
+.side-map {
+  width: 1120px;
+  height: 568px;
+  z-index: 1 !important; }
+  .side-map__map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+    .side-map__map ymaps[class*="ground"] {
+      -webkit-filter: invert(100%) grayscale(0.8);
+      filter: invert(100%) grayscale(0.8); }
 
 .owl-carousel .owl-nav {
   top: 20px; }

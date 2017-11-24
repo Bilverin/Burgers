@@ -47,7 +47,7 @@
 	&:focus {
 		color: #ffffff;
 		&:hover {
-			color: $main-dark;	
+			color: $main-dark;
 		}
 	}
 }
@@ -294,7 +294,7 @@ ul.header-socials {
 // Navigation
 .navigation {
 	@include respond-to(sm) {
-		height: 100%;		
+		height: 100%;
 	}
 	nav {
 		position: relative; left: -7px;
@@ -416,7 +416,7 @@ ul.header-socials {
 
 // Footer
 .footer {
-	
+
 	* {
 		position: relative; z-index: 5;
 	}
@@ -431,7 +431,7 @@ ul.header-socials {
 				display: block;
 			}
 		}
-		
+
 	}
 
 	a.logo {
@@ -641,7 +641,7 @@ ul.header-socials {
 
 				&.mobile {
 					font-family: $i-black; font-size: 48px; line-height: 50px; text-transform: uppercase;
-					display: none;  
+					display: none;
 					@include respond-to(sm) {
 						display: block; margin-top: -32px; margin-left: -3px;
 					}
@@ -685,7 +685,7 @@ ul.header-socials {
 				padding: 10px;
 			}
 			@include respond-to(sm) {
-				font-family: $s-book; font-size: 28px; line-height: 40px; 
+				font-family: $s-book; font-size: 28px; line-height: 40px;
 				padding: 0 48px;
 				background: none;
 			}
@@ -705,7 +705,7 @@ ul.header-socials {
 			position: relative;
 			@include respond-to(md) {
 				text-shadow: 1px 1px 0 #000;
-				padding: 5px; 
+				padding: 5px;
 			}
 			@include respond-to(sm) {
 				font-size: 32px;
@@ -828,7 +828,7 @@ ul.header-socials {
 				}
 				@media (max-width: 639px) {
 					font-size: 22px; line-height: 36px;
-					margin-left: 0; 
+					margin-left: 0;
 				}
 				@include respond-to(xs) {
 					font-size: 20px; line-height: 32px;
@@ -837,7 +837,7 @@ ul.header-socials {
 
 			a.btn {
 				letter-spacing: -1.3px;
-				width: calc(100% + 15px); left: -16px; top: 2px; 
+				width: calc(100% + 15px); left: -16px; top: 2px;
 				@include respond-to(md) {
 					left: 0; width: 100%;
 				}
@@ -846,7 +846,7 @@ ul.header-socials {
 					width: 422px; padding-bottom: 13px; margin-left: 47px; margin-top: 51px;
 				}
 				@media (max-width: 639px) {
-					width: 95%; margin-left: 0; 
+					width: 95%; margin-left: 0;
 				}
 			}
 		}
@@ -881,9 +881,9 @@ ul.header-socials {
 	&-join-info {
 		ul {
 			padding-top: 3px; margin-bottom: 50px;
-			counter-reset: list; 
+			counter-reset: list;
 			@include respond-to(sm) {
-				padding-top: 0; margin-top: 10px; 
+				padding-top: 0; margin-top: 10px;
 			}
 			li {
 				font-size: 130px; font-family: $cp-light-LC; line-height: 115px; letter-spacing: -2.3px;
@@ -892,7 +892,7 @@ ul.header-socials {
 				}
 				@include respond-to(sm) {
 					font-size: 92px;  line-height: 80px; letter-spacing: -3.4px; padding-left: 68px;
-					position: relative; 
+					position: relative;
 				}
 				@media (max-width: 639px) {
 					font-size: 64px;
@@ -1133,7 +1133,7 @@ ul.header-socials {
 						margin-right: 10px;
 					}
 					p {
-						font-family: $cp-light-LC; 
+						font-family: $cp-light-LC;
 					}
 				}
 			}
@@ -1152,7 +1152,7 @@ ul.header-socials {
 				li {
 					width: 40%; padding-top: 70px; position: relative; margin-bottom: 23px;
 					@include respond-to(sm) {
-						width: 60%; padding-top: 60px; margin-bottom: 108px; padding-left: 10px; 
+						width: 60%; padding-top: 60px; margin-bottom: 108px; padding-left: 10px;
 					}
 					@media (max-width: 639px) {width: 100%;}
 
@@ -1188,7 +1188,7 @@ ul.header-socials {
 								display: block;
 							}
 						}
-						
+
 					}
 
 					p {
@@ -1225,7 +1225,7 @@ ul.header-socials {
 						display: block; width: 50%; margin-left: 45px;
 					}
 					@media (max-width: 639px) {
-						font-size: 24px; 
+						font-size: 24px;
 						width: 100%; margin-left: 0;
 					}
 					@include respond-to(xs) {width: 210px;}
@@ -1276,12 +1276,19 @@ ul.header-socials {
 	}
 
 	&-list {
-		padding-top: 49px;
+		display: inline-block; height: 70vh; overflow-y: scroll;
+		position: absolute; top: 130px; left: 20%;
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #ffffff; border-radius: 50px;
+		}
 		@include respond-to(sm) {padding-top: 56px;}
 		@media (max-width: 639px) {padding-top: 90px;}
 
 		.map-mob {
-			display: none; 
+			display: none;
 			@include respond-to(sm) {
 				display: block; padding-bottom: 20px;
 			}
@@ -1300,11 +1307,11 @@ ul.header-socials {
 					@include respond-to(xs) {font-size: 20px;}
 				}
 				p {
-					font-size: 21px; font-family: $s-book; 
+					font-size: 21px; font-family: $s-book;
 					padding-left: 2px; margin-top: 3px; position: relative; left: -2px;
 					@include respond-to(xs) {font-size: 16px;}
 				}
-				ul { 
+				ul {
 					margin-top: 10px; position: relative; left: -2px;
 					li {
 						font-size: 21px; font-family: $s-book;
@@ -1320,7 +1327,7 @@ ul.header-socials {
 				}
 
 				a.close {
-					width: 27px; height: 27px; position: absolute; right: 42px; top: 679px; 
+					width: 27px; height: 27px; position: absolute; right: 42px; top: 679px;
 					opacity: 1;
 					transition: 0.4s ease-out;
 					@include respond-to(xs) {
@@ -1346,7 +1353,7 @@ ul.header-socials {
 				}
 			}
 
-		}	
+		}
 
 		& > ul {
 			& > li {
@@ -1362,7 +1369,7 @@ ul.header-socials {
 				&.active {
 					margin-bottom: 43px;
 					@include respond-to(sm) {margin-bottom: 75px;}
-					
+
 					* {
 						color: $main-light;
 						@include respond-to(sm) {margin-left: -1px;}
@@ -1395,7 +1402,7 @@ ul.header-socials {
 				ul {
 					padding-bottom: 15px; margin-bottom: 0;
 					@include respond-to(sm) {margin-top: 10px;}
-					
+
 					li {
 						font-size: 14px; font-family: $s-book;
 						@include respond-to(sm) {
@@ -1403,7 +1410,7 @@ ul.header-socials {
 							padding-left: 2px; margin-bottom: 10px;
 						}
 						@media (max-width: 639px) {font-size: 18px;}
-						
+
 						span {
 							font-family: $s-bold;
 							&.day {
@@ -1432,9 +1439,9 @@ ul.header-socials {
 							@include respond-to(sm) {
 								display: block; right: 0; bottom: -11px;
 							}
-							@include respond-to(xs) {display: none;}	
-						} 
-							
+							@include respond-to(xs) {display: none;}
+						}
+
 					}
 				}
 			}
@@ -1456,7 +1463,7 @@ ul.header-socials {
 			font-size: 36px; font-family: $cp-light-LC; text-transform: uppercase; letter-spacing: 0.9px;
 			padding-left: 10px;
 			@include respond-to(sm) {font-size: 28px}
-			@include respond-to(xs) {font-size: 21px;} 
+			@include respond-to(xs) {font-size: 21px;}
 		}
 	}
 }
@@ -1485,7 +1492,7 @@ ul.header-socials {
 			}
 		}
 	}
-	
+
 }
 
 .menu {
@@ -1534,7 +1541,7 @@ ul.header-socials {
 			&:last-child {
 				margin-bottom: 0;
 			}
-			
+
 			&.right {
 				margin-top: 46px;
 			}
@@ -1563,7 +1570,7 @@ ul.header-socials {
 					@include respond-to(sm) {display: none;}
 				}
 			}
-			
+
 		}
 		a {
 			&:hover {
@@ -1652,7 +1659,7 @@ ul.header-socials {
 						padding-right: 5px;
 						background: $main-dark;
 						@include respond-to(sm) {
-							font-size: 26px; line-height: 26px; 
+							font-size: 26px; line-height: 26px;
 						}
 					}
 					&:after {
@@ -1665,7 +1672,7 @@ ul.header-socials {
 					font-size: 34px; font-family: $cp-light; line-height: 34px; letter-spacing: 1px;
 					width: 20%; padding-left: 5px;
 					@include respond-to(sm) {
-						font-size: 26px; line-height: 26px; 
+						font-size: 26px; line-height: 26px;
 					}
 				}
 				& > em {
@@ -1683,7 +1690,7 @@ ul.header-socials {
 				font-size: 34px; font-family: $i-black; line-height: 34px; text-transform: uppercase;
 				display: inline-block;
 				@include respond-to(sm) {
-					font-size: 26px; line-height: 26px; 
+					font-size: 26px; line-height: 26px;
 				}
 				@media (max-width: 639px){
 					display: block; margin-bottom: 15px;
@@ -1711,7 +1718,7 @@ ul.header-socials {
 				h3 {
 					font-size: 34px; font-family: $i-black; text-transform: uppercase; line-height: 34px; letter-spacing: -0.3px;
 					@include respond-to(sm) {
-						font-size: 26px; line-height: 26px; 
+						font-size: 26px; line-height: 26px;
 					}
 				}
 				p {
@@ -2009,7 +2016,7 @@ ul.header-socials {
 			padding: 0 20px 0 0;
 		}
 		p {
-			
+
 			font-size: 18px; font-family: $s-regular; line-height: 32px; letter-spacing: 0.2px;
 			@include respond-to(sm) {
 				font-size: 24px; line-height: 36px; font-family: $s-book;
@@ -2046,7 +2053,7 @@ ul.header-socials {
 		padding: 200px 20px 0 0;
 	}
 	p {
-		
+
 		font-size: 18px; font-family: $s-book; line-height: 26px; text-shadow: 1px 1px 0 #000;
 		width: 345px;
 		@include respond-to(sm) {
@@ -2171,7 +2178,7 @@ ul.header-socials {
 	}
 }
 
-// add 
+// add
 .add {
 	ul {
 		display: flex; justify-content: space-between; flex-wrap: wrap; padding-top: 66px; margin: 0 0 -83px; width: 1030px;
@@ -2307,7 +2314,7 @@ ul.header-socials {
 			margin-bottom: 28px;
 			@include respond-to(md) {text-shadow: 0 1px 0 #9a9a9a;}
 			@include respond-to(sm) {
-				text-shadow: none; font-size: 28px; line-height: 40px; letter-spacing: -0.1px; 
+				text-shadow: none; font-size: 28px; line-height: 40px; letter-spacing: -0.1px;
 				padding-right: 50px; margin-bottom: 30px;
 			}
 			@include respond-to(xs) {
@@ -2346,7 +2353,7 @@ ul.header-socials {
 				span {
 					font-family: $s-bold;
 				}
-				
+
 			}
 		}
 	}
@@ -2377,7 +2384,7 @@ ul.header-socials {
 				span {
 					font-family: $s-bold;
 				}
-				
+
 			}
 		}
 	}
@@ -2413,7 +2420,7 @@ ul.header-socials {
 				@include respond-to(xs) {
 					font-size: 16px; line-height: 28px;
 				}
-				
+
 			}
 		}
 
@@ -2449,8 +2456,8 @@ ul.header-socials {
 			@include respond-to(md) {color: #000;}
 			@include respond-to(sm) {
 				font-size: 60px; line-height: 54px; letter-spacing: 0.4px;
-				margin-bottom: 26px;  
-				
+				margin-bottom: 26px;
+
 			}
 			@media (max-width: 639px) {
 				font-size: 52px; line-height: 43px;
@@ -2564,7 +2571,7 @@ ul.header-socials {
 					@media (max-width: 639px) {
 						font-size: 14px; line-height: 22px;
 					}
-					
+
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -2656,8 +2663,10 @@ ul.header-socials {
 		div.section {
 			padding-top: 32px;
 			@include respond-to(sm) {padding-top: 20px;}
+
 			div.section_item {
 				width: 345px; margin-right: 50px; display: inline-block;
+
 				@include respond-to(sm) {
 					margin-right: 0; position: relative;
 				}
@@ -2695,7 +2704,7 @@ ul.header-socials {
 								font-size: 12px; font-family: $s-regular;
 								margin-bottom: 6px;
 								@include respond-to(sm) {
-									font-size: 21px; letter-spacing: 0.5px; 
+									font-size: 21px; letter-spacing: 0.5px;
 									margin-bottom: 6px;
 								}
 								@media (max-width: 639px) {font-size: 18px;}
@@ -2713,7 +2722,6 @@ ul.header-socials {
 								@include respond-to(xs) {
 									font-size: 18px; line-height: 25px;
 								}
-								
 							}
 						}
 					}
@@ -3027,6 +3035,22 @@ ul.header-socials {
 					opacity: 1;
 				}
 			}
+		}
+	}
+}
+
+/* Карта */
+.side-map {
+	width: 1120px; height: 568px;
+	z-index: 1 !important;
+	&__map {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		ymaps[class*="ground"] {
+			filter: invert(100%) grayscale(0.8);
 		}
 	}
 }
