@@ -261,7 +261,7 @@ $(window).on('load', function() {
 		var placeMarks = coords.map(function (coord, index) {
 			var placemark = new ymaps.Placemark(coord, {}, {
 	        iconLayout: 'default#image',
-	        iconImageHref: 'assets/img/marker.png',
+	        iconImageHref: '../assets/img/marker.png',
 	        iconImageSize: [26, 36],
 	        iconImageOffset: [-19, -36]
 	    });
@@ -280,10 +280,10 @@ $(window).on('load', function() {
 		function updatePlacemark(index) {
 			var pmOld = placeMarks[current];
 			var pmNew = placeMarks[index];
-			pmOld.options.set('iconImageHref', 'assets/img/marker.png');
+			pmOld.options.set('iconImageHref', '../assets/img/marker.png');
 			pmOld.options.set('iconImageSize', [26, 36]);
 			pmOld.options.set('iconImageOffset', [-19, -36]);
-			pmNew.options.set('iconImageHref', 'assets/img/marker-active.png');
+			pmNew.options.set('iconImageHref', '../assets/img/marker-active.png');
 			pmNew.options.set('iconImageSize', [52, 72]);
 			pmNew.options.set('iconImageOffset', [-36, -72]);
 		}

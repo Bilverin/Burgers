@@ -41,6 +41,10 @@ body {
 		&-header {
 			padding: 31px 0 19px; z-index: 110;
 			@include respond-to(sm) {padding-top: 53px;}
+
+			.big-map & {
+				background: rgba(0,0,0,0.6);
+			}
 		}
 
 		&-navigation {
@@ -84,8 +88,14 @@ body {
 			}
 
 			&-slider {
-				position: relative; padding-bottom: 160px; padding-top: 50px;
+				position: relative; padding-bottom: 160px; padding-top: 0;
 				@include respond-to(sm) {padding-bottom: 153px;}
+
+				.section-header {
+					h2 {
+						padding-top: 50px;
+					}
+				}
 
 				h2 {
 					@include respond-to(sm) {position: absolute;

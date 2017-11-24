@@ -38,7 +38,7 @@
 
 .btn {
 	font-size: 26px; font-family: $i-black; text-transform: uppercase; text-align: left;
-	display: block; position: relative; left: -28px; padding: 14px 27px 25px;
+	display: block; position: relative; left: -28px; padding: 14px 27px 14px;
 	background: transparent; border: solid 2px #ffffff; border-radius: 0;
 	&:hover {
 		color: $main-dark;
@@ -256,8 +256,13 @@ ul.header-socials {
 					margin-right: 0;
 				}
 				&.active {
+					.light & {
+						a {
+							color: $main-light;
+						}
+					}
 					a {
-						font-family: $i-light;
+						color: $main-light;
 						pointer-events: none;
 					}
 				}
@@ -311,7 +316,7 @@ ul.header-socials {
 			li {
 				&.active {
 					a {
-						font-family: $i-thin;
+						color: $main-light;
 						pointer-events: none;
 					}
 				}
@@ -420,6 +425,11 @@ ul.header-socials {
 	* {
 		position: relative; z-index: 5;
 	}
+	& > * {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 	i.icon-logo-footer {
 		margin-bottom: 5px;
 		&-dark {
@@ -523,15 +533,7 @@ ul.header-socials {
 			a {
 				&:hover {
 					i {
-						&.fa-instagram {
-							color: #af1581;
-						}
-						&.fa-vk {
-							color: #5082b9;
-						}
-						&.fa-facebook {
-							color: #3b5998;
-						}
+						color: $main-light;
 					}
 				}
 				i {
@@ -937,7 +939,7 @@ ul.header-socials {
 		}
 
 		a.btn {
-			display: block; width: 100%; margin-top: 46px; padding: 13px 27px 24px; left: 0;
+			display: block; width: 100%; margin-top: 46px; left: 0;
 			border-width: 3px;
 			@include respond-to(sm) {
 				letter-spacing: 1.4px; white-space: pre-line;
@@ -1277,7 +1279,8 @@ ul.header-socials {
 
 	&-list {
 		display: inline-block; height: 70vh; overflow-y: scroll;
-		position: absolute; top: 130px; left: 20%;
+		position: absolute; top: 130px; left: 20%; padding: 20px;
+		background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 100%);
 		&::-webkit-scrollbar {
 			width: 6px;
 		}
@@ -1358,6 +1361,7 @@ ul.header-socials {
 		& > ul {
 			& > li {
 				margin-bottom: 29px;
+				cursor: pointer;
 				@include respond-to(sm) {
 					margin-bottom: 49px;
 				}
@@ -1429,6 +1433,10 @@ ul.header-socials {
 						display: block; width: 408px; margin-top: 3px; position: relative;
 					}
 					@include respond-to(xs) {font-size: 20px;}
+
+					&:hover {
+						color: $main-light; text-decoration: underline;
+					}
 
 					i {
 						position: absolute; right: -62px; bottom: -3px;
@@ -1736,6 +1744,13 @@ ul.header-socials {
 				font-size: 18px; font-family: $i-black; text-transform: uppercase;
 				padding-left: 30px; position: relative; margin-bottom: 16px;
 				@include respond-to(sm) {line-height: 40px;}
+
+				a {
+					transition: 0.3s ease-out;
+					&:hover {
+						color: $main-light;
+					}
+				}
 
 				&:before {
 					content: '';
@@ -2755,6 +2770,12 @@ ul.header-socials {
 					font-size: 18px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.2px;
 					margin-bottom: 3px;
 					font-size: 30px;
+					a {
+						transition: 0.3s ease-out;
+						&:hover {
+							color: $main-light;
+						}
+					}
 					@include respond-to(sm) {
 						font-size: 30px; letter-spacing: -0.5px;
 						margin-bottom: 9px;

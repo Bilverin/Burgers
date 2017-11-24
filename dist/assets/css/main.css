@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8502,7 +8502,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   display: block;
   position: relative;
   left: -28px;
-  padding: 14px 27px 25px;
+  padding: 14px 27px 14px;
   background: transparent;
   border: solid 2px #ffffff;
   -webkit-border-radius: 0;
@@ -8751,8 +8751,10 @@ ul.header-socials {
           margin-right: 0; } }
       .header nav ul.navigation li:last-child {
         margin-right: 0; }
+      .light .header nav ul.navigation li.active a {
+        color: #fbb040; }
       .header nav ul.navigation li.active a {
-        font-family: "intro-light", sans-serif;
+        color: #fbb040;
         pointer-events: none; }
       .header nav ul.navigation li a {
         color: #ffffff;
@@ -8817,7 +8819,7 @@ ul.header-socials {
   .navigation nav ul.links {
     margin-bottom: 42px; }
     .navigation nav ul.links li.active a {
-      font-family: "intro-thin", sans-serif;
+      color: #fbb040;
       pointer-events: none; }
     .navigation nav ul.links li a {
       font-size: 110px;
@@ -8932,6 +8934,9 @@ ul.header-socials {
   position: relative;
   z-index: 5; }
 
+.footer > *:last-child {
+  margin-bottom: 0; }
+
 .footer i.icon-logo-footer {
   margin-bottom: 5px; }
   .footer i.icon-logo-footer-dark {
@@ -9034,12 +9039,8 @@ ul.header-socials {
     @media (max-width: 767px) {
       .footer ul.socials li {
         margin-right: 52px; } }
-    .footer ul.socials li a:hover i.fa-instagram {
-      color: #af1581; }
-    .footer ul.socials li a:hover i.fa-vk {
-      color: #5082b9; }
-    .footer ul.socials li a:hover i.fa-facebook {
-      color: #3b5998; }
+    .footer ul.socials li a:hover i {
+      color: #fbb040; }
     .footer ul.socials li a i {
       font-size: 22px;
       line-height: 22px; }
@@ -9533,7 +9534,6 @@ ul.header-socials {
   display: block;
   width: 100%;
   margin-top: 46px;
-  padding: 13px 27px 24px;
   left: 0;
   border-width: 3px; }
   @media (max-width: 767px) {
@@ -9971,7 +9971,11 @@ ul.header-socials {
   overflow-y: scroll;
   position: absolute;
   top: 130px;
-  left: 20%; }
+  left: 20%;
+  padding: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), color-stop(40%, rgba(0, 0, 0, 0.7)), to(transparent));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, transparent 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, transparent 100%); }
   .burgerPlace-list::-webkit-scrollbar {
     width: 6px; }
   .burgerPlace-list::-webkit-scrollbar-thumb {
@@ -10074,7 +10078,8 @@ ul.header-socials {
             .burgerPlace-list .map-mob .addess > a i {
               display: none; } }
   .burgerPlace-list > ul > li {
-    margin-bottom: 29px; }
+    margin-bottom: 29px;
+    cursor: pointer; }
     @media (max-width: 767px) {
       .burgerPlace-list > ul > li {
         margin-bottom: 49px; } }
@@ -10159,6 +10164,9 @@ ul.header-socials {
       @media (max-width: 480px) {
         .burgerPlace-list > ul > li a {
           font-size: 20px; } }
+      .burgerPlace-list > ul > li a:hover {
+        color: #fbb040;
+        text-decoration: underline; }
       .burgerPlace-list > ul > li a i {
         position: absolute;
         right: -62px;
@@ -10533,6 +10541,11 @@ ul.header-socials {
     @media (max-width: 767px) {
       .menu-places ul li {
         line-height: 40px; } }
+    .menu-places ul li a {
+      -webkit-transition: 0.3s ease-out;
+      transition: 0.3s ease-out; }
+      .menu-places ul li a:hover {
+        color: #fbb040; }
     .menu-places ul li:before {
       content: '';
       position: absolute;
@@ -11787,6 +11800,11 @@ ul.header-socials {
       letter-spacing: -0.2px;
       margin-bottom: 3px;
       font-size: 30px; }
+      .company-contacts ul li h3 a {
+        -webkit-transition: 0.3s ease-out;
+        transition: 0.3s ease-out; }
+        .company-contacts ul li h3 a:hover {
+          color: #fbb040; }
       @media (max-width: 767px) {
         .company-contacts ul li h3 {
           font-size: 30px;
@@ -12211,6 +12229,8 @@ body {
     @media (max-width: 767px) {
       .app .wr-header {
         padding-top: 53px; } }
+    .big-map .app .wr-header {
+      background: rgba(0, 0, 0, 0.6); }
   .app .wr-navigation {
     position: fixed;
     left: 0;
@@ -12259,10 +12279,12 @@ body {
   .app .wr-main-slider, .app .wr-bhf-slider, .app .wr-burgerPlace-slider, .app .wr-burgerPlace-gallery {
     position: relative;
     padding-bottom: 160px;
-    padding-top: 50px; }
+    padding-top: 0; }
     @media (max-width: 767px) {
       .app .wr-main-slider, .app .wr-bhf-slider, .app .wr-burgerPlace-slider, .app .wr-burgerPlace-gallery {
         padding-bottom: 153px; } }
+    .app .wr-main-slider .section-header h2, .app .wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-gallery .section-header h2 {
+      padding-top: 50px; }
     @media (max-width: 767px) {
       .app .wr-main-slider h2, .app .wr-bhf-slider h2, .app .wr-burgerPlace-slider h2, .app .wr-burgerPlace-gallery h2 {
         position: absolute; } }
