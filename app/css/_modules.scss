@@ -777,7 +777,7 @@ ul.header-socials {
 	}
 
 	&-map {
-		padding-top: 46px;
+		padding-top: 46px; position: relative; z-index: 2;
 		@include respond-to(sm) {padding-left: 52px; padding-top: 45px;}
 		@media (max-width: 639px) {padding-left: 0; padding-top: 150px;}
 		@include respond-to(xs) {position: absolute;}

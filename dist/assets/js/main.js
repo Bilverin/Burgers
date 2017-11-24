@@ -178,8 +178,8 @@ $(window).on('load', function() {
 
 // Типа параллакса что-то
 (function ($) {
-	var figure = $('.wr-burgerPlace-intro > figure');
-	var figure_2 = $('.wr-company-mission > figure');
+	var figure = $('.wr-burgerPlace-intro > .container > figure');
+	var figure_2 = $('.wr-company-mission > .container > figure');
 	var wnd = $(window);
 	// Обновляет положение фигурки
 	// newState - новое значение скролла

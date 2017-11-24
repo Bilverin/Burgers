@@ -9329,7 +9329,9 @@ ul.header-socials {
             background: none; } }
 
 .main-map {
-  padding-top: 46px; }
+  padding-top: 46px;
+  position: relative;
+  z-index: 2; }
   @media (max-width: 767px) {
     .main-map {
       padding-left: 52px;
