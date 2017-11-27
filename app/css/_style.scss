@@ -67,7 +67,7 @@ body {
 
 		&-page {
 			&-intro {
-				padding: 70px 0 140px;
+				padding: 42px 0 140px;
 			}
 		}
 
@@ -93,7 +93,7 @@ body {
 
 				.section-header {
 					h2 {
-						padding-top: 50px;
+						padding-top: 47px;
 					}
 				}
 
@@ -341,7 +341,7 @@ body {
 		}
 
 		&-menu {
-			padding: 72px 0 89px;
+			padding: 47px 0 89px;
 
 			&.first {
 
@@ -401,7 +401,7 @@ body {
 
 		&-company {
 			&-intro {
-				padding: 14px 0 135px;
+				padding: 50px 0 135px;
 				@include respond-to(sm) {padding-bottom: 74px;}
 				figure {
 					display: none;

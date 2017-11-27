@@ -19,12 +19,11 @@ $(document).ready(function() {
 	// 	}
 	// });
 
-	// $('.owl-news').owlCarousel({
-	// 	items:5,
-	// 	margin:50,
-	// 	autoWidth:true,
-	// 	navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
-	// });
+	$('.owl-news').owlCarousel({
+		margin:50,
+		autoWidth:true,
+		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
+	});
 
 	/*
 	$('.owl-slider').owlCarousel({
@@ -226,7 +225,9 @@ $(window).on('load', function() {
 
 // Модуль управления картой
 (function ($) {
-	ymaps.ready(init);
+	if($('.side-map').length) {
+		ymaps.ready(init);
+	}
 	// Большая ли карта
 	var isBigMap = $('body').hasClass('big-map');
 	// Координаты мест

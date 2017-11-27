@@ -50,7 +50,8 @@ gulp.task('sass', function () {
 gulp.task('js:libs', function () {
 	gulp.src([
 		'bower_components/jquery/dist/jquery.min.js',
-		'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js'
+		'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
+		'bower_components/owl.carousel/dist/owl.carousel.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

@@ -1,5 +1,7 @@
 @import 'bower_components/bootstrap/dist/css/bootstrap.min';
 @import 'bower_components/font-awesome/scss/font-awesome';
+@import 'bower_components/owl.carousel/dist/assets/owl.carousel.min';
+@import 'bower_components/owl.carousel/dist/assets/owl.theme.default.min';
 
 // Используй это миксин для всего конфига!
 @mixin font-type($font-family, $font-size, $line-height, $letter-spacing) {

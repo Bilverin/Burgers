@@ -1093,7 +1093,7 @@ ul.header-socials {
 	&-intro {
 		&-header {
 			@extend .main-intro-header;
-			margin-bottom: 69px;
+			margin-bottom: 69px; padding-top: 39px;
 			h1 {
 				line-height: 140px; letter-spacing: -9.7px;
 				margin-bottom: 50px;
@@ -1482,7 +1482,7 @@ ul.header-socials {
 .burgers {
 	&-header {
 		@extend .main-intro-header;
-		padding-top: 13px; margin-bottom: 42px;
+		padding-top: 50px; margin-bottom: 42px;
 		@include respond-to(sm) {margin-bottom: 7px;}
 
 		h1 {
