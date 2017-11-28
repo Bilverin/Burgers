@@ -19,11 +19,11 @@ $(document).ready(function() {
 	// 	}
 	// });
 
-	$('.owl-news').owlCarousel({
-		margin:50,
-		autoWidth:true,
-		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
-	});
+	// $('.owl-news').owlCarousel({
+	// 	margin:50,
+	// 	autoWidth:true,
+	// 	navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
+	// });
 
 	/*
 	$('.owl-slider').owlCarousel({
@@ -53,6 +53,8 @@ $(document).ready(function() {
 	});
 	*/
 
+	$("#date").mask("99.99.9999",{placeholder:"дд.мм.гггг"});
+	$("#tel").mask("9 (999) 9999999");
 
 	$('.js-composition-toggle li a').click(function(){
 
