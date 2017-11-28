@@ -9346,11 +9346,19 @@ ul.header-socials {
       .section-header h3 {
         font-size: 90px;
         line-height: 84px;
-        letter-spacing: -4.6px; } }
+        letter-spacing: -4.6px; }
+        .menu-popup .section-header h3 {
+          font-size: 46px;
+          line-height: 52px;
+          letter-spacing: -2px; } }
     @media (max-width: 480px) {
       .section-header h3 {
         font-size: 40px;
-        line-height: 36px; } }
+        line-height: 36px; }
+        .menu-popup .section-header h3 {
+          font-size: 30px;
+          line-height: 36px;
+          letter-spacing: 0; } }
     .section-header h3 span {
       color: #fbb040;
       font-family: "intro-black", sans-serif; }
@@ -10687,6 +10695,9 @@ ul.header-socials {
 
 .menu-tea {
   padding-top: 41px; }
+  @media (max-width: 991px) {
+    .menu-tea {
+      padding: 41px 30px 0 0; } }
   .menu-tea ul li {
     display: -webkit-box;
     display: -webkit-flex;
@@ -10700,9 +10711,17 @@ ul.header-socials {
     -ms-flex-align: end;
     align-items: flex-end;
     margin-bottom: 8px; }
+    .menu-tea ul li:last-child {
+      margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .menu-tea ul li {
+        padding-bottom: 20px; } }
     .menu-tea ul li p {
       width: 80%;
       position: relative; }
+      @media (max-width: 480px) {
+        .menu-tea ul li p {
+          margin-bottom: 10px; } }
       .menu-tea ul li p span {
         font-size: 34px;
         font-family: "intro-black", sans-serif;
@@ -10711,10 +10730,6 @@ ul.header-socials {
         -letter-spacing: 0.6px;
         padding-right: 5px;
         background: #080808; }
-        @media (max-width: 767px) {
-          .menu-tea ul li p span {
-            font-size: 26px;
-            line-height: 26px; } }
       .menu-tea ul li p:after {
         content: '';
         display: block;
@@ -10725,6 +10740,9 @@ ul.header-socials {
         width: 95%;
         z-index: -1;
         border-bottom: 4px dotted #ffffff; }
+        @media (max-width: 480px) {
+          .menu-tea ul li p:after {
+            display: none; } }
     .menu-tea ul li > span {
       font-size: 34px;
       font-family: "code-pro-light", sans-serif;
@@ -10734,8 +10752,13 @@ ul.header-socials {
       padding-left: 5px; }
       @media (max-width: 767px) {
         .menu-tea ul li > span {
-          font-size: 26px;
-          line-height: 26px; } }
+          font-size: 22px;
+          line-height: 24px; } }
+      @media (max-width: 480px) {
+        .menu-tea ul li > span {
+          font-size: 226x;
+          line-height: 30px;
+          width: 100%; } }
     .menu-tea ul li > em {
       font-size: 18px;
       font-family: "stolzl-book", sans-serif;
@@ -12249,6 +12272,12 @@ ul.header-socials {
   background: #080808;
   overflow-y: auto;
   overflow-x: hidden; }
+  @media (max-width: 767px) {
+    .popup-burger-place-menu {
+      padding: 84px 20px 140px; } }
+  @media (max-width: 480px) {
+    .popup-burger-place-menu {
+      padding: 84px 20px 50px; } }
   .popup-burger-place-menu a.close {
     position: fixed;
     right: 82px;
@@ -12260,6 +12289,10 @@ ul.header-socials {
     opacity: 0.6;
     -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out; }
+    @media (max-width: 991px) {
+      .popup-burger-place-menu a.close {
+        top: 40px;
+        right: 40px; } }
     .popup-burger-place-menu a.close i {
       position: absolute;
       left: 50%;
@@ -12271,6 +12304,9 @@ ul.header-socials {
       opacity: 1; }
   .popup-burger-place-menu .wr-menu-tea {
     padding: 73px 0 130px; }
+    @media (max-width: 480px) {
+      .popup-burger-place-menu .wr-menu-tea {
+        padding-bottom: 70px; } }
   .popup-burger-place-menu .wr-menu-sauces {
     padding: 0 0 123px; }
   .popup-burger-place-menu .wr-menu-breakfasts {
@@ -12284,6 +12320,14 @@ ul.header-socials {
       line-height: 150px;
       letter-spacing: -14px;
       margin-bottom: 9px; }
+      @media (max-width: 767px) {
+        .popup-burger-place-menu .popup-header h2 {
+          font-size: 120px; } }
+      @media (max-width: 480px) {
+        .popup-burger-place-menu .popup-header h2 {
+          font-size: 92px;
+          line-height: 86px;
+          letter-spacing: -8px; } }
     .popup-burger-place-menu .popup-header h3 {
       font-size: 36px;
       font-family: "code-pro-light-lc", sans-serif;
