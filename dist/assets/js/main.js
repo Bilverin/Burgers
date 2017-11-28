@@ -19,11 +19,11 @@ $(document).ready(function() {
 	// 	}
 	// });
 
-	$('.owl-news').owlCarousel({
-		margin:50,
-		autoWidth:true,
-		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
-	});
+	// $('.owl-news').owlCarousel({
+	// 	margin:50,
+	// 	autoWidth:true,
+	// 	navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
+	// });
 
 	/*
 	$('.owl-slider').owlCarousel({

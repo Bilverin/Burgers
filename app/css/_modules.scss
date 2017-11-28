@@ -800,6 +800,24 @@ ul.header-socials {
 				font-size: 14px; font-family: $s-book; line-height: 18px;
 				@include respond-to(sm) {font-size: 24px; line-height: 35px;}
 				@media (max-width: 639px) {font-size: 20px; line-height: 31px;}
+				&.all-bars {
+					padding-top: 20px;
+					a {
+						color: #fbb040;
+						position: relative; display: inline-block;
+						&:after {
+							content: '';
+							display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%);
+							background: #fbb040;
+							transition: .4s ease-out;
+						}
+						&:hover {
+							&:after {
+								width: 100%;
+							}
+						}
+					}
+				}
 				span {
 					font-family: $s-bold;
 					@include respond-to(sm) {font-family: $s-book;}
@@ -1279,7 +1297,7 @@ ul.header-socials {
 
 	&-list {
 		display: inline-block; height: 70vh; overflow-y: scroll;
-		position: absolute; top: 130px; left: 20%; padding: 20px;
+		position: absolute; top: 130px; left: 20%; padding: 20px; z-index: 50;
 		background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 100%);
 		&::-webkit-scrollbar {
 			width: 6px;
@@ -1659,7 +1677,7 @@ ul.header-socials {
 		padding-top: 41px;
 		ul {
 			li {
-				display: flex; flex-wrap: wrap; margin-bottom: 8px;
+				display: flex; flex-wrap: wrap; align-items: flex-end; margin-bottom: 8px;
 				p {
 					width: 80%; position: relative;
 					span {
