@@ -89,23 +89,27 @@ body {
 
 			&-slider {
 				position: relative; padding-bottom: 160px; padding-top: 0;
-				@include respond-to(sm) {padding-bottom: 153px;}
+				@include respond-to(sm) {padding-bottom: 153px; padding-top: 0;}
 
 				.section-header {
 					h2 {
+						text-shadow: 1px 1px 1px #000;
 						padding-top: 47px;
+						small {text-shadow: 1px 1px 1px #000;}
 					}
 				}
+				
 
 				h2 {
-					@include respond-to(sm) {position: absolute;
+					@include respond-to(sm) {}
 					@media (max-width: 639px) {top: 64px;}
-					}
+					
 				}
 				figure {
-					position: absolute; right: -75px; top: 56px; z-index: -1;
+					width: 65%; position: absolute; right: 0; top: 56px; z-index: -1;
+					opacity: 0.8;
 					@include respond-to(sm) {
-						width: calc(100% + 45px); height: 455px; top: 120px; right: 0; 
+						width: 90%; height: auto; top: 120px; right: 0; 
 					}
 
 					img {
@@ -134,7 +138,8 @@ body {
 
 				figure {
 					position: absolute; right: -254px; top: 71px; z-index: -1;
-					@include respond-to(sm) {display: none;}
+					@include respond-to(sm) {right: 0;}
+					@media (max-width: 639px) {}
 					&.mobile {
 						display:none;
 						@include respond-to(sm) {

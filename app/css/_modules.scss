@@ -475,16 +475,16 @@ ul.header-socials {
 
 	nav {
 		margin-bottom: 23px;
-		@include respond-to(sm) {margin-bottom: 68px;}
+		@include respond-to(md) {margin-bottom: 68px;}
 		ul {
 			display: flex;
-			@include respond-to(sm) {
+			@include respond-to(md) {
 				display: block; margin-left: 50px;
 			}
 
 			li {
 				margin-right: 35px;
-				@include respond-to(sm) {margin: 6px 0 10px 0;}
+				@include respond-to(md) {margin: 6px 0 10px 0;}
 
 				&.active {
 					a {
@@ -495,7 +495,7 @@ ul.header-socials {
 				a {
 					color: #ffffff; font-size: 15px; font-family: $i-black; text-transform: uppercase; letter-spacing: 1px;
 					display: inline-block; position: relative;
-					@include respond-to(sm) {
+					@include respond-to(md) {
 						font-size: 26px; letter-spacing: 1.2px; line-height: 30px;
 					}
 
@@ -524,12 +524,12 @@ ul.header-socials {
 
 	ul.socials {
 		display: flex; margin-bottom: 44px;
-		@include respond-to(sm) {
+		@include respond-to(md) {
 			margin-left: 50px; margin-bottom: 50px;
 		}
 		li {
 			margin-right: 18px;
-			@include respond-to(sm) {margin-right: 52px;}
+			@include respond-to(md) {margin-right: 52px;}
 			a {
 				&:hover {
 					i {
@@ -538,15 +538,15 @@ ul.header-socials {
 				}
 				i {
 					font-size: 22px; line-height: 22px;
-					@include respond-to(sm) {
+					@include respond-to(md) {
 						font-size: 36px;
 					}
 					&.fa-vk {
-						@include respond-to(sm) {font-size: 40px;}
+						@include respond-to(md) {font-size: 40px;}
 					}
 					&.fa-facebook {
 						font-size: 16px;
-						@include respond-to(sm) {font-size: 27px;}
+						@include respond-to(md) {font-size: 27px;}
 					}
 				}
 			}
@@ -679,13 +679,11 @@ ul.header-socials {
 
 	&-slider {
 		padding-top: 41px;
-		@include respond-to(sm) {padding-top: 630px;}
 
 		p {
-			font-size: 16px; font-family: $s-regular; line-height: 26px;
+			font-size: 16px; font-family: $s-regular; line-height: 26px; text-shadow: 1px 1px 0 #000;
 			margin-bottom: 15px;
 			@include respond-to(md) {
-				text-shadow: 1px 1px 0 #000;
 				padding: 10px;
 			}
 			@include respond-to(sm) {
@@ -694,6 +692,7 @@ ul.header-socials {
 				background: none;
 			}
 			@media (max-width: 639px) {
+				font-size: 18px; line-height: 30px;
 				padding: 0;
 			}
 			@include respond-to(xs) {
@@ -3075,6 +3074,10 @@ ul.header-socials {
 .side-map {
 	width: 1120px; height: 568px;
 	z-index: 1 !important;
+	@include respond-to(md) {width: 840px;}
+	@include respond-to(sm) {width: 500px;}
+	@media (max-width: 639px) {width: 380px;}
+	@include respond-to(xs) {width: 240px;}
 	&__map {
 		position: absolute;
 		left: 0;
