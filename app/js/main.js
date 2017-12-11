@@ -214,8 +214,8 @@ $(window).on('load', function() {
 	// Обновляет положение фигурки
 	// newState - новое значение скролла
 	function updateFigure(newState) {
-		var posY = newState < 900 ? newState > 50 ?
-			newState * 0.5 - 225 : 0 - 4 * newState : 225;
+		var posY = newState < 900 ? newState > 100 ?
+			newState * 0.5 - 150 : 0 - 1 * newState : 300;
 		figure.css('transform', 'translate(0, ' + posY + 'px)');
 		figure_2.css('transform', 'translate(0, ' + (posY - 100) + 'px)');
 	}
