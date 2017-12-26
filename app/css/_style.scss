@@ -191,7 +191,7 @@ body {
 		}
 
 		&-roasting {
-			position: relative; padding: 0 0 165px;
+			position: relative; padding: 0 0 165px; overflow: hidden; margin-bottom: 100px;
 			@include respond-to(sm) {
 				padding: 0 0 74px;
 			}

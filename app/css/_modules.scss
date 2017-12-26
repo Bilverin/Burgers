@@ -1935,7 +1935,7 @@ ul.header-socials {
 		}
 
 		figure {
-			position: absolute; right: -368px; top: 249px; z-index: -1;
+			position: absolute; right: -200px; top: 249px; z-index: -1;
 			@include respond-to(md) {
 				width: 600px; right: 50px; top: 0;
 			}
@@ -1955,7 +1955,7 @@ ul.header-socials {
 	}
 
 	&-body {
-		display: flex;
+		display: flex; flex-wrap: wrap;
 		@include respond-to(sm) {
 			flex-wrap: wrap; padding: 0 47px;
 		}
@@ -1963,12 +1963,12 @@ ul.header-socials {
 			padding: 0 20px 0 0;
 		}
 		& > div {
-			width: 430px; position: relative; top: -7px;
+			width: 430px; margin-right: 74px; margin-bottom: 50px; position: relative; top: -7px; flex-shrink: 0;
 			@include respond-to(sm) {
 				width: 100%; margin-bottom: 55px;
 			}
 			p {
-				font-size: 18px; font-family: $s-regular; line-height: 32px;
+				font-size: 18px; font-family: $s-regular; line-height: 32px; text-shadow: 1px 1px 0 #000;
 				margin-bottom: 10px;
 				&:last-child {
 					margin-bottom: 0;
@@ -1984,12 +1984,14 @@ ul.header-socials {
 		}
 
 		ul {
-			margin-left: 74px;
-			@include respond-to(sm) {
-				width: 100%; margin-left: 0;
+			display: flex; flex-direction: column; flex-wrap: wrap;
+			max-height: 356px; width: calc(100% - 504px);
+			@include respond-to(lg) {
+				width: 100%;
 			}
+			@include respond-to(sm) {height: auto; max-height: 100%;}
 			li {
-				padding-left: 30px; position: relative; margin-bottom: 36px;
+				padding-left: 30px; position: relative; margin-bottom: 36px; margin-right: 40px;
 				@include respond-to(sm) {
 					padding: 0 0 0 34px; margin-bottom: 49px;
 				}
@@ -2163,7 +2165,7 @@ ul.header-socials {
 	}
 	p {
 
-		font-size: 18px; font-family: $s-book; line-height: 26px; text-shadow: 1px 1px 0 #000;
+		font-size: 18px; font-family: $s-book; line-height: 26px;
 		width: 345px;
 		@include respond-to(sm) {
 			font-size: 24px; line-height: 36px; font-family: $s-book; letter-spacing: 0.2px;

@@ -8683,6 +8683,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     font-family: "rouble";
     src: url("../fonts/rouble/rouble.svg#rouble") format("svg"); } }
 
+/*$main-dark: #080808;*/
 @-webkit-keyframes preloader {
   0% {
     -webkit-transform: translate(-50%, -50%) rotate(0);
@@ -8690,7 +8691,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   0% {
     -webkit-transform: translate(-50%, -50%) rotate(-360deg);
     transform: translate(-50%, -50%) rotate(-360deg); } }
-
 @keyframes preloader {
   0% {
     -webkit-transform: translate(-50%, -50%) rotate(0);
@@ -8739,12 +8739,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   -webkit-border-radius: 0;
   border-radius: 0; }
   .btn:hover, .bhf-activation form button:hover {
-    color: #080808;
+    color: #000;
     background: #ffffff; }
   .btn:focus, .bhf-activation form button:focus {
     color: #ffffff; }
     .btn:focus:hover, .bhf-activation form button:focus:hover {
-      color: #080808; }
+      color: #000; }
 
 .no-wrap {
   white-space: nowrap; }
@@ -8842,9 +8842,9 @@ ul.header-socials {
       .light ul.header-socials li a {
         text-shadow: none; }
         .light ul.header-socials li a:after {
-          background: #080808; }
+          background: #000; }
         .light ul.header-socials li a:hover {
-          color: #080808; }
+          color: #000; }
 
 .header {
   display: -webkit-box;
@@ -8965,7 +8965,7 @@ ul.header-socials {
           .header a.burger span:nth-child(4) {
             top: 22px; } }
       .light .header a.burger span {
-        background: #080808; }
+        background: #000; }
   .header nav {
     padding-top: 3px; }
     @media (max-width: 991px) {
@@ -9015,9 +9015,9 @@ ul.header-socials {
         .header nav ul.navigation li a:hover:after {
           width: 100%; }
         .light .header nav ul.navigation li a {
-          color: #080808; }
+          color: #000; }
           .light .header nav ul.navigation li a:after {
-            background: #080808; }
+            background: #000; }
 
 .navigation {
   height: 100%;
@@ -9076,9 +9076,9 @@ ul.header-socials {
         .navigation nav ul.links li a:hover {
           color: #fbb040; }
         .light .navigation nav ul.links li a {
-          color: #080808; }
+          color: #000; }
           .light .navigation nav ul.links li a:hover {
-            color: #080808; }
+            color: #000; }
     .navigation nav ul.socials {
       display: -webkit-box;
       display: -webkit-flex;
@@ -9168,7 +9168,7 @@ ul.header-socials {
               width: 22px;
               height: 29px; }
               .light .navigation .proposition figure figcaption p em svg {
-                fill: #080808; }
+                fill: #000; }
 
 .footer * {
   position: relative;
@@ -9269,9 +9269,9 @@ ul.header-socials {
         .footer nav ul li a:hover:after {
           width: 100%; }
         .light .footer nav ul li a {
-          color: #080808; }
+          color: #000; }
           .light .footer nav ul li a:after {
-            background: #080808; }
+            background: #000; }
 
 .footer ul.socials {
   display: -webkit-box;
@@ -9870,7 +9870,7 @@ ul.header-socials {
         padding-bottom: 28px;
         border-width: 7px; } }
     .bhf-activation form select option {
-      color: #080808; }
+      color: #000; }
   .bhf-activation form input[type=text] {
     font-size: 18px;
     font-family: "stolzl-regular", sans-serif;
@@ -10774,7 +10774,7 @@ ul.header-socials {
         text-transform: uppercase;
         -letter-spacing: 0.6px;
         padding-right: 5px;
-        background: #080808; }
+        background: #000; }
         @media (max-width: 480px) {
           .menu-tea ul li p span {
             font-size: 28px;
@@ -11016,7 +11016,7 @@ ul.header-socials {
             line-height: 24px; } }
   .intro-header figure {
     position: absolute;
-    right: -368px;
+    right: -200px;
     top: 249px;
     z-index: -1; }
     @media (max-width: 991px) {
@@ -11047,7 +11047,10 @@ ul.header-socials {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   @media (max-width: 767px) {
     .intro-body {
       -webkit-flex-wrap: wrap;
@@ -11059,8 +11062,13 @@ ul.header-socials {
       padding: 0 20px 0 0; } }
   .intro-body > div {
     width: 430px;
+    margin-right: 74px;
+    margin-bottom: 50px;
     position: relative;
-    top: -7px; }
+    top: -7px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
     @media (max-width: 767px) {
       .intro-body > div {
         width: 100%;
@@ -11069,6 +11077,7 @@ ul.header-socials {
       font-size: 18px;
       font-family: "stolzl-regular", sans-serif;
       line-height: 32px;
+      text-shadow: 1px 1px 0 #000;
       margin-bottom: 10px; }
       .intro-body > div p:last-child {
         margin-bottom: 0; }
@@ -11084,15 +11093,33 @@ ul.header-socials {
           font-size: 20px;
           line-height: 28px; } }
   .intro-body ul {
-    margin-left: 74px; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-height: 356px;
+    width: -webkit-calc(100% - 504px);
+    width: calc(100% - 504px); }
+    @media (max-width: 1199px) {
+      .intro-body ul {
+        width: 100%; } }
     @media (max-width: 767px) {
       .intro-body ul {
-        width: 100%;
-        margin-left: 0; } }
+        height: auto;
+        max-height: 100%; } }
     .intro-body ul li {
       padding-left: 30px;
       position: relative;
-      margin-bottom: 36px; }
+      margin-bottom: 36px;
+      margin-right: 40px; }
       @media (max-width: 767px) {
         .intro-body ul li {
           padding: 0 0 0 34px;
@@ -11280,7 +11307,6 @@ ul.header-socials {
     font-size: 18px;
     font-family: "stolzl-book", sans-serif;
     line-height: 26px;
-    text-shadow: 1px 1px 0 #000;
     width: 345px; }
     @media (max-width: 767px) {
       .roasting p {
@@ -11632,7 +11658,7 @@ ul.header-socials {
         position: absolute;
         left: 8px;
         top: 11px;
-        background: #080808;
+        background: #000;
         -webkit-border-radius: 50%;
         border-radius: 50%; }
         @media (max-width: 767px) {
@@ -11680,7 +11706,7 @@ ul.header-socials {
       position: absolute;
       left: 8px;
       top: 11px;
-      background: #080808;
+      background: #000;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
       @media (max-width: 767px) {
@@ -11760,7 +11786,7 @@ ul.header-socials {
       position: absolute;
       left: 0px;
       top: 10px;
-      background: #080808;
+      background: #000;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
 
@@ -11895,7 +11921,7 @@ ul.header-socials {
       .company-vacancy-info {
         padding-left: 15px; } }
     .light .company-vacancy-info::-webkit-scrollbar-thumb {
-      background: #080808; }
+      background: #000; }
     .company-vacancy-info h3 {
       font-size: 18px;
       font-family: "intro-black", sans-serif;
@@ -11931,7 +11957,7 @@ ul.header-socials {
           position: absolute;
           left: 0px;
           top: 10px;
-          background: #080808;
+          background: #000;
           -webkit-border-radius: 50%;
           border-radius: 50%; }
   .company-vacancy-another {
@@ -12180,7 +12206,7 @@ ul.header-socials {
   height: 100%;
   z-index: 1000;
   padding: 84px 0 140px;
-  background: #080808;
+  background: #000;
   overflow-y: auto;
   overflow-x: hidden; }
   @media (max-width: 767px) {
@@ -12259,7 +12285,7 @@ ul.header-socials {
   height: 100%;
   z-index: 1000;
   padding: 54px 0 0;
-  background: #080808;
+  background: #000;
   overflow-y: auto;
   overflow-x: hidden; }
   .popup-company-vacancy:before {
@@ -12337,7 +12363,7 @@ ul.header-socials {
   height: 100%;
   z-index: 1000;
   padding: 84px 0 140px;
-  background: #080808;
+  background: #000;
   overflow-y: auto;
   overflow-x: hidden; }
   @media (max-width: 767px) {
@@ -12543,7 +12569,7 @@ ul.header-socials {
     content: none; }
 
 body {
-  background: #080808; }
+  background: #000; }
   body.light {
     background: #ffffff; }
 
@@ -12573,7 +12599,7 @@ body {
   .app .wr-header {
     padding: 31px 0 19px;
     z-index: 110;
-    background: #080808; }
+    background: #000; }
     @media (max-width: 767px) {
       .app .wr-header {
         margin: 0 -15px 0 -45px;
@@ -12597,7 +12623,7 @@ body {
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
     padding: 103px 0 0;
-    background: #080808;
+    background: #000;
     -webkit-transition: .4s ease-out;
     transition: .4s ease-out; }
     @media (min-width: 992px) {
@@ -12732,7 +12758,9 @@ body {
         padding: 0 0 80px; } }
   .app .wr-roasting {
     position: relative;
-    padding: 0 0 165px; }
+    padding: 0 0 165px;
+    overflow: hidden;
+    margin-bottom: 100px; }
     @media (max-width: 767px) {
       .app .wr-roasting {
         padding: 0 0 74px; } }
