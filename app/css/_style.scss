@@ -35,6 +35,28 @@ body {
 				&-info {
 					padding-bottom: 380px;
 				}
+				/*&-slider {
+					.owl-carousel {
+						.owl-dot {
+							&:first-child {
+								&:before {color: green;}
+							}
+							&.active {
+								&:before {
+									opacity: 1;
+								}
+							}
+							&:before {
+								counter-increment: list; content: counter(list);
+								color: #999; font-size: 20px;
+								display: block;
+								opacity: 0;
+								transition: .4s ease;
+							}
+							
+						}
+					}
+				} */
 			}
 		}
 	}
@@ -256,14 +278,16 @@ body {
 				@include respond-to(sm) {padding-bottom: 135px;}
 
 				figure {
-					position: absolute; right: 0; top: 248px; z-index: -1;
+					position: absolute; right: 0; top: 100px; z-index: -1;
+					transition: transform .4s ease;
 					@include respond-to(md) {display: none;}
+					img {max-height: 850px;}
 				}
 			}
 
 			&-slider {
 				@extend .wr-main-slider;
-				padding: 0 0 422px;
+				padding: 0 0 200px;
 				@include respond-to(md) {padding-bottom: 550px;}
 				@include respond-to(sm) {padding: 0 0 162px;}
 

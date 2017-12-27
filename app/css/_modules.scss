@@ -138,7 +138,7 @@ ul.header-socials {
 					&.active {
 						a {
 							color: $main-light; font-family: $i-black;
-							pointer-events: none;
+							&:after {display: none;}
 						}
 					}
 				}
@@ -263,7 +263,7 @@ ul.header-socials {
 					}
 					a {
 						color: $main-light;
-						pointer-events: none;
+						&:after {display: none;}
 					}
 				}
 				a {
@@ -2591,7 +2591,7 @@ ul.header-socials {
 					margin-bottom: 0;
 				}
 				a {
-					color: #ffffff; font-size: 42px; font-family: $i-black; text-transform: uppercase; line-height: 33px; letter-spacing: -0.5px;
+					color: #ffffff; font-size: 42px; font-family: $i-black; text-transform: uppercase; line-height: 33px; letter-spacing: -2px;
 					position: relative;
 					transition: color 0.3s ease-out;
 					@include respond-to(md) {color: #000; text-shadow: 0 1px 0 #9a9a9a;}
@@ -2705,7 +2705,7 @@ ul.header-socials {
 						margin-bottom: 0;
 					}
 					a {
-						color: #ffffff; font-size: 60px; line-height: 55px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.5px;
+						color: #ffffff; font-size: 60px; line-height: 55px; font-family: $i-black; text-transform: uppercase; letter-spacing: -2px;
 						position: relative;
 						transition: color 0.3s ease-out;
 						@include respond-to(md) {color: #000;}

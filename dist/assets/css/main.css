@@ -8859,8 +8859,9 @@ ul.header-socials {
     margin-right: 35px; }
   .header.menu nav ul.navigation li.active a {
     color: #fbb040;
-    font-family: "intro-black", sans-serif;
-    pointer-events: none; }
+    font-family: "intro-black", sans-serif; }
+    .header.menu nav ul.navigation li.active a:after {
+      display: none; }
   .header a.logo {
     margin-right: 33px;
     position: relative;
@@ -8985,8 +8986,9 @@ ul.header-socials {
       .light .header nav ul.navigation li.active a {
         color: #fbb040; }
       .header nav ul.navigation li.active a {
-        color: #fbb040;
-        pointer-events: none; }
+        color: #fbb040; }
+        .header nav ul.navigation li.active a:after {
+          display: none; }
       .header nav ul.navigation li a {
         color: #ffffff;
         font-size: 15px;
@@ -11847,7 +11849,7 @@ ul.header-socials {
         font-family: "intro-black", sans-serif;
         text-transform: uppercase;
         line-height: 33px;
-        letter-spacing: -0.5px;
+        letter-spacing: -2px;
         position: relative;
         -webkit-transition: color 0.3s ease-out;
         transition: color 0.3s ease-out; }
@@ -11991,7 +11993,7 @@ ul.header-socials {
           line-height: 55px;
           font-family: "intro-black", sans-serif;
           text-transform: uppercase;
-          letter-spacing: -0.5px;
+          letter-spacing: -2px;
           position: relative;
           -webkit-transition: color 0.3s ease-out;
           transition: color 0.3s ease-out; }
@@ -12594,8 +12596,31 @@ body {
       @media (max-width: 767px) {
         .app.absolute-header .wr-header {
           margin: 0; } }
-  .app.home .wr-main-info {
-    padding-bottom: 380px; }
+  .app.home .wr-main {
+    /*&-slider {
+					.owl-carousel {
+						.owl-dot {
+							&:first-child {
+								&:before {color: green;}
+							}
+							&.active {
+								&:before {
+									opacity: 1;
+								}
+							}
+							&:before {
+								counter-increment: list; content: counter(list);
+								color: #999; font-size: 20px;
+								display: block;
+								opacity: 0;
+								transition: .4s ease;
+							}
+							
+						}
+					}
+				} */ }
+    .app.home .wr-main-info {
+      padding-bottom: 380px; }
   .app .wr-header {
     padding: 31px 0 19px;
     z-index: 110;
@@ -12822,13 +12847,19 @@ body {
     .app .wr-burgerPlace-intro figure {
       position: absolute;
       right: 0;
-      top: 248px;
-      z-index: -1; }
+      top: 100px;
+      z-index: -1;
+      -webkit-transition: -webkit-transform .4s ease;
+      transition: -webkit-transform .4s ease;
+      transition: transform .4s ease;
+      transition: transform .4s ease, -webkit-transform .4s ease; }
       @media (max-width: 991px) {
         .app .wr-burgerPlace-intro figure {
           display: none; } }
+      .app .wr-burgerPlace-intro figure img {
+        max-height: 850px; }
   .app .wr-burgerPlace-slider {
-    padding: 0 0 422px; }
+    padding: 0 0 200px; }
     @media (max-width: 991px) {
       .app .wr-burgerPlace-slider {
         padding-bottom: 550px; } }
