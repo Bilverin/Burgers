@@ -1828,17 +1828,22 @@ ul.header-socials {
 
 				a {
 					transition: 0.3s ease-out;
+					&:before {
+						content: '';
+						position: absolute; left: 0; top: 0; display: block; width: 20px; height: 20px;
+						background: url('../img/intro-star.png') center center no-repeat;
+						transition: 0.3s ease-out;
+						@include respond-to(sm) {top: 9px;}
+					}
 					&:hover {
 						color: $main-light;
+						&:before {
+							background: url('../img/intro-star_orange.png') center center no-repeat;
+						}
 					}
 				}
 
-				&:before {
-					content: '';
-					position: absolute; left: 0; top: 0; display: block; width: 20px; height: 20px;
-					background: url('../img/intro-star.png') center center no-repeat;
-					@include respond-to(sm) {top: 9px;}
-				}
+				
 			}
 		}
 	}
