@@ -10914,20 +10914,24 @@ ul.header-socials {
     .menu-places ul li a {
       -webkit-transition: 0.3s ease-out;
       transition: 0.3s ease-out; }
+      .menu-places ul li a:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url("../img/intro-star.png") center center no-repeat;
+        -webkit-transition: 0.3s ease-out;
+        transition: 0.3s ease-out; }
+        @media (max-width: 767px) {
+          .menu-places ul li a:before {
+            top: 9px; } }
       .menu-places ul li a:hover {
         color: #fbb040; }
-    .menu-places ul li:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: block;
-      width: 20px;
-      height: 20px;
-      background: url("../img/intro-star.png") center center no-repeat; }
-      @media (max-width: 767px) {
-        .menu-places ul li:before {
-          top: 9px; } }
+        .menu-places ul li a:hover:before {
+          background: url("../img/intro-star_orange.png") center center no-repeat; }
 
 .intro-header {
   margin-bottom: 530px;

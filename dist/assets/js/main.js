@@ -253,7 +253,8 @@ $(window).on('load', function() {
 		var myMap = new ymaps.Map("side-map", {
 			center: [55.74159657, 37.62564850],
 			zoom: 13,
-			controls: []
+			controls: [],
+			behaviors: ['drag']
 		}, {
 			maxZoom: 14,
 			minZoom: 14
