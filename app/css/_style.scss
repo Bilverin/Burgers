@@ -5,11 +5,11 @@ body {
 	}
 }
 .app {
-	min-width: 320px;
+	min-width: 320px; padding-top: 80px;
 	overflow-x: hidden;
 	// width: 1200px;
 	@include respond-to(sm) {
-		padding: 0 15px 0 45px;
+		padding: 100px 15px 0 45px;
 	}
 	@include respond-to(xs) {
 		padding-left: 15px;
@@ -63,13 +63,18 @@ body {
 
 	.wr {
 		&-header {
-			padding: 31px 0 19px; z-index: 110;
+			padding: 31px 0 19px; z-index: 110; position: fixed; top: 0; width: 100%;
 			background: $main-dark;
+			transition: .4s ease;
 			@include respond-to(sm) {
 				margin: 0 -15px 0 -45px; padding: 31px 15px 19px 45px;
 			}
 			@include respond-to(xs) {
 				margin: 0 -15px 30px; padding: 31px 15px 19px;
+			}
+			&.hide-header {
+				top: -90px;
+				transition: .4s ease;
 			}
 
 			.light & {
@@ -561,7 +566,7 @@ body {
 			}
 
 			&-news {
-				padding: 0 0 266px;
+				padding: 0 0 266px; max-width: 1920px; margin: 0 auto;
 				@include respond-to(sm) {padding-bottom: 180px;}
 				@include respond-to(xs) {padding-bottom: 150px;}
 				h2 {

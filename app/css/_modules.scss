@@ -508,6 +508,10 @@ ul.header-socials {
 				&.active {
 					a {
 						color: $main-light;
+						&:after {display: none;}
+						.light & {
+							color: $main-light;
+						}
 					}
 				}
 				a {
@@ -1020,14 +1024,14 @@ ul.header-socials {
 			select {
 				font-size: 18px; font-family: $s-regular; line-height: 26px;
 				width: 100%; display: block; padding-bottom: 9px;
-				background: transparent; border: none; border-bottom: solid 3px #ffffff;
+				background: #000; border: none; border-bottom: solid 3px #ffffff;
 				@include respond-to(sm) {
 					width: 92%; padding-bottom: 28px;
 					border-width: 7px;
 				}
 
 				option {
-					color: $main-dark;
+					color: #fff;
 				}
 			}
 			input {
@@ -1041,6 +1045,7 @@ ul.header-socials {
 					}
 					&.error {
 						border-color: $main-light;
+						color: $main-light;
 					}
 				}
 				&[type=checkbox] {
@@ -1557,7 +1562,7 @@ ul.header-socials {
 				width: 40%; margin-left: 0; margin-bottom: 120px;
 			}
 			@include respond-to(sm) {
-				width: 100%; max-width: 548px; height: auto; margin-bottom: 80px;
+				width: 100%; max-width: 580px; height: auto; margin-bottom: 80px;
 			}
 
 			&:last-child {
@@ -1642,6 +1647,7 @@ ul.header-socials {
 			}
 			figure {
 				position: relative;
+				@include respond-to(sm) {right: -15px;}
 				&:after {
 					content: '';
 					display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; bottom: 0; right: 0; z-index: 2;
@@ -1668,26 +1674,21 @@ ul.header-socials {
 			figcaption {
 				position: absolute; z-index: 3; left: -84px; top: 0; transform: translateY(-50%); max-width: 100%;
 				@include respond-to(lg) {left: -52px;}
-				@include respond-to(md) {
-					left: 0;
-				}
-				@include respond-to(sm) {
-					top: 25px;
-				}
+				@include respond-to(md) {left: 0;}
+				@include respond-to(sm) {top: 25px;}
+				@include respond-to(xs) {top: 15px;}
 
 				h2 {
 					font-size: 60px; font-family: $i-black; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 					transition: .4s ease-out;
 					@include respond-to(md) {font-size: 48px; line-height: 48px;}
-					@include respond-to(xs) {
-						font-size: 28px; line-height: 34px; word-wrap: break-word;
-					}
+					@include respond-to(xs) {font-size: 34px; line-height: 34px; word-wrap: break-word;}
 					br {
 						@include respond-to(sm) {display: none;}
 					}
 				}
 				h3 {
-					font-size: 60px; font-family: $cp-light-LC; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+					font-size: 60px; font-family: $cp-light-LC; text-transform: uppercase; line-height: 55px; letter-spacing: -0.7px; text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), 1px 1px 10px rgba(0, 0, 0, 0.3), 1px 1px 10px rgba(0, 0, 0, 0.3), 1px 1px 10px rgba(0, 0, 0, 0.3);
 					@include respond-to(md) {font-size: 48px; line-height: 48px;}
 					@include respond-to(xs) {
 						font-size: 34px; line-height: 34px;
@@ -1975,7 +1976,7 @@ ul.header-socials {
 		& > div {
 			flex-shrink: 0;
 			width: 30%; margin-right: 75px; margin-bottom: 50px; position: relative; top: -7px; 
-			@include respond-to(sm) {
+			@include respond-to(md) {
 				width: 100%; margin-bottom: 55px;
 			}
 			p {
@@ -1997,6 +1998,7 @@ ul.header-socials {
 		ul {
 			display: flex; flex-direction: column; flex-wrap: wrap;
 			max-height: 356px;
+			@media (max-width: 1300px) {max-height: 500px;}
 			@include respond-to(lg) {
 				width: 100%;
 			}
@@ -2962,13 +2964,13 @@ ul.header-socials {
 
 	&-company {
 		&-vacancy {
-			display: none; position: fixed; left: 0; top: 0;width: 100%; height: 100%; z-index: 1000; padding: 54px 0 0;
+			display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 1000; padding: 54px 0 0;
 			background: $main-dark;
 			overflow-y: auto; overflow-x: hidden;
 
 			&:before {
 				content: '';
-				display: block; width: 100%; height: 100%; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
+				display: block; width: 100%; max-width: 858px; height: 100%; max-height: 1110px; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
 				background: rgba(19,17,18,0.4);
 				@include respond-to(sm) {
 					display: none;

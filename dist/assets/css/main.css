@@ -9243,6 +9243,10 @@ ul.header-socials {
           margin: 0 0 10px; } }
       .footer nav ul li.active a {
         color: #fbb040; }
+        .footer nav ul li.active a:after {
+          display: none; }
+        .light .footer nav ul li.active a {
+          color: #fbb040; }
       .footer nav ul li a {
         color: #ffffff;
         font-size: 15px;
@@ -9881,7 +9885,7 @@ ul.header-socials {
     width: 100%;
     display: block;
     padding-bottom: 9px;
-    background: transparent;
+    background: #000;
     border: none;
     border-bottom: solid 3px #ffffff; }
     @media (max-width: 767px) {
@@ -9890,7 +9894,7 @@ ul.header-socials {
         padding-bottom: 28px;
         border-width: 7px; } }
     .bhf-activation form select option {
-      color: #000; }
+      color: #fff; }
   .bhf-activation form input[type=text] {
     font-size: 18px;
     font-family: "stolzl-regular", sans-serif;
@@ -9910,7 +9914,8 @@ ul.header-socials {
         border-width: 7px;
         padding-bottom: 26px; } }
     .bhf-activation form input[type=text].error {
-      border-color: #fbb040; }
+      border-color: #fbb040;
+      color: #fbb040; }
   .bhf-activation form input[type=checkbox] {
     display: none; }
   .bhf-activation form label {
@@ -10550,7 +10555,7 @@ ul.header-socials {
   @media (max-width: 767px) {
     .menu-list a, .menu-list div {
       width: 100%;
-      max-width: 548px;
+      max-width: 580px;
       height: auto;
       margin-bottom: 80px; } }
   .menu-list a:last-child, .menu-list div:last-child {
@@ -10624,6 +10629,9 @@ ul.header-socials {
 
 .menu-list a figure {
   position: relative; }
+  @media (max-width: 767px) {
+    .menu-list a figure {
+      right: -15px; } }
   .menu-list a figure:after {
     content: '';
     display: block;
@@ -10678,6 +10686,9 @@ ul.header-socials {
     @media (max-width: 767px) {
       .menu-list figure figcaption {
         top: 25px; } }
+    @media (max-width: 480px) {
+      .menu-list figure figcaption {
+        top: 15px; } }
     .menu-list figure figcaption h2 {
       font-size: 60px;
       font-family: "intro-black", sans-serif;
@@ -10693,7 +10704,7 @@ ul.header-socials {
           line-height: 48px; } }
       @media (max-width: 480px) {
         .menu-list figure figcaption h2 {
-          font-size: 28px;
+          font-size: 34px;
           line-height: 34px;
           word-wrap: break-word; } }
       @media (max-width: 767px) {
@@ -10705,7 +10716,7 @@ ul.header-socials {
       text-transform: uppercase;
       line-height: 55px;
       letter-spacing: -0.7px;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), 1px 1px 10px rgba(0, 0, 0, 0.3), 1px 1px 10px rgba(0, 0, 0, 0.3), 1px 1px 10px rgba(0, 0, 0, 0.3); }
       @media (max-width: 991px) {
         .menu-list figure figcaption h3 {
           font-size: 48px;
@@ -11094,7 +11105,7 @@ ul.header-socials {
     margin-bottom: 50px;
     position: relative;
     top: -7px; }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       .intro-body > div {
         width: 100%;
         margin-bottom: 55px; } }
@@ -11131,6 +11142,9 @@ ul.header-socials {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     max-height: 356px; }
+    @media (max-width: 1300px) {
+      .intro-body ul {
+        max-height: 500px; } }
     @media (max-width: 1199px) {
       .intro-body ul {
         width: 100%; } }
@@ -12311,7 +12325,9 @@ ul.header-socials {
     content: '';
     display: block;
     width: 100%;
+    max-width: 858px;
     height: 100%;
+    max-height: 1110px;
     position: fixed;
     right: 42.85714%;
     top: 0;
@@ -12594,10 +12610,11 @@ body {
 
 .app {
   min-width: 320px;
+  padding-top: 80px;
   overflow-x: hidden; }
   @media (max-width: 767px) {
     .app {
-      padding: 0 15px 0 45px; } }
+      padding: 100px 15px 0 45px; } }
   @media (max-width: 480px) {
     .app {
       padding-left: 15px; } }
@@ -12641,7 +12658,12 @@ body {
   .app .wr-header {
     padding: 31px 0 19px;
     z-index: 110;
-    background: #000; }
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    -webkit-transition: .4s ease;
+    transition: .4s ease; }
     @media (max-width: 767px) {
       .app .wr-header {
         margin: 0 -15px 0 -45px;
@@ -12650,6 +12672,10 @@ body {
       .app .wr-header {
         margin: 0 -15px 30px;
         padding: 31px 15px 19px; } }
+    .app .wr-header.hide-header {
+      top: -90px;
+      -webkit-transition: .4s ease;
+      transition: .4s ease; }
     .light .app .wr-header {
       background: #ffffff; }
     .big-map .app .wr-header {
@@ -13166,7 +13192,9 @@ body {
         .app .wr-company-command figure img {
           width: 480px; } }
   .app .wr-company-news {
-    padding: 0 0 266px; }
+    padding: 0 0 266px;
+    max-width: 1920px;
+    margin: 0 auto; }
     @media (max-width: 767px) {
       .app .wr-company-news {
         padding-bottom: 180px; } }
