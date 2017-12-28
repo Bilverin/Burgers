@@ -71,7 +71,7 @@
 // preloader
 .preloader {
 	position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 1000;
-	background: #080808;
+	background: #000;
 	&:before {
 		content: '';
 		display: block; width: 60px; height: 60px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(0);
@@ -825,6 +825,11 @@ ul.header-socials {
 							&:after {
 								width: 100%;
 							}
+							i {transform: translate(15px);}
+						}
+						i {
+							position: relative; top: 3px; transform: translate(7px);
+							transition: .4s ease;
 						}
 					}
 				}
@@ -1846,7 +1851,7 @@ ul.header-socials {
 // intro
 .intro {
 	&-header {
-		margin-bottom: 530px; position: relative;
+		margin-bottom: 530px; position: relative; padding-top: 30px;
 		@include respond-to(md) {
 			margin-bottom: 365px;
 		}
@@ -1963,7 +1968,8 @@ ul.header-socials {
 			padding: 0 20px 0 0;
 		}
 		& > div {
-			width: 430px; margin-right: 74px; margin-bottom: 50px; position: relative; top: -7px; flex-shrink: 0;
+			flex-shrink: 0;
+			width: 30%; margin-right: 75px; margin-bottom: 50px; position: relative; top: -7px; 
 			@include respond-to(sm) {
 				width: 100%; margin-bottom: 55px;
 			}
@@ -1985,13 +1991,13 @@ ul.header-socials {
 
 		ul {
 			display: flex; flex-direction: column; flex-wrap: wrap;
-			max-height: 356px; width: calc(100% - 504px);
+			max-height: 356px;
 			@include respond-to(lg) {
 				width: 100%;
 			}
 			@include respond-to(sm) {height: auto; max-height: 100%;}
 			li {
-				padding-left: 30px; position: relative; margin-bottom: 36px; margin-right: 40px;
+				padding-left: 30px; position: relative; margin-bottom: 36px; margin-right: 25px;
 				@include respond-to(sm) {
 					padding: 0 0 0 34px; margin-bottom: 49px;
 				}
@@ -2250,9 +2256,6 @@ ul.header-socials {
 					display: block;
 				}
 			}
-			[class$='checked'] {
-				display: none;
-			}
 
 			h3 {
 				font-size: 18px; font-family: $i-black; text-transform: uppercase; letter-spacing: -0.25px;
@@ -2352,10 +2355,6 @@ ul.header-socials {
 			}
 			[class*='icon-add-9'] {
 				left: -12px; top: 7px;
-			}
-
-			[class$='checked'] {
-				display: none;
 			}
 
 			p {
