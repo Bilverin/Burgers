@@ -270,6 +270,11 @@ $(window).on('load', function() {
 				isMapBlocked = true;
 			}
 		});
+		$('#map-hint').click(function (event) {
+			myMap.behaviors.enable(['drag']);
+			isMapBlocked = false;
+			$(this).fadeOut();
+		});
 		// Номер активной метки
 		var current = 0;
 		// Создаём метки на карте
