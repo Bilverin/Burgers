@@ -307,6 +307,7 @@ $(window).on('load', function() {
 					updatePlacemark(index);
 					updateItems(index);
 					current = index;
+					myMap.setCenter(coords[index]);
 				});
 			});
 		}
