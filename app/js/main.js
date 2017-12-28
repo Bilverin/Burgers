@@ -254,10 +254,21 @@ $(window).on('load', function() {
 			center: [55.74159657, 37.62564850],
 			zoom: 13,
 			controls: [],
-			behaviors: ['drag']
+			behaviors: []
 		}, {
 			maxZoom: 14,
 			minZoom: 14
+		});
+		// Блокировка
+		var isMapBlocked = true;
+		myMap.events.add('dblclick', function () {
+			if (isMapBlocked) {
+				myMap.behaviors.enable(['drag']);
+				isMapBlocked = false;
+			} else {
+				myMap.behaviors.disable(['drag']);
+				isMapBlocked = true;
+			}
 		});
 		// Номер активной метки
 		var current = 0;
