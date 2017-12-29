@@ -1,35 +1,12 @@
 $(document).ready(function() {
-
-	// $('.owl-slider').owlCarousel({
-	// 	loop: true,
-	// 	margin: 10,
-	// 	navRewind: false,
-	// 	nav : true,
-	// 	navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-right.png'>"],
-	// 	responsive: {
-	// 		0: {
-	// 			items: 1
-	// 		},
-	// 		600: {
-	// 			items: 1
-	// 		},
-	// 		1000: {
-	// 			items: 1
-	// 		}
-	// 	}
-	// });
-
-	// $('.owl-news').owlCarousel({
-	// 	margin:50,
-	// 	autoWidth:true,
-	// 	navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
-	// });
-
-	/*
+	
 	$('.owl-slider').owlCarousel({
 		loop: true,
 		margin: 10,
 		navRewind: false,
+		autoHeight: true,
+		dotsEach: true,
+		pagination : true,
 		nav : true,
 		navText: ["<img src='assets/templates/html/assets/img/slider-arrow-left.png'>","<img src='assets/templates/html/assets/img/slider-arrow-right.png'>"],
 		responsive: {
@@ -51,16 +28,10 @@ $(document).ready(function() {
 		autoWidth:true,
 		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
 	});
-	*/
-
-	$("#date").mask("99.99.9999",{placeholder:"дд.мм.гггг"});
-	$("#tel").mask("9 (999) 9999999");
-
+			  
 	$('.js-composition-toggle li a').click(function(){
-
 		$('.js-composition-toggle li a').removeClass('active');
 		$(this).addClass('active');
-
 		return false;
 	});
 
@@ -68,44 +39,37 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		$('.wr-navigation').toggleClass('active');
 		$('body').toggleClass('ov-hidden');
-
 		return false;
 	});
 
 	// popups
 	$('.js-section-popup').click(function(e){
 		e.preventDefault();
-
-		var popupLink = $(this).attr('href');
-		$('.' + popupLink).addClass('active-popup').fadeIn();
+		var vacancyLink = $(this).attr('href');
+		$('.' + vacancyLink).addClass('active-popup').fadeIn();
 		$('.popup-company-vacancy').fadeIn();
 		$('body').addClass('ov-hidden');
-
 	});
 	$('.js-section-popup-change').click(function(e){
 		e.preventDefault();
-
 		var vacancyLink = $(this).attr('href'),
 			activePopup = $('.active-popup');
 		$(activePopup).removeClass('active-popup').fadeOut();
 		$('.' + vacancyLink).addClass('active-popup').fadeIn();
-
+		
 	});
 	$('.js-popup-close').click(function(e){
 		e.preventDefault();
-
 		var activePopup = $('.active-popup');
 		$(activePopup).removeClass('active-popup');
 		$(this).parent().fadeOut(400);
 		$('.popup-company-vacancy .container').fadeOut(400);
 		$('body').removeClass('ov-hidden');
 	});
-
-});
-
-$(window).on('load', function() {
-	// preloader
-	$('.preloader').fadeOut();
+	
+	$("#date").mask("99.99.9999",{placeholder:"дд.мм.гггг"});
+	$("#tel").mask("9 (999) 9999999");
+	
 });
 
 // Карусель с вертикальной прокруткой (прожарка)
@@ -208,8 +172,8 @@ $(window).on('load', function() {
 
 // Типа параллакса что-то
 (function ($) {
-	var figure = $('.wr-burgerPlace-intro > .container > figure');
-	var figure_2 = $('.wr-company-mission > .container > figure');
+	var figure = $('.wr-burgerPlace-intro > .container figure');
+	var figure_2 = $('.wr-company-mission > .container figure');
 	var wnd = $(window);
 	// Обновляет положение фигурки
 	// newState - новое значение скролла
@@ -224,6 +188,7 @@ $(window).on('load', function() {
 		updateFigure(offset);
 	});
 })(jQuery);
+
 
 // Модуль управления картой
 (function ($) {
@@ -248,10 +213,18 @@ $(window).on('load', function() {
 		});
 		coords.push(coord);
 	});
+	// Находим центр карты
+	var mapCenter = $('#side-map').data('position');
+	if(typeof mapCenter === 'undefined') {
+		mapCenter = '55.74159657, 37.62564850';
+	}
+	var mapCenterPosition = mapCenter.split(',').map(function (item) {
+		return parseFloat(item.trim());
+	});
 	// Инициализация
 	function init(){
 		var myMap = new ymaps.Map("side-map", {
-			center: [55.74159657, 37.62564850],
+			center: mapCenterPosition,
 			zoom: 13,
 			controls: [],
 			behaviors: []
@@ -261,7 +234,7 @@ $(window).on('load', function() {
 		});
 		// Блокировка
 		var isMapBlocked = true;
-		myMap.events.add('dblclick', function () {
+		myMap.events.add('click', function () {
 			if (isMapBlocked) {
 				myMap.behaviors.enable(['drag']);
 				isMapBlocked = false;
@@ -281,7 +254,7 @@ $(window).on('load', function() {
 		var placeMarks = coords.map(function (coord, index) {
 			var placemark = new ymaps.Placemark(coord, {}, {
 	        iconLayout: 'default#image',
-	        iconImageHref: '../assets/img/marker.png',
+	        iconImageHref: 'assets/templates/html/assets/img/marker.png',
 	        iconImageSize: [26, 36],
 	        iconImageOffset: [-19, -36]
 	    });
@@ -300,10 +273,10 @@ $(window).on('load', function() {
 		function updatePlacemark(index) {
 			var pmOld = placeMarks[current];
 			var pmNew = placeMarks[index];
-			pmOld.options.set('iconImageHref', '../assets/img/marker.png');
+			pmOld.options.set('iconImageHref', 'assets/templates/html/assets/img/marker.png');
 			pmOld.options.set('iconImageSize', [26, 36]);
 			pmOld.options.set('iconImageOffset', [-19, -36]);
-			pmNew.options.set('iconImageHref', '../assets/img/marker-active.png');
+			pmNew.options.set('iconImageHref', 'assets/templates/html/assets/img/marker-active.png');
 			pmNew.options.set('iconImageSize', [52, 72]);
 			pmNew.options.set('iconImageOffset', [-36, -72]);
 		}
@@ -336,3 +309,48 @@ $(window).on('load', function() {
 		});
 	}
 })(jQuery);
+
+// центрирование карусели новостей
+(function ($) {
+	var windowWidth = $(window).width(),
+		newsCarousel = $('.company-news .owl-carousel .owl-stage-outer'),
+		containerWidth = $('.wr-company-news .container').width();
+
+	var newsCarouselPaddings = (windowWidth - containerWidth)/2;
+	newsCarousel.css('padding-left', newsCarouselPaddings).css('padding-right', newsCarouselPaddings);
+
+	$(window).resize(function() {
+		containerWidth = $('.wr-company-news .container').width();
+		newsCarouselPaddings = (windowWidth - containerWidth)/2;
+		newsCarousel.css('padding-left', newsCarouselPaddings).css('padding-right', newsCarouselPaddings);
+	})
+})(jQuery);
+
+
+$(window).load(function() {
+	$('.preloader').hide();
+});
+
+//прячем меню  при прокрутке вниз, показывем при прокрутке ввех
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // код для прокрутки вниз
+       $('.wr-header').addClass('hide-header');
+   } else {
+      // код для прокрутки вверх
+      $('.wr-header').removeClass('hide-header');
+   }
+   lastScrollTop = st;
+});
+
+//добавляем фон шапке на странице "о компании"
+$(window).scroll(function(){
+	var positionHead =  $('.company-intro h1').offset().top;
+	if (($(window).scrollTop() + $(window).height()) > positionHead + 100){
+		$('.light .app .wr-header').addClass('white');
+	} else {
+		$('.light .app .wr-header').removeClass('white');
+	}
+});

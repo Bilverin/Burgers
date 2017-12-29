@@ -35,28 +35,20 @@ body {
 				&-info {
 					padding-bottom: 380px;
 				}
-				/*&-slider {
-					.owl-carousel {
-						.owl-dot {
-							&:first-child {
-								&:before {color: green;}
-							}
-							&.active {
-								&:before {
-									opacity: 1;
-								}
-							}
-							&:before {
-								counter-increment: list; content: counter(list);
-								color: #999; font-size: 20px;
-								display: block;
-								opacity: 0;
-								transition: .4s ease;
-							}
-							
+				&-slider {
+					.section-header {
+						h2 {
+							@media (max-width: 639px ){margin-bottom: 120px;}
+							@include respond-to(xs) {line-height: 38px; margin-bottom: 60px;}
 						}
 					}
-				} */
+					figure {
+						@media (max-width: 639px) {right: 0;}
+						img {
+							@media (max-width: 639px) {height: auto;}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -78,7 +70,11 @@ body {
 			}
 
 			.light & {
-				background: #ffffff;
+				background: #fff;
+				@include respond-to(sm) {background: transparent;}
+				&.white {
+					@include respond-to(sm) {background: #fff;}
+				}
 			}
 
 			.big-map & {
@@ -135,15 +131,15 @@ body {
 			&-slider {
 				position: relative; padding-bottom: 160px; padding-top: 0;
 				@include respond-to(sm) {padding-bottom: 153px; padding-top: 0;}
-				@include respond-to(xs) {
-					padding-bottom: 80px;
-				}
+				@media (max-width: 639px) {width: 87%;}
+				@include respond-to(xs) {padding-bottom: 80px;}
 
 				.section-header {
 					h2 {
 						text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 						padding-top: 47px;
 						small {text-shadow: 1px 1px 1px rgba(0,0,0,0.3);}
+						@include respond-to(sm) {line-height: 64px; margin-bottom: 200px;}
 						@include respond-to(xs) {
 							padding-top: 0;
 						}
@@ -161,12 +157,53 @@ body {
 					@include respond-to(sm) {
 						width: 90%; height: auto; top: 120px; right: 0; 
 					}
-
+					@media (max-width: 639px) {width: 100%; right: 45px;}
 					img {
 						@include respond-to(sm) {
 							height: 100%;
 						}
 					}
+				}
+
+				.owl-nav {
+					text-align: left; padding-left: 110px;
+					width: 1170px; margin: 0 auto;
+					@media (max-width: 639px) {padding-left: 0;}
+					@include respond-to(sm) {}
+					.owl-next {margin-left: 115px;}
+				}
+
+				.owl-dots {
+					counter-reset: slides-num;
+				    position: absolute; top: 100%; left: 260px; margin-top: 2px;
+					@media (max-width: 639px) {left: 67px;}
+					&:after {
+						font-size: 24px; font-family: $cp-light-LC; color: #fffffe; vertical-align: middle;
+						content: counter(slides-num); 
+						display: inline-block; padding-left: 5px; position: absolute; bottom: 0; right: -72px;
+					}
+				}
+
+				.owl-dot {
+					counter-increment: slides-num;
+				    display: inline-block; margin-right: 5px;
+
+					&.active {
+						&:before {
+							content:  counter(slides-num); 
+							font-size: 24px; font-family: $cp-light-LC; color: #fffffe;
+							display: inline-block; vertical-align: middle; 	position: absolute; left: 0; top: 0;
+						}
+
+						span {
+							&:before {
+								content: 'из';
+								font-weight: 700; font-size: 20px; color: #fff; font-family: $s-regular;
+								position: absolute; top: -1px; left: 33px;
+							}
+						}	
+					}
+
 				}
 			}
 
@@ -176,6 +213,9 @@ body {
 				@include respond-to(sm) {display: none;}
 				figure {
 					position: absolute; right: 0; top: 47px; z-index: -1;
+					img {
+						@include respond-to(md) {max-height: 640px;}
+					}
 				}
 			}
 
@@ -189,7 +229,7 @@ body {
 				figure {
 					position: absolute; right: -254px; top: 71px; z-index: -1;
 					@include respond-to(sm) {right: 0;}
-					@media (max-width: 639px) {}
+					@media (max-width: 639px) {right: -15px;}
 					@include respond-to(xs) {
 						right: -15px;
 					}
@@ -513,7 +553,7 @@ body {
 
 			&-worth {
 				padding: 0 0 137px;
-				@include respond-to(sm) {padding-left: 48px;}
+				@include respond-to(sm) {padding-left: 48px; padding-bottom: 0;}
 				@include respond-to(xs) {padding-left: 25px;}
 				h2 {
 					@include respond-to(sm) {
@@ -532,10 +572,10 @@ body {
 			&-command {
 				padding: 0 0 188px;
 				@include respond-to(sm) {
-					padding-top: 413px;
+					padding-top: 200px;
 				}
 				@include respond-to(xs) {
-					padding-top: 283px;
+					padding-top: 170px;
 				}
 				h2 {
 					@include respond-to(sm) {
@@ -578,7 +618,7 @@ body {
 						font-size: 80px;  line-height: 64px;
 					}
 					@include respond-to(xs) {
-						font-size: 60px; line-height: 46px;
+						font-size: 60px; line-height: 50px;
 					}
 					span {
 						@include respond-to(sm) {display: none;}
@@ -614,4 +654,17 @@ body {
 			padding: 0 0 65px;
 		}
 	}
+}
+.app .wr-main-slider {
+	figure {
+		@include respond-to(xs) {top: 40px;}
+		img {
+			@media (max-width: 639px) {height: 375px;}
+		}
+	}
+}
+
+.app .wr-main-slider .section-header h2 {
+	@media (max-width: 639px) {margin-bottom: 300px;}
+	@include respond-to(xs) {margin-bottom: 250px;}
 }
