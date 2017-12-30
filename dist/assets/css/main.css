@@ -13403,27 +13403,100 @@ body {
   .app .wr-main-slider .section-header h2, .app .wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-gallery .section-header h2 {
     margin-bottom: 250px; } }
 
-.app .wr-burgerPlace-slider .burgerPlace-slider {
-  position: absolute;
-  z-index: 2; }
-
-.app .wr-burgerPlace-slider figure {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  width: 100%;
-  position: relative;
-  top: 0; }
-  .app .wr-burgerPlace-slider figure img {
-    max-width: 100%;
-    width: auto;
-    max-height: 515px; }
-
-.app .wr-burgerPlace-slider .owl-dots {
-  left: 182px; }
+.app .wr-burgerPlace-slider {
+  max-height: 980px; }
+  @media (max-width: 639px) {
+    .app .wr-burgerPlace-slider {
+      max-height: 100%;
+      width: 100%;
+      padding: 0; } }
+  .app .wr-burgerPlace-slider.wr-main-slider .section-header h2, .app .wr-burgerPlace-slider.wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-slider.wr-burgerPlace-gallery .section-header h2 {
+    line-height: 102px;
+    margin-bottom: 20px; }
+    @media (max-width: 991px) {
+      .app .wr-burgerPlace-slider.wr-main-slider .section-header h2, .app .wr-burgerPlace-slider.wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-slider.wr-burgerPlace-gallery .section-header h2 {
+        line-height: 58px; } }
+    @media (max-width: 480px) {
+      .app .wr-burgerPlace-slider.wr-main-slider .section-header h2, .app .wr-burgerPlace-slider.wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-slider.wr-burgerPlace-gallery .section-header h2 {
+        line-height: 48px; } }
+  .app .wr-burgerPlace-slider .burgerPlace-slider {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    width: 40%; }
+    @media (max-width: 991px) {
+      .app .wr-burgerPlace-slider .burgerPlace-slider {
+        width: 70%;
+        background: -webkit-linear-gradient(315deg, black 0%, rgba(0, 0, 0, 0.56) 31%, rgba(0, 0, 0, 0.53) 33%, rgba(255, 255, 255, 0) 70%);
+        background: linear-gradient(135deg, black 0%, rgba(0, 0, 0, 0.56) 31%, rgba(0, 0, 0, 0.53) 33%, rgba(255, 255, 255, 0) 70%); } }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-slider .burgerPlace-slider {
+        width: 80%; } }
+    @media (max-width: 639px) {
+      .app .wr-burgerPlace-slider .burgerPlace-slider {
+        width: 100%;
+        padding: 0 0 50px 0; } }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-slider .burgerPlace-slider p {
+        font-size: 18px;
+        line-height: 24px; } }
+    @media (max-width: 639px) {
+      .app .wr-burgerPlace-slider .burgerPlace-slider p {
+        font-size: 16px;
+        line-height: 22px;
+        padding-right: 0; } }
+  .app .wr-burgerPlace-slider .owl-slider {
+    position: relative;
+    top: -500px; }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-slider .owl-slider {
+        top: -465px; } }
+    @media (max-width: 639px) {
+      .app .wr-burgerPlace-slider .owl-slider {
+        top: -80px; } }
+  .app .wr-burgerPlace-slider figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    width: 100%;
+    position: relative;
+    top: 0; }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-slider figure {
+        min-height: 550px;
+        width: 100%;
+        display: block;
+        left: 0; } }
+    @media (max-width: 639px) {
+      .app .wr-burgerPlace-slider figure {
+        min-height: auto;
+        height: auto; } }
+    .app .wr-burgerPlace-slider figure img {
+      max-width: 100%;
+      width: auto;
+      max-height: 515px; }
+      @media (max-width: 767px) {
+        .app .wr-burgerPlace-slider figure img {
+          width: 100%;
+          height: auto; } }
+      @media (max-width: 639px) {
+        .app .wr-burgerPlace-slider figure img {
+          min-height: auto;
+          height: auto; } }
+  @media (max-width: 767px) {
+    .app .wr-burgerPlace-slider .owl-item {
+      width: 100%; } }
+  .app .wr-burgerPlace-slider .owl-dots {
+    left: 182px; }
+    @media (max-width: 639px) {
+      .app .wr-burgerPlace-slider .owl-dots {
+        left: 68px; } }
+    .app .wr-burgerPlace-slider .owl-dots:after {
+      right: auto;
+      left: 70px; }

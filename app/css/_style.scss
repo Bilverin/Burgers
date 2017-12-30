@@ -669,14 +669,59 @@ body {
 	@include respond-to(xs) {margin-bottom: 250px;}
 }
 
+//стили для слайдера на странице бургер бара
+
 .app .wr-burgerPlace-slider {
-	.burgerPlace-slider {position: absolute; z-index: 2;}
+	max-height: 980px;
+	@media (max-width: 639px) {max-height: 100%; width: 100%; padding: 0;}
+	&.wr-main-slider {
+		.section-header h2 {
+			line-height: 102px;
+			margin-bottom: 20px;
+			@include respond-to(md) {line-height: 58px;}
+			@include respond-to(xs) {line-height: 48px;}
+		}
+	}
+	.burgerPlace-slider {
+		position: relative; z-index: 2; pointer-events: none; width: 40%; 
+		@include respond-to(md) {
+			width: 70%; background: linear-gradient(135deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0.56) 31%,rgba(0,0,0,0.53) 33%,rgba(255,255,255,0) 70%);
+		}
+		@include respond-to(sm) {width: 80%;}
+		@media (max-width: 639px) {width: 100%; padding: 0 0 50px 0;}
+
+		p {
+			@include respond-to(sm) {font-size: 18px; line-height: 24px;}
+			@media (max-width: 639px) {
+				font-size: 16px; line-height: 22px;
+				padding-right: 0;
+			}
+		}
+	}
+	.owl-slider {
+		position: relative; top: -500px;
+		@include respond-to(sm) {top: -465px;}
+		@media (max-width: 639px) {top: -80px;}
+	}
 	figure {
 		display: flex; flex-direction: row-reverse; width: 100%;
 		position: relative; top: 0;
+		@include respond-to(sm) {min-height: 550px; width: 100%; display: block; left: 0;}
+		@media (max-width: 639px) {min-height: auto; height: auto;}
 		img {
 			max-width: 100%; width: auto; max-height: 515px;
+			@include respond-to(sm) {width: 100%; height: auto;}
+			@media (max-width: 639px) {min-height: auto; height: auto;}
 		}
 	}
-	.owl-dots {left: 182px;}
+	.owl-item {
+		@include respond-to(sm) {width: 100%;}
+	}
+	.owl-dots {
+		left: 182px;
+		@media (max-width: 639px) {left: 68px;}
+		&:after {
+			right: auto; left: 70px;
+		}
+	}
 }
