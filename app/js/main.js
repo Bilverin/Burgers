@@ -75,6 +75,7 @@ $(document).ready(function() {
 // Карусель с вертикальной прокруткой (прожарка)
 (function ($) {
 	var slides = $('.roasting-slider-item');
+	var titles = $('.roasting-titles a');
 	var backgrounds = $('.roasting-slider-photo figure');
 	var count = slides.length;
 	var oldState = 0;
@@ -143,6 +144,15 @@ $(document).ready(function() {
 	}
 	// Создаём точки
 	dots = makeDots($('.roasting-slider-nav ul'), slides);
+	// Листаем по клику
+	titles.each(function (index) {
+		$(this).click(function (event) {
+			event.preventDefault();
+			updateSlides(slides, index);
+			titles.removeClass('active')
+			.eq(index).addClass('active');
+		});
+	});
 	// Подключаем свайп
 	$('.roasting-slider').swipe({
 		swipe: function (event, direction) {
