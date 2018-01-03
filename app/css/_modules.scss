@@ -76,6 +76,7 @@
 		content: '';
 		display: block; width: 60px; height: 60px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(0);
 		border: solid 5px transparent; border-right: solid 5px #ffffff; border-radius: 50%;
+		transition: .4s ease;
 		animation: preloader 1s infinite linear;
 	}
 	&:after {
@@ -997,6 +998,15 @@ ul.header-socials {
 				position: relative; margin-bottom: 45px;
 				@include respond-to(sm) {margin-bottom: 79px;}
 				@include respond-to(xs) {margin-bottom: 70px;}
+				&.pol {
+					position: relative;
+					&:after {
+						content: '';
+						position: absolute; right: 4px; top: 10px; display: block; width: 7px; height: 4px; 
+						background: url(../img/pol.png);
+						@include respond-to(sm) {right: 9%;}
+					}
+				}
 				input {}
 				label {
 					font-size: 18px; font-family: $s-regular;
@@ -1022,14 +1032,15 @@ ul.header-socials {
 			select {
 				font-size: 18px; font-family: $s-regular; line-height: 26px;
 				width: 100%; display: block; padding-bottom: 9px;
-				background: #000; border: none; border-bottom: solid 3px #ffffff;
+				background: transparent; border: none; border-bottom: solid 3px #ffffff;
 				@include respond-to(sm) {
 					width: 92%; padding-bottom: 28px;
 					border-width: 7px;
 				}
 
 				option {
-					color: #fff;
+					color: #fff; font-size: 18px; font-family: $s-regular; line-height: 26px;
+					background: #000;
 				}
 			}
 			input {
@@ -2982,7 +2993,7 @@ ul.header-socials {
 			display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 1000; padding: 54px 0 0;
 			background: $main-dark;
 			overflow-y: auto; overflow-x: hidden;
-
+			@media (min-width: 1920px) {width: 1920px; left: 50%; margin-left: -960px;}
 			&:before {
 				content: '';
 				display: block; width: 100%; max-width: 858px; height: 100%; max-height: 1110px; position: fixed; right: 42.85714%; top: 0; transform: translateX(100%); z-index: 2;
@@ -3004,6 +3015,7 @@ ul.header-socials {
 				position: fixed; right: 82px; top: 89px; z-index: 110; display: block; width: 30px; height: 30px;
 				opacity: 0.6;
 				transition: 0.3s ease-out;
+				@media (min-width: 1920px) {position: absolute; right: 50px;}
 				i {
 					position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
 				}

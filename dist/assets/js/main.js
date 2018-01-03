@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
 	$('.owl-slider').owlCarousel({
 		loop: true,
 		margin: 10,
@@ -28,7 +28,7 @@ $(document).ready(function() {
 		autoWidth:true,
 		navText: ["<img src='assets/templates/html/assets/img/news-arrow-left.png'>","<img src='assets/templates/html/assets/img/news-arrow-right.png'>"]
 	});
-			  
+
 	$('.js-composition-toggle li a').click(function(){
 		$('.js-composition-toggle li a').removeClass('active');
 		$(this).addClass('active');
@@ -56,7 +56,7 @@ $(document).ready(function() {
 			activePopup = $('.active-popup');
 		$(activePopup).removeClass('active-popup').fadeOut();
 		$('.' + vacancyLink).addClass('active-popup').fadeIn();
-		
+
 	});
 	$('.js-popup-close').click(function(e){
 		e.preventDefault();
@@ -66,15 +66,16 @@ $(document).ready(function() {
 		$('.popup-company-vacancy .container').fadeOut(400);
 		$('body').removeClass('ov-hidden');
 	});
-	
+
 	$("#date").mask("99.99.9999",{placeholder:"дд.мм.гггг"});
 	$("#tel").mask("9 (999) 9999999");
-	
+
 });
 
 // Карусель с вертикальной прокруткой (прожарка)
 (function ($) {
 	var slides = $('.roasting-slider-item');
+	var titles = $('.roasting-titles a');
 	var backgrounds = $('.roasting-slider-photo figure');
 	var count = slides.length;
 	var oldState = 0;
@@ -143,6 +144,15 @@ $(document).ready(function() {
 	}
 	// Создаём точки
 	dots = makeDots($('.roasting-slider-nav ul'), slides);
+	// Листаем по клику
+	titles.each(function (index) {
+		$(this).click(function (event) {
+			event.preventDefault();
+			updateSlides(slides, index);
+			titles.removeClass('active')
+			.eq(index).addClass('active');
+		});
+	});
 	// Подключаем свайп
 	$('.roasting-slider').swipe({
 		swipe: function (event, direction) {
@@ -241,6 +251,7 @@ $(document).ready(function() {
 			} else {
 				myMap.behaviors.disable(['drag']);
 				isMapBlocked = true;
+				$('#map-hint').fadeIn();
 			}
 		});
 		$('#map-hint').click(function (event) {

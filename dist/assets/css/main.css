@@ -8789,6 +8789,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     border-right: solid 5px #ffffff;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+    -webkit-transition: .4s ease;
+    transition: .4s ease;
     -webkit-animation: preloader 1s infinite linear;
     animation: preloader 1s infinite linear; }
   .preloader:after {
@@ -9861,6 +9863,20 @@ ul.header-socials {
     @media (max-width: 480px) {
       .bhf-activation form .floating-labels {
         margin-bottom: 70px; } }
+    .bhf-activation form .floating-labels.pol {
+      position: relative; }
+      .bhf-activation form .floating-labels.pol:after {
+        content: '';
+        position: absolute;
+        right: 4px;
+        top: 10px;
+        display: block;
+        width: 7px;
+        height: 4px;
+        background: url(../img/pol.png); }
+        @media (max-width: 767px) {
+          .bhf-activation form .floating-labels.pol:after {
+            right: 9%; } }
     .bhf-activation form .floating-labels label {
       font-size: 18px;
       font-family: "stolzl-regular", sans-serif;
@@ -9896,7 +9912,7 @@ ul.header-socials {
     width: 100%;
     display: block;
     padding-bottom: 9px;
-    background: #000;
+    background: transparent;
     border: none;
     border-bottom: solid 3px #ffffff; }
     @media (max-width: 767px) {
@@ -9905,7 +9921,11 @@ ul.header-socials {
         padding-bottom: 28px;
         border-width: 7px; } }
     .bhf-activation form select option {
-      color: #fff; }
+      color: #fff;
+      font-size: 18px;
+      font-family: "stolzl-regular", sans-serif;
+      line-height: 26px;
+      background: #000; }
   .bhf-activation form input[type=text] {
     font-size: 18px;
     font-family: "stolzl-regular", sans-serif;
@@ -12374,6 +12394,11 @@ ul.header-socials {
   background: #000;
   overflow-y: auto;
   overflow-x: hidden; }
+  @media (min-width: 1920px) {
+    .popup-company-vacancy {
+      width: 1920px;
+      left: 50%;
+      margin-left: -960px; } }
   .popup-company-vacancy:before {
     content: '';
     display: block;
@@ -12419,6 +12444,10 @@ ul.header-socials {
     opacity: 0.6;
     -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out; }
+    @media (min-width: 1920px) {
+      .popup-company-vacancy a.close {
+        position: absolute;
+        right: 50px; } }
     .popup-company-vacancy a.close i {
       position: absolute;
       left: 50%;
@@ -12851,8 +12880,7 @@ body {
     .app .wr-main-slider .owl-nav, .app .wr-bhf-slider .owl-nav, .app .wr-burgerPlace-slider .owl-nav, .app .wr-burgerPlace-gallery .owl-nav {
       text-align: left;
       padding-left: 110px;
-      width: 1170px;
-      margin: 0 auto; }
+      width: 1170px; }
       @media (max-width: 639px) {
         .app .wr-main-slider .owl-nav, .app .wr-bhf-slider .owl-nav, .app .wr-burgerPlace-slider .owl-nav, .app .wr-burgerPlace-gallery .owl-nav {
           padding-left: 0; } }
@@ -12862,7 +12890,7 @@ body {
       counter-reset: slides-num;
       position: absolute;
       top: 100%;
-      left: 260px;
+      left: 182px;
       margin-top: 2px; }
       @media (max-width: 639px) {
         .app .wr-main-slider .owl-dots, .app .wr-bhf-slider .owl-dots, .app .wr-burgerPlace-slider .owl-dots, .app .wr-burgerPlace-gallery .owl-dots {
@@ -12969,7 +12997,12 @@ body {
     position: relative;
     padding: 0 0 165px;
     overflow: hidden;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    max-width: 1500; }
+    @media (min-width: 1200px) {
+      .app .wr-roasting {
+        max-width: 1500px;
+        margin: 0 auto; } }
     @media (max-width: 767px) {
       .app .wr-roasting {
         padding: 0 0 74px; } }
@@ -13416,6 +13449,9 @@ body {
     @media (max-width: 991px) {
       .app .wr-burgerPlace-slider.wr-main-slider .section-header h2, .app .wr-burgerPlace-slider.wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-slider.wr-burgerPlace-gallery .section-header h2 {
         line-height: 58px; } }
+    @media (max-width: 767px) {
+      .app .wr-burgerPlace-slider.wr-main-slider .section-header h2, .app .wr-burgerPlace-slider.wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-slider.wr-burgerPlace-gallery .section-header h2 {
+        line-height: 78px; } }
     @media (max-width: 480px) {
       .app .wr-burgerPlace-slider.wr-main-slider .section-header h2, .app .wr-burgerPlace-slider.wr-bhf-slider .section-header h2, .app .wr-burgerPlace-slider .section-header h2, .app .wr-burgerPlace-slider.wr-burgerPlace-gallery .section-header h2 {
         line-height: 48px; } }
@@ -13500,3 +13536,20 @@ body {
     .app .wr-burgerPlace-slider .owl-dots:after {
       right: auto;
       left: 70px; }
+
+.wr-roasting .section-header h3 {
+  font-size: 76px;
+  line-height: 82px; }
+  @media (max-width: 480px) {
+    .wr-roasting .section-header h3 {
+      font-size: 58px; } }
+  .wr-roasting .section-header h3 a {
+    font-weight: 300;
+    -webkit-transition: .4s ease;
+    transition: .4s ease; }
+    .wr-roasting .section-header h3 a.active {
+      font-family: "intro-black", sans-serif;
+      color: #fff; }
+  @media (max-width: 767px) {
+    .wr-roasting .section-header h3 span {
+      display: inline-block; } }
