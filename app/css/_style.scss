@@ -39,7 +39,7 @@ body {
 					.section-header {
 						h2 {
 							@media (max-width: 639px ){margin-bottom: 120px;}
-							@include respond-to(xs) {line-height: 38px; margin-bottom: 60px;}
+							@include respond-to(xs) {line-height: 38px; padding-top: 5px; margin-bottom: 60px; font-size: 42px;}
 						}
 					}
 					figure {
@@ -119,11 +119,18 @@ body {
 					@include respond-to(md) {text-align: right; width: 100%;}
 					@include respond-to(xs) {
 						padding-bottom: 80px;
+						
+					}
+					@media (max-width: 639px){display: none;}
+					&.mobile {
+						display: none;
+						@media (max-width: 639px) {display: block; margin-right: -15px;}
 					}
 					img {
 						@include respond-to(md) {
 							width: 100%; max-width: 650px;
 						}
+						@media (max-width: 639px) {width: 60%;}
 					}
 				}
 			}
@@ -131,7 +138,7 @@ body {
 			&-slider {
 				position: relative; padding-bottom: 160px; padding-top: 0;
 				@include respond-to(sm) {padding-bottom: 153px; padding-top: 0;}
-				@media (max-width: 639px) {width: 87%;}
+				@media (max-width: 639px) {width: 87%; padding-top: 10px;}
 				@include respond-to(xs) {padding-bottom: 80px;}
 
 				.section-header {
@@ -255,6 +262,11 @@ body {
 			@include respond-to(xs) {
 				padding: 0 0 80px;
 			}
+			.section-header {
+				h2 {
+					@include respond-to(xs) {font-size: 70px;}
+				}
+			} 
 		}
 
 		&-roasting {
@@ -263,6 +275,7 @@ body {
 			@include respond-to(sm) {
 				padding: 0 0 74px;
 			}
+			@media (max-width: 639px) {margin-bottom: 0;}
 		}
 
 		&-meat {
@@ -321,6 +334,7 @@ body {
 		&-burgerPlace {
 			&-intro {
 				padding: 8px 0 0; min-height: 1200px;
+				@include respond-to(md) {min-height: 50px;}
 				@include respond-to(sm) {padding-bottom: 135px;}
 
 				figure {
@@ -668,7 +682,7 @@ body {
 .app .wr-main-slider .section-header h2 {
 
 	@media (max-width: 639px) {margin-bottom: 300px;}
-	@include respond-to(xs) {margin-bottom: 250px;}
+	@include respond-to(xs) {margin-bottom: 250px; line-height: 40px;}
 }
 
 //стили для слайдера на странице бургер бара
@@ -710,7 +724,7 @@ body {
 		display: flex; flex-direction: row-reverse; width: 100%;
 		position: relative; top: 0;
 		@include respond-to(sm) {min-height: 550px; width: 100%; display: block; left: 0;}
-		@media (max-width: 639px) {min-height: auto; height: auto;}
+		@media (max-width: 639px) {min-height: 100px; height: auto;}
 		img {
 			max-width: 100%; width: auto; max-height: 515px;
 			@include respond-to(sm) {width: 100%; height: auto;}
@@ -730,10 +744,13 @@ body {
 }
 .wr-roasting .section-header h3 {
 	font-size: 76px; line-height: 82px;
-	@include respond-to(xs) {font-size: 58px;}
+	@include respond-to(xs) {
+		font-size: 56px; line-height: 50px;
+	}
 	a {
 		font-weight: 300; 
 		transition: .4s ease;
+		@media (max-width: 639px) {display: block;}
 		&.active  {
 			font-family: $i-black; color: #fff;
 		}

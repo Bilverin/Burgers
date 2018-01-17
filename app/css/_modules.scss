@@ -325,7 +325,6 @@ ul.header-socials {
 				&.active {
 					a {
 						color: $main-light;
-						pointer-events: none;
 					}
 				}
 				a {
@@ -463,9 +462,6 @@ ul.header-socials {
 		@include respond-to(sm) {
 			margin-left: 50px; margin-top: 38px;
 		}
-		@include respond-to(xs) {
-			margin-left: 0;
-		}
 
 		img {
 			@include respond-to(sm) {display: none;}
@@ -497,9 +493,6 @@ ul.header-socials {
 			display: flex;
 			@include respond-to(md) {
 				display: block; margin-left: 50px;
-			}
-			@include respond-to(xs) {
-				margin-left: 0;
 			}
 
 			li {
@@ -553,15 +546,9 @@ ul.header-socials {
 		@include respond-to(md) {
 			margin-left: 50px; margin-bottom: 0;
 		}
-		@include respond-to(xs) {
-			margin-left: 0;
-		}
 		li {
 			margin-right: 18px;
 			@include respond-to(md) {margin-right: 52px;}
-			@include respond-to(xs) {
-				margin-right: 30px;
-			}
 			a {
 				&:hover {
 					i {
@@ -914,8 +901,9 @@ ul.header-socials {
 				padding: 0; margin-left: 48px;
 			}
 			@media (max-width: 639px) {
-				margin-left: 0; line-height: 30px;
+				margin-left: 0; line-height: 30px; 
 			}
+			@include respond-to(xs) {font-size: 18px;}
 		}
 	}
 	&-join-info {
@@ -1140,7 +1128,7 @@ ul.header-socials {
 	&-intro {
 		&-header {
 			@extend .main-intro-header;
-			margin-bottom: 69px; padding-top: 39px;
+			margin-bottom: 69px; padding-top: 20px;
 			h1 {
 				line-height: 140px; letter-spacing: -9.7px;
 				margin-bottom: 50px;
@@ -2175,8 +2163,8 @@ ul.header-socials {
 	@include respond-to(sm) {
 		padding-top: 315px;
 	}
-	@include respond-to(xs) {
-		padding: 200px 20px 0 0;
+	@media (max-width: 639px) {
+		padding: 73% 0 0 0;
 	}
 	p {
 
@@ -2918,6 +2906,10 @@ ul.header-socials {
 		h1 {
 			font-size: 170px; font-family: $i-black; text-transform: uppercase; line-height: 150px; letter-spacing: -9px;
 			margin-bottom: 15px;
+			@include respond-to(md) {font-size: 130px; line-height: 124px;}
+			@include respond-to(sm) {font-size: 94px; line-height: 100px; letter-spacing: -4px;}
+			@media (max-width: 639px) {font-size: 72px; line-height: 78px; letter-spacing: -2px;}
+			@include respond-to(xs) {font-size: 50px; line-height: 56px; letter-spacing: -2px;}
 		}
 
 		p {
@@ -3105,14 +3097,17 @@ ul.header-socials {
 			@include respond-to(sm) {
 				left: calc(50% - 27px); top: 53px; transform: translateX(-50%); right: auto;
 			}
-			@include respond-to(xs) {
-				width: 500px; left: calc(50% - 10px);
+			@media (max-width: 639px) {
+				width: 100%; text-align: center;
 			}
 			&.active {
 				opacity: 1; pointer-events: all;
 			}
 			img {
 				max-width: 900px;
+				@media (max-width: 639px) {
+					width: 100%;
+				}
 			}
 		}
 	}
