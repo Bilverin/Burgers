@@ -1917,7 +1917,7 @@ ul.header-socials {
 				left: 2px;
 			}
 			@include respond-to(xs) {
-				left: -5px;
+				left: -5px; top: 5px;
 			}
 			li {
 				font-size: 36px; font-family: $cp-light-LC; text-shadow: 1px 1px 0px #000;
@@ -1926,7 +1926,7 @@ ul.header-socials {
 					font-size: 40px; line-height: 38px;
 				}
 				@include respond-to(xs) {
-					font-size: 26px; line-height: 24px;
+					font-size: 30px; line-height: 26px;
 				}
 				&:last-child {
 					&:after {
@@ -1992,7 +1992,7 @@ ul.header-socials {
 					margin-bottom: 30px;
 				}
 				@include respond-to(xs) {
-					font-size: 20px; line-height: 28px;
+					font-size: 18px; line-height: 26px; padding-top: 80px;
 				}
 			}
 		}
@@ -2009,6 +2009,7 @@ ul.header-socials {
 				@include respond-to(sm) {
 					padding: 0 0 0 34px; margin-bottom: 49px;
 				}
+				@include respond-to(xs) {margin-right: 0;}
 				&:last-child {
 					margin-bottom: 0;
 				}
