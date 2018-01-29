@@ -903,7 +903,7 @@ ul.header-socials {
 			@media (max-width: 639px) {
 				margin-left: 0; line-height: 30px; 
 			}
-			@include respond-to(xs) {font-size: 18px;}
+			@include respond-to(xs) {font-size: 16px; line-height: 28px;}
 		}
 	}
 	&-join-info {
@@ -959,7 +959,7 @@ ul.header-socials {
 			@media (max-width: 639px) {
 				margin-left: 0;
 			}
-			@include respond-to(xs) {font-size: 24px; line-height: 37px;}
+			@include respond-to(xs) {font-size: 16px; line-height: 28px;}
 		}
 
 		a.btn {
@@ -1143,7 +1143,7 @@ ul.header-socials {
 					font-size: 80px; line-height: 64px;
 				}
 				@include respond-to(xs) {
-					font-size: 56px; line-height: 46px;
+					font-size: 50px; line-height: 46px;
 				}
 			}
 
@@ -1797,7 +1797,7 @@ ul.header-socials {
 				}
 				p {
 					font-size: 18px; font-family: $s-book;
-					@include respond-to(xs) {line-height: 26px;}
+					@include respond-to(xs) {line-height: 26px; font-size: 16px;}
 				}
 			}
 		}
@@ -1980,7 +1980,7 @@ ul.header-socials {
 					margin-bottom: 30px;
 				}
 				@include respond-to(xs) {
-					font-size: 18px; line-height: 26px; padding-top: 80px;
+					font-size: 16px; line-height: 26px; padding-top: 80px;
 				}
 			}
 		}
@@ -2036,7 +2036,7 @@ ul.header-socials {
 						max-width: 100%;
 					}
 					@include respond-to(xs) {
-						font-size: 18px; line-height: 22px;
+						font-size: 16px; line-height: 22px;
 					}
 
 					br {
@@ -2136,7 +2136,7 @@ ul.header-socials {
 				font-size: 24px; line-height: 36px; font-family: $s-book;
 			}
 			@include respond-to(xs) {
-				font-size: 20px; line-height: 28px;
+				font-size: 16px; line-height: 28px;
 			}
 			br {
 				@include respond-to(md) {
@@ -2175,7 +2175,7 @@ ul.header-socials {
 			width: 100%; padding: 0 47px;
 		}
 		@include respond-to(xs) {
-			font-size: 20px; line-height: 28px;
+			font-size: 16px; line-height: 28px;
 			padding: 0;
 		}
 		br {
@@ -2191,6 +2191,9 @@ ul.header-socials {
 	position: relative; z-index: 2;
 	@include respond-to(sm) {
 		padding: 0 5px 0 47px;
+	}
+	@media (max-width: 640px) {
+		padding-left: 0;
 	}
 	@include respond-to(xs) {
 		padding: 0 20px 0 0;
@@ -2208,8 +2211,11 @@ ul.header-socials {
 			@include respond-to(sm) {
 				width: 50%; margin-bottom: 61px; padding-right: 0; padding-top: 0;
 			}
+			@media (max-width: 640px) {
+				padding-bottom: 90px;
+			}
 			@include respond-to(xs) {
-				width: 100%; margin-bottom: 50px;
+				margin-bottom: 50px;
 			}
 
 			&:last-child {
@@ -2224,9 +2230,10 @@ ul.header-socials {
 
 			i {
 				position: absolute; left: 0; top: 0;
-				@include respond-to(sm) {
-					display: none;
+				@media (max-width: 640px) {
+					top: 45px!important;
 				}
+				@media (max-width: 530px) {top: 60px!important;}
 			}
 
 			[class*='icon-meat-1'] {
@@ -2261,6 +2268,8 @@ ul.header-socials {
 					font-size: 28px;
 					margin-bottom: 0;
 				}
+				@media (max-width: 640px) {font-size: 22px;}
+				@media (max-width: 530px) {width: 80%;}
 				@include respond-to(xs) {
 					margin-bottom: 10px;
 				}
@@ -2279,10 +2288,6 @@ ul.header-socials {
 				}
 				@include respond-to(sm) {
 					display: none;
-				}
-				@include respond-to(xs) {
-					font-size: 20px; line-height: 28px;
-					display: block;
 				}
 			}
 		}
@@ -2423,7 +2428,7 @@ ul.header-socials {
 				font-size: 26px; line-height: 44px;
 			}
 			@include respond-to(xs) {
-				font-size: 20px; line-height: 34px;
+				font-size: 16px; line-height: 30px;
 			}
 			br {
 				@include respond-to(sm) {display: none;}
@@ -2446,7 +2451,7 @@ ul.header-socials {
 				padding-right: 50px; margin-bottom: 30px;
 			}
 			@include respond-to(xs) {
-				font-size: 20px; line-height: 32px; 
+				font-size: 16px; line-height: 28px; 
 				padding-right: 0;
 			}
 
@@ -2502,7 +2507,7 @@ ul.header-socials {
 					font-size: 24px; line-height: 36px;
 				}
 				@include respond-to(xs) {
-					font-size: 20px; line-height: 30px;
+					font-size: 16px; line-height: 28px;
 					padding-right: 0;
 				}
 				&:before {
@@ -2538,7 +2543,7 @@ ul.header-socials {
 				text-shadow: none; font-size: 26px; line-height: 42px;
 			}
 			@include respond-to(xs) {
-				font-size: 20px; line-height: 34px;
+				font-size: 16px; line-height: 28px;
 			}
 
 			span {
@@ -2764,7 +2769,7 @@ ul.header-socials {
 				font-size: 22px; line-height: 32px;
 			}
 			@include respond-to(xs) {
-				font-size: 18px; line-height: 28px;
+				font-size: 16px; line-height: 28px;
 			}
 
 			br {

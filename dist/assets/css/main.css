@@ -9730,7 +9730,8 @@ ul.header-socials {
       line-height: 30px; } }
   @media (max-width: 480px) {
     .bhf-slider p {
-      font-size: 18px; } }
+      font-size: 16px;
+      line-height: 28px; } }
 
 .bhf-join-info ul {
   padding-top: 3px;
@@ -9813,8 +9814,8 @@ ul.header-socials {
       margin-left: 0; } }
   @media (max-width: 480px) {
     .bhf-join-info p {
-      font-size: 24px;
-      line-height: 37px; } }
+      font-size: 16px;
+      line-height: 28px; } }
 
 .bhf-join-info a.btn {
   display: block;
@@ -10054,7 +10055,7 @@ ul.header-socials {
         line-height: 64px; } }
     @media (max-width: 480px) {
       .burgerPlace-intro-header h1 {
-        font-size: 56px;
+        font-size: 50px;
         line-height: 46px; } }
   .burgerPlace-intro-header ul {
     padding-left: 7px; }
@@ -10920,7 +10921,8 @@ ul.header-socials {
       font-family: "stolzl-book", sans-serif; }
       @media (max-width: 480px) {
         .menu-breakfasts ul li p {
-          line-height: 26px; } }
+          line-height: 26px;
+          font-size: 16px; } }
 
 .menu-places {
   padding: 78px 0 0 32px; }
@@ -11157,7 +11159,7 @@ ul.header-socials {
           margin-bottom: 30px; } }
       @media (max-width: 480px) {
         .intro-body > div p {
-          font-size: 18px;
+          font-size: 16px;
           line-height: 26px;
           padding-top: 80px; } }
   .intro-body ul {
@@ -11250,7 +11252,7 @@ ul.header-socials {
             max-width: 100%; } }
         @media (max-width: 480px) {
           .intro-body ul li p {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 22px; } }
         @media (max-width: 767px) {
           .intro-body ul li p br {
@@ -11350,7 +11352,7 @@ ul.header-socials {
           font-family: "stolzl-book", sans-serif; } }
       @media (max-width: 480px) {
         .composition div p {
-          font-size: 20px;
+          font-size: 16px;
           line-height: 28px; } }
       @media (max-width: 991px) {
         .composition div p br {
@@ -11393,7 +11395,7 @@ ul.header-socials {
         padding: 0 47px; } }
     @media (max-width: 480px) {
       .roasting p {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 28px;
         padding: 0; } }
     @media (max-width: 767px) {
@@ -11406,6 +11408,9 @@ ul.header-socials {
   @media (max-width: 767px) {
     .meat {
       padding: 0 5px 0 47px; } }
+  @media (max-width: 640px) {
+    .meat {
+      padding-left: 0; } }
   @media (max-width: 480px) {
     .meat {
       padding: 0 20px 0 0; } }
@@ -11434,9 +11439,11 @@ ul.header-socials {
           margin-bottom: 61px;
           padding-right: 0;
           padding-top: 0; } }
+      @media (max-width: 640px) {
+        .meat ul li {
+          padding-bottom: 90px; } }
       @media (max-width: 480px) {
         .meat ul li {
-          width: 100%;
           margin-bottom: 50px; } }
       @media (max-width: 767px) {
         .meat ul li:last-child {
@@ -11447,9 +11454,12 @@ ul.header-socials {
         position: absolute;
         left: 0;
         top: 0; }
-        @media (max-width: 767px) {
+        @media (max-width: 640px) {
           .meat ul li i {
-            display: none; } }
+            top: 45px !important; } }
+        @media (max-width: 530px) {
+          .meat ul li i {
+            top: 60px !important; } }
       .meat ul li [class*='icon-meat-1'] {
         left: -6px; }
         @media (max-width: 767px) {
@@ -11485,6 +11495,12 @@ ul.header-socials {
           .meat ul li h3 {
             font-size: 28px;
             margin-bottom: 0; } }
+        @media (max-width: 640px) {
+          .meat ul li h3 {
+            font-size: 22px; } }
+        @media (max-width: 530px) {
+          .meat ul li h3 {
+            width: 80%; } }
         @media (max-width: 480px) {
           .meat ul li h3 {
             margin-bottom: 10px; } }
@@ -11503,11 +11519,6 @@ ul.header-socials {
         @media (max-width: 767px) {
           .meat ul li p {
             display: none; } }
-        @media (max-width: 480px) {
-          .meat ul li p {
-            font-size: 20px;
-            line-height: 28px;
-            display: block; } }
 
 .add ul {
   display: -webkit-box;
@@ -11686,8 +11697,8 @@ ul.header-socials {
       line-height: 44px; } }
   @media (max-width: 480px) {
     .company-intro p {
-      font-size: 20px;
-      line-height: 34px; } }
+      font-size: 16px;
+      line-height: 30px; } }
   @media (max-width: 767px) {
     .company-intro p br {
       display: none; } }
@@ -11715,8 +11726,8 @@ ul.header-socials {
         margin-bottom: 30px; } }
     @media (max-width: 480px) {
       .company-mission p {
-        font-size: 20px;
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 28px;
         padding-right: 0; } }
     .company-mission p:last-child {
       margin-bottom: 0; }
@@ -11796,8 +11807,8 @@ ul.header-socials {
         line-height: 36px; } }
     @media (max-width: 480px) {
       .company-worth ul li {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 28px;
         padding-right: 0; } }
     .company-worth ul li:before {
       content: '';
@@ -11846,8 +11857,8 @@ ul.header-socials {
         line-height: 42px; } }
     @media (max-width: 480px) {
       .company-command p {
-        font-size: 20px;
-        line-height: 34px; } }
+        font-size: 16px;
+        line-height: 28px; } }
     @media (max-width: 767px) {
       .company-command p span {
         font-size: 28px;
@@ -12136,7 +12147,7 @@ ul.header-socials {
         line-height: 32px; } }
     @media (max-width: 480px) {
       .company-news > p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 28px; } }
     @media (max-width: 767px) {
       .company-news > p br {
@@ -13512,7 +13523,7 @@ body {
     @media (max-width: 639px) {
       .app .wr-burgerPlace-slider .burgerPlace-slider {
         width: 100%;
-        padding: 0 0 50px 0; } }
+        padding: 0 0 80px 0; } }
     @media (max-width: 767px) {
       .app .wr-burgerPlace-slider .burgerPlace-slider p {
         font-size: 18px;
