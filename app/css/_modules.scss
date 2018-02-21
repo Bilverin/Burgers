@@ -3209,7 +3209,10 @@ ul.header-socials {
 }
 .wr-main-slider {
 	.bhf-slider {
-		margin-top: -45px; padding-top: 0;
+		margin-top: 0; padding-top: 40px;
+		@media(max-width: 639px) {
+			margin-top: -45px; padding-top: 0;
+		}
 	}
 	figure {
 		img {

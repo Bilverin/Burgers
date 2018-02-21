@@ -367,6 +367,7 @@ body {
 						font-size: 56px; line-height: 47px;
 					}
 				}
+				.owl-height {height: auto!important;}
 				figure {
 					right: 0; top: 194px;
 					@include respond-to(sm) {
@@ -696,7 +697,6 @@ body {
 	@media (max-width: 639px) {max-height: 100%; width: 100%; padding: 0;}
 	&.wr-main-slider {
 		.section-header h2 {
-			line-height: 102px;
 			margin-bottom: 20px;
 			@include respond-to(md) {line-height: 58px;}
 			@include respond-to(sm) {line-height: 78px;}
@@ -733,6 +733,7 @@ body {
 			max-width: 100%; width: auto; max-height: 515px;
 			@include respond-to(sm) {width: 100%; height: auto;}
 			@media (max-width: 639px) {min-height: auto; height: auto;}
+			@include respond-to(xs) {max-width: 2000px; width: auto;}
 		}
 	}
 	.owl-item {
