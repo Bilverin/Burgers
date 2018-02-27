@@ -12816,7 +12816,11 @@ body {
     z-index: 110;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
     background: #000;
     -webkit-transition: .4s ease;
     transition: .4s ease; }
@@ -12829,7 +12833,9 @@ body {
         margin: 0 -45px 30px;
         padding: 31px 37px 19px; } }
     .app .wr-header.hide-header {
-      top: -90px;
+      -webkit-transform: translate(0, -90px);
+      -ms-transform: translate(0, -90px);
+      transform: translate(0, -90px);
       -webkit-transition: .4s ease;
       transition: .4s ease; }
       @media (max-width: 480px) {

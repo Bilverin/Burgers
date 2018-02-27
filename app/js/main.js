@@ -356,6 +356,8 @@ $(window).scroll(function(event){
    lastScrollTop = st;
 });
 
+
+
 //добавляем фон шапке на странице "о компании"
 $(window).scroll(function(){
 	var positionHead =  $('.company-intro h1').offset().top;

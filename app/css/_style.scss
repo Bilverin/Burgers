@@ -55,7 +55,7 @@ body {
 
 	.wr {
 		&-header {
-			padding: 31px 0 19px; z-index: 110; position: fixed; top: 0; width: 100%;
+			padding: 31px 0 19px; z-index: 110; position: fixed; top: 0; left: 0; width: 100%; transform: translate(0, 0);
 			background: $main-dark;
 			transition: .4s ease;
 			@include respond-to(sm) {
@@ -65,7 +65,7 @@ body {
 				margin: 0 -45px 30px; padding: 31px 37px 19px;
 			}
 			&.hide-header {
-				top: -90px;
+				transform: translate(0, -90px);
 				transition: .4s ease;
 				@include respond-to(xs) {top: 0;}
 			}
