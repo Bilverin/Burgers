@@ -10285,8 +10285,8 @@ ul.header-socials {
   overflow-y: auto;
   overflow-x: hidden;
   position: absolute;
-  top: 130px;
-  left: 20%;
+  top: 0;
+  left: 0;
   padding: 20px;
   z-index: 50;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), color-stop(40%, rgba(0, 0, 0, 0.7)), to(transparent));
@@ -10317,7 +10317,9 @@ ul.header-socials {
       height: 200px; } }
   @media (max-width: 480px) {
     .burgerPlace-list {
-      left: -15px; } }
+      left: -15px;
+      top: auto;
+      bottom: 0; } }
   .burgerPlace-list::-webkit-scrollbar {
     width: 6px; }
   .burgerPlace-list::-webkit-scrollbar-thumb {
@@ -12309,13 +12311,16 @@ ul.header-socials {
       @media (max-width: 767px) {
         .company-contacts ul li p {
           font-size: 30px;
-          letter-spacing: -0.5px; } }
+          letter-spacing: -0.5px;
+          line-height: 32px; } }
       @media (max-width: 639px) {
         .company-contacts ul li p {
-          font-size: 20px; } }
+          font-size: 20px;
+          line-height: 22px; } }
       @media (max-width: 480px) {
         .company-contacts ul li p {
-          font-size: 16px; } }
+          font-size: 16px;
+          line-height: 18px; } }
 
 .page-intro h1 {
   font-size: 170px;
@@ -12826,11 +12831,11 @@ body {
     transition: .4s ease; }
     @media (max-width: 767px) {
       .app .wr-header {
-        margin: 0 -15px 0 -45px;
+        margin: 0 -15px 0 0;
         padding: 31px 15px 19px 45px; } }
     @media (max-width: 480px) {
       .app .wr-header {
-        margin: 0 -45px 30px;
+        margin: 0 0 30px;
         padding: 31px 37px 19px; } }
     .app .wr-header.hide-header {
       -webkit-transform: translate(0, -90px);
@@ -12845,9 +12850,6 @@ body {
       background: #fff; }
       @media (max-width: 767px) {
         .light .app .wr-header {
-          background: transparent; } }
-      @media (max-width: 767px) {
-        .light .app .wr-header.white {
           background: #fff; } }
     .big-map .app .wr-header {
       background: rgba(0, 0, 0, 0.6); }
@@ -13219,7 +13221,8 @@ body {
   .app .wr-burgerPlace-list {
     width: 100%;
     height: 100vh;
-    padding-top: 130px; }
+    padding-top: 130px;
+    margin-top: -80px; }
     @media (max-width: 767px) {
       .app .wr-burgerPlace-list {
         padding-top: 0; } }
@@ -13259,7 +13262,7 @@ body {
       position: absolute;
       left: 0;
       right: 0;
-      top: 0;
+      top: 80px;
       bottom: 0;
       width: auto;
       height: auto;

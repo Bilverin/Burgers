@@ -343,10 +343,25 @@ $(window).load(function() {
 });
 
 //прячем меню  при прокрутке вниз, показывем при прокрутке ввех
+var isMenuHidden = false;
 var lastScrollTop = 0;
+
+$(window).scroll(function (event) {
+  var st = $(this).scrollTop();
+  if (!isMenuHidden && st > 70 && st > lastScrollTop) {
+    isMenuHidden = true;
+    $('.wr-header').addClass('hide-header');
+  }
+  if (isMenuHidden && st < lastScrollTop) {
+    isMenuHidden = false;
+    $('.wr-header').removeClass('hide-header');
+  }
+  lastScrollTop = st;
+});
+/*var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
-   if (st > lastScrollTop){
+   if (st > 70 && st > lastScrollTop) {
        // код для прокрутки вниз
        $('.wr-header').addClass('hide-header');
    } else {
@@ -354,9 +369,7 @@ $(window).scroll(function(event){
       $('.wr-header').removeClass('hide-header');
    }
    lastScrollTop = st;
-});
-
-
+});*/
 
 //добавляем фон шапке на странице "о компании"
 $(window).scroll(function(){
